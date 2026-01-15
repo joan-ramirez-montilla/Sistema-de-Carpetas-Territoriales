@@ -1,0 +1,8 @@
+php artisan make:livewire employees.index --class
+
+
+// Alerts desde Livewire (SIN redirect)
+$this->dispatch('notify',
+    type: 'success',
+    message: 'Employee created successfully'
+);
