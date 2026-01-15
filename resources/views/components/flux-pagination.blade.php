@@ -11,13 +11,13 @@
             @else
                 <a href="{{ $paginator->previousPageUrl() }}"
                    rel="prev"
-                   class="px-3 py-1.5 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                   class="px-3 py-1.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                     ← Anterior
                 </a>
             @endif
 
             {{-- Info de Página --}}
-            <span class="text-sm text-gray-600 dark:text-gray-400 px-4">
+            <span class="text-sm text-gray-700 dark:text-gray-300 px-4">
                 {{ $paginator->currentPage() }} / {{ $paginator->lastPage() }}
             </span>
 
@@ -25,7 +25,7 @@
             @if ($paginator->hasMorePages())
                 <a href="{{ $paginator->nextPageUrl() }}"
                    rel="next"
-                   class="px-3 py-1.5 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                   class="px-3 py-1.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                     Siguiente →
                 </a>
             @else
@@ -39,14 +39,14 @@
         <div class="hidden sm:block">
             <div class="flex items-center justify-between">
                 {{-- Info de Resultados --}}
-                <div class="text-sm text-gray-600 dark:text-gray-400 mr-6">
+                <div class="text-sm text-gray-700 dark:text-gray-300 mr-6">
                     @if ($paginator->total() > 0)
                         Mostrando
-                        <span class="font-medium text-gray-800 dark:text-gray-200">{{ $paginator->firstItem() }}</span>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ $paginator->firstItem() }}</span>
                         a
-                        <span class="font-medium text-gray-800 dark:text-gray-200">{{ $paginator->lastItem() }}</span>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ $paginator->lastItem() }}</span>
                         de
-                        <span class="font-medium text-gray-800 dark:text-gray-200">{{ $paginator->total() }}</span>
+                        <span class="font-medium text-gray-900 dark:text-gray-100">{{ $paginator->total() }}</span>
                         resultados
                     @else
                         No se encontraron resultados
@@ -66,7 +66,7 @@
                     @else
                         <a href="{{ $paginator->previousPageUrl() }}"
                            rel="prev"
-                           class="p-2.5 rounded-lg text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                           class="p-2.5 rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                             </svg>
@@ -90,7 +90,7 @@
                                         </span>
                                     @else
                                         <a href="{{ $url }}"
-                                           class="px-3.5 py-1.5 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                                           class="px-3.5 py-1.5 text-sm text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                                             {{ $page }}
                                         </a>
                                     @endif
@@ -103,7 +103,7 @@
                     @if ($paginator->hasMorePages())
                         <a href="{{ $paginator->nextPageUrl() }}"
                            rel="next"
-                           class="p-2.5 rounded-lg text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                           class="p-2.5 rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                             </svg>
