@@ -19,24 +19,13 @@
 
         {{-- Name --}}
         <flux:field>
-            <flux:label>Name</flux:label>
+            <flux:label>Nombre completo</flux:label>
             <flux:input
                 wire:model.defer="name"
                 placeholder="John Doe"
                 :invalid="$errors->has('name')"
             />
             <flux:error name="name" />
-        </flux:field>
-
-        {{-- Phone --}}
-        <flux:field>
-            <flux:label>Phone</flux:label>
-            <flux:input
-                wire:model.defer="phone"
-                placeholder="809-000-0000"
-                :invalid="$errors->has('phone')"
-            />
-            <flux:error name="phone" />
         </flux:field>
 
         {{-- Email --}}
@@ -50,15 +39,27 @@
             <flux:error name="email" />
         </flux:field>
 
-        {{-- Position --}}
+        {{-- Password --}}
         <flux:field>
-            <flux:label>Position</flux:label>
+            <flux:label>Contraseña</flux:label>
             <flux:input
-                wire:model.defer="position"
-                placeholder="Cashier"
-                :invalid="$errors->has('position')"
+                type="password"
+                wire:model.defer="password"
+                placeholder="Ingrese su contraseña"
+                :invalid="$errors->has('password')"
             />
-            <flux:error name="position" />
+            <flux:error name="password" />
+        </flux:field>
+
+        {{-- Phone --}}
+        <flux:field>
+            <flux:label>Phone</flux:label>
+            <flux:input
+                wire:model.defer="phone"
+                placeholder="809-000-0000"
+                :invalid="$errors->has('phone')"
+            />
+            <flux:error name="phone" />
         </flux:field>
 
         {{-- Status --}}
@@ -74,6 +75,12 @@
             </flux:select>
             <flux:error name="status" />
         </flux:field>
+
+        @include('components.schedule', [
+            'schedule' => $schedule,
+            'title' => 'Calendario y Horario',
+            'description' => 'Selecciona los días de la semana y define la hora de inicio y fin de cada jornada laboral.'
+        ])
 
         {{-- Actions --}}
         <div class="flex justify-end gap-3 pt-4">

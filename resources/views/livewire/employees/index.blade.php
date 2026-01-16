@@ -18,7 +18,6 @@
                 <tr>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Name</th>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Phone</th>
-                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Position</th>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Status</th>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Actions</th>
                 </tr>
@@ -29,11 +28,7 @@
                     <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
 
                         <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
-                            {{ $employee->name }}
-                        </td>
-
-                        <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
-                            {{ $employee->phone }}
+                            {{ $employee->user->name }}
                         </td>
 
                         <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
@@ -65,7 +60,7 @@
                     <tr>
                         <td colspan="5"
                             class="px-4 py-6 text-center text-gray-500 dark:text-gray-400">
-                            No employees found
+                            No se encontraron empleados
                         </td>
                     </tr>
                 @endforelse

@@ -2,26 +2,41 @@
 
 namespace App\Livewire\Employees;
 
+use App\Models\User;
 use Livewire\Component;
 use App\Models\Employee;
+use Illuminate\Support\Facades\Hash;
 
 class Create extends Component
 {
-    public $name, $phone, $email, $position, $status = 'active';
+    public $name, $phone, $email, $schedule = [], $password, $status = 'active';
 
     protected $rules = [
         'name' => 'required|min:3',
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required',
+
         'phone' => 'required',
-        'email' => 'nullable|email',
-        'position' => 'required',
         'status' => 'required',
+        'schedule' => 'nullable|array',
     ];
 
     public function save()
     {
         $this->validate();
 
-        Employee::create($this->all());
+        $user = User::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'password' => Hash::make($this->password)
+        ]);
+
+        Employee::create([
+            'phone' => $this->phone,
+            'status' => $this->status,
+            'schedule' => $this->schedule,
+            'user_id' => $user->id
+        ]);
 
         return redirect()->route('employees.index')
         ->with('success', 'Empleado creado con exito.');

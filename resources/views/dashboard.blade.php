@@ -18,7 +18,7 @@
                 class="relative overflow-hidden rounded-2xl border border-gray-200/50 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-gray-300/50 dark:hover:border-gray-700">
                 <div class="flex items-start justify-between">
                     <div>
-                        <p class="text-sm font-medium text-gray-600 dark:text-gray-300">Empleados Activos</p>
+                        <p class="text-sm font-medium text-gray-600 dark:text-gray-300">Empleados Registrado</p>
                         <p id="empleados" class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">120</p>
                     </div>
                     <div class="rounded-lg bg-indigo-50 dark:bg-indigo-950/30 p-3">

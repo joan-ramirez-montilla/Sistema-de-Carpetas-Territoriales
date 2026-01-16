@@ -20,6 +20,7 @@ return new class extends Migration
             $table->time('appointment_time');
             $table->enum('status', ['scheduled', 'completed', 'canceled'])->default('scheduled');
             $table->text('notes')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

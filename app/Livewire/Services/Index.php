@@ -19,7 +19,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.services.index', [
-            'services' => Service::latest()->paginate(1)
+            'services' => Service::latest()->paginate(20)
         ]);
     }
 }

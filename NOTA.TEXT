@@ -6,3 +6,10 @@ $this->dispatch('notify',
     type: 'success',
     message: 'Employee created successfully'
 );
+
+
+PENDIENTE:
+Agregarle fecha a los empleados y que tambien ellos mismo lo puedan modificar
+Acceso para los empleados
+Que los empleados puedan subir fotos
+Pagina home donde muestre informacion de la empresa y calendario para que los usuario agenden cita.

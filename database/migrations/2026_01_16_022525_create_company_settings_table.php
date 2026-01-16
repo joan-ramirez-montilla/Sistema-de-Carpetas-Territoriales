@@ -40,6 +40,7 @@ return new class extends Migration
             $table->text('seo_description')->nullable();
             $table->string('seo_keywords')->nullable();
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }
