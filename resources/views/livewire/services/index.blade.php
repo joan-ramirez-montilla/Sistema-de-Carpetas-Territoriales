@@ -2,9 +2,9 @@
 
     {{-- Header --}}
     <div class="flex items-center justify-between">
-        <flux:heading size="lg">
-           Servicios
-        </flux:heading>
+        <div>
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">Servicios</h1>
+        </div>
 
         <flux:button href="{{ route('services.create') }}" icon="plus" variant="primary">
             Agregar Servicio
@@ -46,13 +46,13 @@
 
                         <td class="px-4 py-3">
                             <div class="flex gap-3">
-                                <flux:button href="{{ route('services.edit', $service) }}"
-                                    size="sm" icon="pencil">
+                                <flux:button href="{{ route('services.edit', $service) }}" size="sm"
+                                    icon="pencil">
                                     Edit
                                 </flux:button>
 
-                                <flux:button wire:click="delete({{ $service->id }})"
-                                    variant="danger" size="sm" icon="trash">
+                                <flux:button wire:click="delete({{ $service->id }})" variant="danger" size="sm"
+                                    icon="trash">
                                     Eliminar
                                 </flux:button>
                             </div>
@@ -61,8 +61,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5"
-                            class="px-4 py-6 text-center text-gray-500 dark:text-gray-400">
+                        <td colspan="5" class="px-4 py-6 text-center text-gray-500 dark:text-gray-400">
                             No se encontraron Servicios
                         </td>
                     </tr>

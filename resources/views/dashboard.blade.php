@@ -6,9 +6,6 @@
                 <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">Dashboard</h1>
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Visión general de métricas y estadísticas</p>
             </div>
-            <div class="flex items-center gap-3">
-                <div class="text-sm text-gray-500 dark:text-gray-400">Actualizado hoy</div>
-            </div>
         </div>
 
         {{-- Grid de métricas --}}
@@ -95,30 +92,128 @@
             </div>
         </div>
 
-        {{-- Gráfico de citas --}}
-        <div
-            class="relative overflow-hidden rounded-2xl border border-gray-200/50 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-6 shadow-sm">
-            <div class="flex items-center justify-between mb-6">
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Citas por Mes</h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Evolución mensual de citas programadas</p>
+
+        @if (auth()->user()->role == 'admin')
+            {{-- Gráfico de citas --}}
+            <div
+                class="relative overflow-hidden rounded-2xl border border-gray-200/50 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-6 shadow-sm">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Citas por Mes</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Evolución mensual de citas programadas</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <select
+                            class="rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1 text-sm text-gray-700 dark:text-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-800 focus:outline-none">
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                    <select
-                        class="rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1 text-sm text-gray-700 dark:text-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-800 focus:outline-none">
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                    </select>
+                <div class="h-80">
+                    <canvas id="chartCitas" class="w-full h-full"></canvas>
                 </div>
             </div>
-            <div class="h-80">
-                <canvas id="chartCitas" class="w-full h-full"></canvas>
-            </div>
-        </div>
+        @endif
     </div>
 
-    {{-- Scripts --}}
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    @if (auth()->user()->role == 'admin')
+        {{-- Scripts --}}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            // Iniciar animaciones
+            document.addEventListener('DOMContentLoaded', () => {
+                // Gráfico con estilo más profesional
+                const ctx = document.getElementById('chartCitas').getContext('2d');
+
+                const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+                gradient.addColorStop(0, 'rgba(99, 102, 241, 0.4)');
+                gradient.addColorStop(1, 'rgba(99, 102, 241, 0.05)');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov',
+                            'Dic'
+                        ],
+                        datasets: [{
+                            label: 'Citas',
+                            data: [320, 420, 380, 510, 480, 610, 590, 520, 580, 630, 600, 650],
+                            backgroundColor: gradient,
+                            borderColor: '#6366F1',
+                            borderWidth: 2,
+                            borderRadius: 12,
+                            borderSkipped: false,
+                            barThickness: 36
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                                titleColor: '#1f2937',
+                                bodyColor: '#4b5563',
+                                borderColor: '#e5e7eb',
+                                borderWidth: 1,
+                                cornerRadius: 8,
+                                padding: 12,
+                                displayColors: false,
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.parsed.y.toLocaleString()} citas`;
+                                    }
+                                }
+                            }
+                        },
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    color: 'rgba(0, 0, 0, 0.05)',
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    color: '#6b7280',
+                                    font: {
+                                        size: 12
+                                    },
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    color: '#6b7280',
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            }
+                        },
+                        animation: {
+                            duration: 2000,
+                            easing: 'easeOutQuart'
+                        }
+                    }
+                });
+            });
+        </script>
+    @endif
+
     <script>
         // Contadores animados con efecto más suave
         function animateCount(id, target) {
@@ -138,99 +233,10 @@
                 }
             }, 16);
         }
-
-        // Iniciar animaciones
         document.addEventListener('DOMContentLoaded', () => {
             animateCount('empleados', 120);
             animateCount('citasSemana', 220);
             animateCount('citasMes', 4304);
-
-            // Gráfico con estilo más profesional
-            const ctx = document.getElementById('chartCitas').getContext('2d');
-
-            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-            gradient.addColorStop(0, 'rgba(99, 102, 241, 0.4)');
-            gradient.addColorStop(1, 'rgba(99, 102, 241, 0.05)');
-
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov',
-                        'Dic'
-                    ],
-                    datasets: [{
-                        label: 'Citas',
-                        data: [320, 420, 380, 510, 480, 610, 590, 520, 580, 630, 600, 650],
-                        backgroundColor: gradient,
-                        borderColor: '#6366F1',
-                        borderWidth: 2,
-                        borderRadius: 12,
-                        borderSkipped: false,
-                        barThickness: 36
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                            titleColor: '#1f2937',
-                            bodyColor: '#4b5563',
-                            borderColor: '#e5e7eb',
-                            borderWidth: 1,
-                            cornerRadius: 8,
-                            padding: 12,
-                            displayColors: false,
-                            callbacks: {
-                                label: function(context) {
-                                    return `${context.parsed.y.toLocaleString()} citas`;
-                                }
-                            }
-                        }
-                    },
-                    interaction: {
-                        intersect: false,
-                        mode: 'index'
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: {
-                                color: 'rgba(0, 0, 0, 0.05)',
-                                drawBorder: false
-                            },
-                            ticks: {
-                                color: '#6b7280',
-                                font: {
-                                    size: 12
-                                },
-                                callback: function(value) {
-                                    return value.toLocaleString();
-                                }
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            ticks: {
-                                color: '#6b7280',
-                                font: {
-                                    size: 12
-                                }
-                            }
-                        }
-                    },
-                    animation: {
-                        duration: 2000,
-                        easing: 'easeOutQuart'
-                    }
-                }
-            });
         });
     </script>
 </x-layouts::app>

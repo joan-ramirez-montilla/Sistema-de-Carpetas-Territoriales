@@ -2,11 +2,10 @@
 
     {{-- Header --}}
     <div class="flex items-center justify-between">
-        <flux:heading size="lg">
-            Citas
-        </flux:heading>
+        <div>
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">Citas</h1>
+        </div>
     </div>
-
 
 
     {{-- Filtros --}}

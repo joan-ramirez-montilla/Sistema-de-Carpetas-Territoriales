@@ -2,21 +2,19 @@
 
     {{-- Header --}}
     <div class="flex items-center justify-between">
-        <flux:heading size="lg">
-            Configuración de la Empresa
-        </flux:heading>
+        <div>
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">Configuración de la Empresa</h1>
+        </div>
     </div>
 
     <form wire:submit.prevent="save" class="space-y-8" enctype="multipart/form-data">
 
         {{-- Sección: Información General --}}
         <div class="space-y-4">
-            <flux:heading size="md">Información General</flux:heading>
+            <flux:heading size="lg">Información General</flux:heading>
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 Ingresa los datos básicos de tu empresa, como nombre, logo, teléfono, correo y ubicación.
             </p>
-
-
 
             <flux:field>
                 <flux:label>Nombre de la empresa</flux:label>
@@ -30,8 +28,7 @@
                 <flux:label>Logo</flux:label>
 
                 @if ($logo_path)
-                    <img src="{{ asset('storage/logos/' . $logo_path) }}" alt="Logo"
-                    class="h-30 mt-2 mb-2">
+                    <img src="{{ asset('storage/logos/' . $logo_path) }}" alt="Logo" class="h-30 mt-2 mb-2">
                 @endif
 
                 <flux:input type="file" wire:model="logo" accept="image/*" :invalid="$errors->has('logo')" />
@@ -67,7 +64,7 @@
 
         {{-- Sección: Colores y Branding --}}
         <div class="space-y-4">
-            <flux:heading size="md">Colores y Branding</flux:heading>
+            <flux:heading size="lg">Colores y Branding</flux:heading>
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 Define los colores principales de tu marca para mantener consistencia en tu diseño y branding.
             </p>
@@ -93,12 +90,12 @@
         @include('components.schedule', [
             'schedule' => $schedule,
             'title' => 'Calendario y Horario',
-            'description' => 'Activa los días de atención y define el horario de apertura y cierre.'
+            'description' => 'Activa los días de atención y define el horario de apertura y cierre.',
         ])
 
         {{-- Sección: Redes Sociales --}}
         <div class="space-y-4">
-            <flux:heading size="md">Redes Sociales</flux:heading>
+            <flux:heading size="lg">Redes Sociales</flux:heading>
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 Agrega las URLs de tus redes sociales para mostrar en tu sitio web o contacto.
             </p>
@@ -106,31 +103,39 @@
             <flux:field>
                 <flux:label>Facebook</flux:label>
                 <flux:input wire:model.defer="facebook" placeholder="https://facebook.com/tuempresa" />
-                @error('facebook') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('facebook')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
 
             <flux:field>
                 <flux:label>Instagram</flux:label>
                 <flux:input wire:model.defer="instagram" placeholder="https://instagram.com/tuempresa" />
-                @error('instagram') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('instagram')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
 
             <flux:field>
                 <flux:label>Twitter</flux:label>
                 <flux:input wire:model.defer="twitter" placeholder="https://twitter.com/tuempresa" />
-                @error('twitter') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('twitter')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
 
             <flux:field>
                 <flux:label>WhatsApp</flux:label>
                 <flux:input wire:model.defer="whatsapp" placeholder="https://wa.me/1234567890" />
-                @error('whatsapp') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('whatsapp')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
         </div>
 
         {{-- Sección: SEO --}}
         <div class="space-y-4">
-            <flux:heading size="md">SEO</flux:heading>
+            <flux:heading size="lg">SEO</flux:heading>
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 Completa la información SEO para mejorar la visibilidad en buscadores.
             </p>
@@ -138,19 +143,25 @@
             <flux:field>
                 <flux:label>Title</flux:label>
                 <flux:input wire:model.defer="seo_title" placeholder="Barberia" />
-                @error('seo_title') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('seo_title')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
 
             <flux:field>
                 <flux:label>Description</flux:label>
                 <flux:textarea wire:model.defer="seo_description" placeholder="" />
-                @error('seo_description') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('seo_description')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
 
             <flux:field>
                 <flux:label>Keywords</flux:label>
                 <flux:input wire:model.defer="seo_keywords" placeholder="" />
-                @error('seo_keywords') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+                @error('seo_keywords')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
             </flux:field>
         </div>
 

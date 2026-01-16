@@ -34,6 +34,13 @@
                     </flux:sidebar.item>
                 @endif
 
+                @if (auth()->user()->role == 'employee')
+                    <flux:sidebar.item icon="book-open-text" :href="route('employees.gallery')"
+                        :current="request()->routeIs('employees.gallery')" wire:navigate>
+                        Galería de Cortes
+                    </flux:sidebar.item>
+                @endif
+
                 <flux:sidebar.item icon="book-open-text" :href="route('appointments.index')"
                     :current="request()->routeIs('appointments.*')" wire:navigate>
                     Citas

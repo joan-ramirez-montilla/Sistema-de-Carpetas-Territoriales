@@ -20,8 +20,12 @@ class CheckRole
     {
         $user = Auth::user();
 
-        if ($user->role != "admin") {
+        if ($role == "admin" && $user->role != "admin") {
             abort(403, 'Acceso denegado: solo admins.');
+        }
+
+        if ($role == "employee" && $user->role != "employee") {
+            abort(403, 'Acceso denegado: solo empleados.');
         }
 
         return $next($request);

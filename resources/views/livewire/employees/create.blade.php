@@ -2,73 +2,51 @@
 
     {{-- Header --}}
     <div class="flex items-center justify-between">
-        <flux:heading size="lg">
-            Crear empleado
-        </flux:heading>
+        <div>
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">Crear empleado</h1>
+        </div>
 
-        <flux:button
-            href="{{ route('employees.index') }}"
-            variant="ghost"
-            icon="arrow-left"
-            size="sm">
+        <flux:button href="{{ route('employees.index') }}" variant="ghost" icon="arrow-left" size="sm">
             Volver atras
         </flux:button>
     </div>
+
 
     <form wire:submit.prevent="save" class="space-y-5">
 
         {{-- Name --}}
         <flux:field>
             <flux:label>Nombre completo</flux:label>
-            <flux:input
-                wire:model.defer="name"
-                placeholder="John Doe"
-                :invalid="$errors->has('name')"
-            />
+            <flux:input wire:model.defer="name" placeholder="John Doe" :invalid="$errors->has('name')" />
             <flux:error name="name" />
         </flux:field>
 
         {{-- Email --}}
         <flux:field>
             <flux:label>Email</flux:label>
-            <flux:input
-                wire:model.defer="email"
-                placeholder="email@example.com"
-                :invalid="$errors->has('email')"
-            />
+            <flux:input wire:model.defer="email" placeholder="email@example.com" :invalid="$errors->has('email')" />
             <flux:error name="email" />
         </flux:field>
 
         {{-- Password --}}
         <flux:field>
             <flux:label>Contraseña</flux:label>
-            <flux:input
-                type="password"
-                wire:model.defer="password"
-                placeholder="Ingrese su contraseña"
-                :invalid="$errors->has('password')"
-            />
+            <flux:input type="password" wire:model.defer="password" placeholder="Ingrese su contraseña"
+                :invalid="$errors->has('password')" />
             <flux:error name="password" />
         </flux:field>
 
         {{-- Phone --}}
         <flux:field>
             <flux:label>Phone</flux:label>
-            <flux:input
-                wire:model.defer="phone"
-                placeholder="809-000-0000"
-                :invalid="$errors->has('phone')"
-            />
+            <flux:input wire:model.defer="phone" placeholder="809-000-0000" :invalid="$errors->has('phone')" />
             <flux:error name="phone" />
         </flux:field>
 
         {{-- Status --}}
         <flux:field>
             <flux:label>Status</flux:label>
-            <flux:select
-                wire:model.defer="status"
-                :invalid="$errors->has('status')"
-            >
+            <flux:select wire:model.defer="status" :invalid="$errors->has('status')">
                 <option value="">Select status</option>
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
@@ -79,23 +57,17 @@
         @include('components.schedule', [
             'schedule' => $schedule,
             'title' => 'Calendario y Horario',
-            'description' => 'Selecciona los días de la semana y define la hora de inicio y fin de cada jornada laboral.'
+            'description' =>
+                'Selecciona los días de la semana y define la hora de inicio y fin de cada jornada laboral.',
         ])
 
         {{-- Actions --}}
         <div class="flex justify-end gap-3 pt-4">
-            <flux:button
-                href="{{ route('employees.index') }}"
-                variant="ghost"
-            >
+            <flux:button href="{{ route('employees.index') }}" variant="ghost">
                 Cancel
             </flux:button>
 
-            <flux:button
-                type="submit"
-                variant="primary"
-                icon="check"
-            >
+            <flux:button type="submit" variant="primary" icon="check">
                 Save
             </flux:button>
         </div>

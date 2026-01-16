@@ -34,6 +34,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         });
     });
 
+    Route::middleware(['role:employee'])->group(function () {
+        Route::prefix('employees')->name('employees.')->group(function () {
+            Route::livewire('/gallery', 'employees.gallery')->name('gallery');
+        });
+    });
+
     // Appointments
     Route::prefix('appointments')->name('appointments.')->group(function () {
         Route::livewire('/', 'appointments.index')->name('index');
