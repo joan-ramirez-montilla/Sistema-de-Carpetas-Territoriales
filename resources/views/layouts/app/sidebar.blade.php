@@ -15,16 +15,20 @@
 
             <flux:sidebar.nav>
                 <flux:sidebar.group :heading="__('Platform')" class="grid">
-                    <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')">
                         Inicio
                     </flux:sidebar.item>
 
-                    <flux:sidebar.item icon="folder-git-2" :href="route('employees.index')" :current="request()->routeIs('employees.*')">
+                    <flux:sidebar.item icon="folder-git-2" :href="route('employees.index')" :current="request()->routeIs('employees.*')" wire:navigate>
                         Empleados
                     </flux:sidebar.item>
 
-                    <flux:sidebar.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
-                        Usuarios
+                    <flux:sidebar.item icon="book-open-text" :href="route('services.index')" :current="request()->routeIs('services.*')" wire:navigate>
+                        Servicios
+                    </flux:sidebar.item>
+
+                    <flux:sidebar.item icon="book-open-text" :href="route('appointments.index')" :current="request()->routeIs('appointments.*')" wire:navigate>
+                        Citas
                     </flux:sidebar.item>
 
                 </flux:sidebar.group>
