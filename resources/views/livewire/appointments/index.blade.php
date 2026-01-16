@@ -10,31 +10,33 @@
 
 
     {{-- Filtros --}}
-<div class="flex flex-col sm:flex-row gap-4 mb-4">
-    {{-- Empleado --}}
-    <div>
-        <flux:select wire:model="filterEmployee" label="Empleado">
-            <option value="">Todos</option>
+    <div class="flex flex-col sm:flex-row gap-4 mb-4">
 
-        </flux:select>
+        @if (auth()->user()->role == 'admin')
+            {{-- Empleado --}}
+            <div>
+                <flux:select wire:model="filterEmployee" label="Empleado">
+                    <option value="">Todos</option>
+
+                </flux:select>
+            </div>
+        @endif
+
+        {{-- Fecha --}}
+        <div>
+            <flux:input type="date" wire:model="filterDate" label="Fecha" />
+        </div>
+
+        {{-- Estado --}}
+        <div>
+            <flux:select wire:model="filterStatus" label="Estado">
+                <option value="">Todos</option>
+                <option value="scheduled">Agendada</option>
+                <option value="completed">Completada</option>
+                <option value="canceled">Cancelada</option>
+            </flux:select>
+        </div>
     </div>
-
-    {{-- Fecha --}}
-    <div>
-        <flux:input type="date" wire:model="filterDate" label="Fecha" />
-    </div>
-
-    {{-- Estado --}}
-    <div>
-        <flux:select wire:model="filterStatus" label="Estado">
-            <option value="">Todos</option>
-            <option value="scheduled">Agendada</option>
-            <option value="completed">Completada</option>
-            <option value="canceled">Cancelada</option>
-        </flux:select>
-    </div>
-</div>
-
 
     {{-- Table --}}
     <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
@@ -76,22 +78,24 @@
                         </td>
 
                         <td class="px-4 py-3">
-                            <flux:badge :color="
-                                $appointment->status === 'scheduled' ? 'blue' :
-                                ($appointment->status === 'completed' ? 'green' : 'red')">
+                            <flux:badge
+                                :color="
+                                                                $appointment->status === 'scheduled' ? 'blue' :
+                                                                ($appointment->status === 'completed' ? 'green' : 'red')
+                                ">
                                 {{ ucfirst($appointment->status) }}
                             </flux:badge>
                         </td>
 
                         <td class="px-4 py-3">
                             <div class="flex gap-3">
-                                <flux:button href="{{ route('appointments.edit', $appointment) }}"
-                                    size="sm" icon="pencil">
+                                <flux:button href="{{ route('appointments.edit', $appointment) }}" size="sm"
+                                    icon="pencil">
                                     Editar
                                 </flux:button>
 
-                                <flux:button wire:click="delete({{ $appointment->id }})"
-                                    variant="danger" size="sm" icon="trash">
+                                <flux:button wire:click="delete({{ $appointment->id }})" variant="danger" size="sm"
+                                    icon="trash">
                                     Eliminar
                                 </flux:button>
                             </div>
@@ -100,8 +104,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="7"
-                            class="px-4 py-6 text-center text-gray-500 dark:text-gray-400">
+                        <td colspan="7" class="px-4 py-6 text-center text-gray-500 dark:text-gray-400">
                             No se encontraron citas
                         </td>
                     </tr>

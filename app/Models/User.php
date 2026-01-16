@@ -39,6 +39,13 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $appends = ['role'];
+
+    public function getRoleAttribute(): string
+    {
+        return $this->employee ? 'employee' : 'admin';
+    }
+
     /**
      * Get the attributes that should be cast.
      *

@@ -40,7 +40,7 @@
             </div>
         </form>
 
-        @if ($this->showDeleteUser)
+        @if (false)
             <livewire:settings.delete-user-form />
         @endif
     </x-settings.layout>
