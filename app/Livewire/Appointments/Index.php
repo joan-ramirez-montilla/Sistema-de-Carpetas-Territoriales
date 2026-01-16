@@ -10,6 +10,10 @@ class Index extends Component
 {
     use WithPagination;
 
+    public $filterEmployee = '';
+    public $filterDate = '';
+    public $filterStatus = '';
+
     public function render()
     {
         return view('livewire.appointments.index', [

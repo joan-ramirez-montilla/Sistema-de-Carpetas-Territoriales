@@ -46,7 +46,7 @@ class Edit extends Component
 
         return redirect()
             ->route('services.index')
-            ->with('success', 'Corte actualizado con éxito.');
+            ->with('success', 'Servicio actualizado con éxito.');
     }
 
     public function render()

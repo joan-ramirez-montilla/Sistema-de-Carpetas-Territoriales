@@ -36,6 +36,12 @@
 
             <flux:spacer />
 
+            <flux:sidebar.nav>
+                <flux:sidebar.item icon="home" :href="route('company-settings.index')" :current="request()->routeIs('company-settings.*')" wire:navigate>
+                    Empresa
+                </flux:sidebar.item>
+            </flux:sidebar.nav>
+
             <x-desktop-user-menu class="hidden lg:block" :name="auth()->user()->name" />
         </flux:sidebar>
 

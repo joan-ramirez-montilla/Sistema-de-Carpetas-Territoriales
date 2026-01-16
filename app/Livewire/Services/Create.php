@@ -28,7 +28,7 @@ class Create extends Component
         ]);
 
         return redirect()->route('services.index')
-            ->with('success', 'Corte creado con éxito.');
+            ->with('success', 'Servicio creado con éxito.');
     }
 
     public function render()

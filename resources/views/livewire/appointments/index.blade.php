@@ -7,6 +7,35 @@
         </flux:heading>
     </div>
 
+
+
+    {{-- Filtros --}}
+<div class="flex flex-col sm:flex-row gap-4 mb-4">
+    {{-- Empleado --}}
+    <div>
+        <flux:select wire:model="filterEmployee" label="Empleado">
+            <option value="">Todos</option>
+
+        </flux:select>
+    </div>
+
+    {{-- Fecha --}}
+    <div>
+        <flux:input type="date" wire:model="filterDate" label="Fecha" />
+    </div>
+
+    {{-- Estado --}}
+    <div>
+        <flux:select wire:model="filterStatus" label="Estado">
+            <option value="">Todos</option>
+            <option value="scheduled">Agendada</option>
+            <option value="completed">Completada</option>
+            <option value="canceled">Cancelada</option>
+        </flux:select>
+    </div>
+</div>
+
+
     {{-- Table --}}
     <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
         <table class="w-full text-sm">
