@@ -15,6 +15,3 @@ Que los empleados puedan modificar su perfil de empleado
 
 Pagina home donde muestre informacion de la empresa y calendario para que los usuario agenden cita.
 
-
-
-php artisan make:livewire employees.photos --class

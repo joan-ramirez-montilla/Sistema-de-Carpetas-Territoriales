@@ -33,7 +33,7 @@
                         </td>
 
                         <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
-                            {{ $employee->position }}
+                            {{ $employee->phone }}
                         </td>
 
                         <td class="px-4 py-3">

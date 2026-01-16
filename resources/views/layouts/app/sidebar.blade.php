@@ -7,8 +7,6 @@
 
 <body class="min-h-screen bg-white dark:bg-zinc-800">
 
-    <x-alert />
-
     <flux:sidebar sticky collapsible="mobile"
         class="border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
         <flux:sidebar.header>
@@ -111,6 +109,29 @@
     {{ $slot }}
 
     @fluxScripts
+
+    <x-alert />
+
+    <script>
+        function animateCount(id, target) {
+            const element = document.getElementById(id);
+            const duration = 1500;
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+    </script>
+
 </body>
 
 </html>
