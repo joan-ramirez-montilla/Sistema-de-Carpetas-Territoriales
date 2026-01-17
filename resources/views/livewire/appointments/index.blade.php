@@ -16,7 +16,6 @@
             <div>
                 <flux:select wire:model="filterEmployee" label="Empleado">
                     <option value="">Todos</option>
-
                 </flux:select>
             </div>
         @endif

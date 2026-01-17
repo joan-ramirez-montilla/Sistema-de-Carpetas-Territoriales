@@ -23,7 +23,7 @@
 
         {{-- Email --}}
         <flux:field>
-            <flux:label>Email</flux:label>
+            <flux:label>Correo electrónico</flux:label>
             <flux:input wire:model.defer="email" placeholder="email@example.com" :invalid="$errors->has('email')" />
             <flux:error name="email" />
         </flux:field>
@@ -38,7 +38,7 @@
 
         {{-- Phone --}}
         <flux:field>
-            <flux:label>Phone</flux:label>
+            <flux:label>Número de teléfono</flux:label>
             <flux:input wire:model.defer="phone" placeholder="809-000-0000" :invalid="$errors->has('phone')" />
             <flux:error name="phone" />
         </flux:field>
@@ -64,11 +64,11 @@
         {{-- Actions --}}
         <div class="flex justify-end gap-3 pt-4">
             <flux:button href="{{ route('employees.index') }}" variant="ghost">
-                Cancel
+                Cancelar
             </flux:button>
 
             <flux:button type="submit" variant="primary" icon="check">
-                Save
+                Guardar
             </flux:button>
         </div>
     </form>

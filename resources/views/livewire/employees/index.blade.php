@@ -17,10 +17,10 @@
         <table class="w-full text-sm">
             <thead class="bg-gray-50 dark:bg-gray-800">
                 <tr>
-                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Name</th>
-                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Phone</th>
-                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Status</th>
-                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Actions</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Nombre</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Número de teléfono</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Estado</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Acciones</th>
                 </tr>
             </thead>
 
@@ -46,12 +46,12 @@
                             <div class="flex gap-3">
                                 <flux:button href="{{ route('employees.edit', $employee) }}" size="sm"
                                     icon="pencil">
-                                    Edit
+                                    Editar
                                 </flux:button>
 
                                 <flux:button wire:click="delete({{ $employee->id }})" variant="danger" size="sm"
                                     icon="trash">
-                                    Delete
+                                    Eliminar
                                 </flux:button>
                             </div>
                         </td>

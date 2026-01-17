@@ -48,7 +48,7 @@
                             <div class="flex gap-3">
                                 <flux:button href="{{ route('services.edit', $service) }}" size="sm"
                                     icon="pencil">
-                                    Edit
+                                    Editar
                                 </flux:button>
 
                                 <flux:button wire:click="delete({{ $service->id }})" variant="danger" size="sm"
