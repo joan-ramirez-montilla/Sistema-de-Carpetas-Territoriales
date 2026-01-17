@@ -3,13 +3,14 @@
 namespace App\Livewire\CompanySettings;
 
 use Livewire\Component;
+use App\Traits\HasSchedule;
 use Livewire\WithFileUploads;
 use App\Models\CompanySetting;
 use Illuminate\Support\Facades\Storage;
 
 class Index extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, HasSchedule;
 
     public $companySetting;
 
@@ -34,6 +35,8 @@ class Index extends Component
         // Cargar configuración existente o crear nueva
         $this->companySetting = CompanySetting::first() ?? new CompanySetting();
 
+        $this->schedule = $this->mergeSchedule($this->companySetting->schedule);
+
         // Rellenar propiedades
         $this->fill([
             'name'            => $this->companySetting->name,
@@ -42,7 +45,7 @@ class Index extends Component
             'map_url'         => $this->companySetting->map_url,
             'primary_color'   => $this->companySetting->primary_color ?? '#000000',
             'secondary_color' => $this->companySetting->secondary_color ?? '#ffffff',
-            'schedule'        => $this->companySetting->schedule ?? [],
+            'schedule'        => $this->mergeSchedule($this->companySetting->schedule),
             'facebook'        => $this->companySetting->facebook,
             'instagram'       => $this->companySetting->instagram,
             'twitter'         => $this->companySetting->twitter,
@@ -80,6 +83,14 @@ class Index extends Component
 
         // Guardar el logo si se subió uno nuevo
         $logoName = $this->companySetting->logo ?? null;
+
+        $this->schedule = $this->mergeSchedule($this->schedule);
+
+        $this->validateSchedule($this->schedule);
+
+        if ($this->getErrorBag()->any()) {
+            return;
+        }
 
         if ($this->logo) {
             // Eliminar el logo anterior si existe

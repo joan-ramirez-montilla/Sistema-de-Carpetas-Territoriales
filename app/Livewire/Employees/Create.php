@@ -4,12 +4,21 @@ namespace App\Livewire\Employees;
 
 use App\Models\User;
 use Livewire\Component;
-use App\Models\Employee;
+use App\Traits\HasSchedule;
+use App\Models\{CompanySetting, Employee};
 use Illuminate\Support\Facades\Hash;
 
 class Create extends Component
 {
+    use HasSchedule;
+
     public $name, $phone, $email, $schedule = [], $password, $status = 'active';
+
+    public function mount()
+    {
+        $this->companySetting = CompanySetting::first() ?? new CompanySetting();
+        $this->schedule = $this->mergeSchedule($this->companySetting->schedule);
+    }
 
     protected $rules = [
         'name' => 'required|min:3',
@@ -24,6 +33,16 @@ class Create extends Component
     public function save()
     {
         $this->validate();
+
+        $this->schedule = $this->mergeSchedule($this->schedule);
+
+        $this->validateSchedule($this->schedule);
+
+        $this->validateScheduleWithinCompany($this->schedule, $this->companySetting->schedule);
+
+        if ($this->getErrorBag()->any()) {
+            return;
+        }
 
         $user = User::create([
             'name' => $this->name,

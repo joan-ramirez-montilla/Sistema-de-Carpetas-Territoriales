@@ -9,7 +9,7 @@ $this->dispatch('notify',
 
 
 PENDIENTE:
-TODO: A los servicios, ponerle foto y un color
+que la columa schedule que el formato de la fecha en configuracion de empresa y horario del trabajador.
 Crear una session de calendario para solo los admin, para que puedan agregar dias de fiesta o no laborables.
 En la home muestrar informacion de la empresa y calendario para que los usuario agenden cita.
 Trabajar la logica de alerta (ya luego integral la api de facebook).
