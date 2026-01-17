@@ -20,16 +20,18 @@ trait HasSchedule
     /**
      * Combina el schedule por defecto con el guardado en DB
      */
-    private function mergeSchedule($existingSchedule = [])
+    protected function mergeSchedule($existingSchedule = [])
     {
         return array_merge($this->defaultSchedule(), $existingSchedule ?? []);
     }
 
-    private function validateSchedule($schedule)
+    /**
+     * Valida que end sea mayor que start usando $this->schedule
+     */
+    protected function validateSchedule()
     {
-        foreach ($schedule as $day => $data) {
+        foreach ($this->schedule as $day => $data) {
 
-            // Si el día no está activo, no validar
             if (empty($data['active']) || !$data['active']) {
                 continue;
             }
@@ -37,20 +39,27 @@ trait HasSchedule
             $start = $data['start'] ?? '00:00';
             $end   = $data['end'] ?? '00:00';
 
-            $startMinutes = strtotime($start);
-            $endMinutes   = strtotime($end);
-
-            if ($endMinutes <= $startMinutes) {
+            if (strtotime($end) <= strtotime($start)) {
                 $this->addError("schedule.$day.end", "La hora de cierre debe ser mayor que la hora de inicio en $day.");
             }
         }
     }
 
-    private function validateScheduleWithinCompany($employeeSchedule, $companySchedule)
+    /**
+     * Valida que el schedule del empleado esté dentro del horario de la empresa
+     */
+    protected function validateScheduleWithinCompany($companySchedule)
     {
-        foreach ($employeeSchedule as $day => $data) {
+        foreach ($this->schedule as $day => $data) {
 
+            // Si el empleado no activó el día, no validar
             if (empty($data['active']) || !$data['active']) {
+                continue;
+            }
+
+            // Si la empresa no tiene activo ese día
+            if (empty($companySchedule[$day]['active']) || !$companySchedule[$day]['active']) {
+                $this->addError("schedule.$day.active", "La empresa no tiene habilitado este día ($day).");
                 continue;
             }
 
@@ -60,12 +69,10 @@ trait HasSchedule
             $companyStart = strtotime($companySchedule[$day]['start'] ?? '00:00');
             $companyEnd   = strtotime($companySchedule[$day]['end'] ?? '00:00');
 
-            // Si el empleado inicia antes que la empresa
             if ($empStart < $companyStart) {
                 $this->addError("schedule.$day.start", "El horario de inicio del empleado no puede ser antes del horario de la empresa ($day).");
             }
 
-            // Si el empleado termina después que la empresa
             if ($empEnd > $companyEnd) {
                 $this->addError("schedule.$day.end", "El horario de cierre del empleado no puede ser después del horario de la empresa ($day).");
             }

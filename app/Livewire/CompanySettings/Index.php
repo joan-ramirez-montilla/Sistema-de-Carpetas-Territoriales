@@ -86,7 +86,7 @@ class Index extends Component
 
         $this->schedule = $this->mergeSchedule($this->schedule);
 
-        $this->validateSchedule($this->schedule);
+        $this->validateSchedule();
 
         if ($this->getErrorBag()->any()) {
             return;

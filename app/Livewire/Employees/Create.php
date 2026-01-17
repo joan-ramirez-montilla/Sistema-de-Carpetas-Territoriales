@@ -36,9 +36,9 @@ class Create extends Component
 
         $this->schedule = $this->mergeSchedule($this->schedule);
 
-        $this->validateSchedule($this->schedule);
+        $this->validateSchedule();
 
-        $this->validateScheduleWithinCompany($this->schedule, $this->companySetting->schedule);
+        $this->validateScheduleWithinCompany($this->companySetting->schedule);
 
         if ($this->getErrorBag()->any()) {
             return;
