@@ -9,9 +9,7 @@ $this->dispatch('notify',
 
 
 PENDIENTE:
-Dashboard, de los empleados y admin
 Que los empleados puedan modificar su perfil de empleado
 
 
 Pagina home donde muestre informacion de la empresa y calendario para que los usuario agenden cita.
-
