@@ -44,6 +44,25 @@
             <flux:error name="duration" />
         </flux:field>
 
+        {{-- Image --}}
+        <flux:field>
+            <flux:label>Imagen</flux:label>
+            <flux:input wire:model="image" type="file" :invalid="$errors->has('image')" />
+            <flux:error name="image" />
+
+            {{-- Vista previa --}}
+            @if ($image)
+                <img src="{{ $image->temporaryUrl() }}" class="mt-3 w-32 h-32 object-cover rounded" />
+            @endif
+        </flux:field>
+
+        {{-- Color --}}
+        <flux:field>
+            <flux:label>Color</flux:label>
+            <flux:input wire:model.defer="color" type="color" :invalid="$errors->has('color')" />
+            <flux:error name="color" />
+        </flux:field>
+
         {{-- Actions --}}
         <div class="flex justify-end gap-3 pt-4">
             <flux:button href="{{ route('services.index') }}" variant="ghost">

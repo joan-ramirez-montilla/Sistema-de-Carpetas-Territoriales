@@ -57,7 +57,7 @@ class Index extends Component
     {
         return [
             'name'            => 'required|string|max:255',
-            'logo'            => 'nullable|image', // 2MB
+            'logo'            => 'nullable|image',
             'phone'           => 'nullable|string|max:50',
             'email'           => 'nullable|email|max:255',
             'map_url'         => 'nullable|url|max:500',

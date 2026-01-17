@@ -27,8 +27,14 @@
             <flux:field>
                 <flux:label>Logo</flux:label>
 
-                @if ($logo_path)
-                    <img src="{{ asset('storage/logos/' . $logo_path) }}" alt="Logo" class="h-30 mt-2 mb-2">
+                {{-- Si hay un logo nuevo cargado, mostrar preview del nuevo --}}
+                @if ($logo)
+                    <img src="{{ $logo->temporaryUrl() }}" alt="Logo Preview" class="h-30 mt-2 mb-2">
+
+                    {{-- Si NO hay logo nuevo, mostrar el logo actual --}}
+                @elseif ($companySetting->logo)
+                    <img src="{{ asset('storage/logos/' . $companySetting->logo) }}" alt="Logo"
+                        class="h-30 mt-2 mb-2">
                 @endif
 
                 <flux:input type="file" wire:model="logo" accept="image/*" :invalid="$errors->has('logo')" />
@@ -36,6 +42,7 @@
                     <span class="text-sm text-red-500">{{ $message }}</span>
                 @enderror
             </flux:field>
+
 
             <flux:field>
                 <flux:label>Teléfono</flux:label>

@@ -9,5 +9,40 @@ $this->dispatch('notify',
 
 
 PENDIENTE:
+TODO: A los servicios, ponerle foto y un color
+Crear una session de calendario para solo los admin, para que puedan agregar dias de fiesta o no laborables.
+En la home muestrar informacion de la empresa y calendario para que los usuario agenden cita.
+Trabajar la logica de alerta (ya luego integral la api de facebook).
 
-Pagina home donde muestre informacion de la empresa y calendario para que los usuario agenden cita.
+
+
+
+Categorías de corte
+
+Fade / Desvanecido
+
+Corte clásico
+
+Corte largo
+
+Corte con diseño
+
+Barba
+
+Afeitado
+
+
+Para una cita:
+Pantalla 1: telefono y nombre
+patalla 2: seleciona el barbero
+pantalla 3: seleciona el serivicio
+pantalla 4: fecha y hora disponible
+
+
+https://static.vecteezy.com/system/resources/previews/012/995/479/non_2x/barber-shop-mobile-phone-app-interface-template-free-vector.jpg
+
+https://static.vecteezy.com/system/resources/previews/012/995/476/non_2x/barber-shop-booking-application-interface-template-for-smartphone-free-vector.jpg
+
+https://img.freepik.com/vector-gratis/encuentra-reserva-aplicacion-reserva-peluquero_23-2148564013.jpg?t=st=1768185784~exp=1768189384~hmac=8af3933b72f7e95534a5a674ccea555ed2d3281ec2a16b690cdd32eaa85b8dd7
+
+https://images.ctfassets.net/2d5q1td6cyxq/5fq24HTAGLQKUn8ZunOInB/3d5ee67b073b2ae6f9bfad7afe14cd17/PD07334_USES_Module_2_Mobile.png

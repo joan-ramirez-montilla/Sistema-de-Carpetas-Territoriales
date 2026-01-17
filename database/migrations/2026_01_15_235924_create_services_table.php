@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price', 8, 2)->nullable();
             $table->integer('duration')->nullable();
+            $table->string('image')->nullable();
+            $table->string('color')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
