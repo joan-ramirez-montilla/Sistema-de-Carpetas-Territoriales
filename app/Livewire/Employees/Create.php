@@ -12,7 +12,7 @@ class Create extends Component
 {
     use HasSchedule;
 
-    public $name, $phone, $email, $schedule = [], $password, $status = 'active';
+    public $companySetting, $name, $phone, $email, $schedule = [], $password, $status = 'active';
 
     public function mount()
     {

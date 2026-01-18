@@ -13,7 +13,6 @@ class Index extends Component
     use WithFileUploads, HasSchedule;
 
     public $companySetting;
-
     public $name;
     public $logo;
     public $phone;
@@ -29,6 +28,7 @@ class Index extends Component
     public $seo_title;
     public $seo_description;
     public $seo_keywords;
+    public $location_description;
 
     public function mount()
     {
@@ -39,41 +39,43 @@ class Index extends Component
 
         // Rellenar propiedades
         $this->fill([
-            'name'            => $this->companySetting->name,
-            'phone'           => $this->companySetting->phone,
-            'email'           => $this->companySetting->email,
-            'map_url'         => $this->companySetting->map_url,
-            'primary_color'   => $this->companySetting->primary_color ?? '#000000',
-            'secondary_color' => $this->companySetting->secondary_color ?? '#ffffff',
-            'schedule'        => $this->mergeSchedule($this->companySetting->schedule),
-            'facebook'        => $this->companySetting->facebook,
-            'instagram'       => $this->companySetting->instagram,
-            'twitter'         => $this->companySetting->twitter,
-            'whatsapp'        => $this->companySetting->whatsapp,
-            'seo_title'       => $this->companySetting->seo_title,
-            'seo_description' => $this->companySetting->seo_description,
-            'seo_keywords'    => $this->companySetting->seo_keywords,
+            'name'                 => $this->companySetting->name,
+            'phone'                => $this->companySetting->phone,
+            'email'                => $this->companySetting->email,
+            'map_url'              => $this->companySetting->map_url,
+            'primary_color'        => $this->companySetting->primary_color ?? '#000000',
+            'secondary_color'      => $this->companySetting->secondary_color ?? '#ffffff',
+            'schedule'             => $this->mergeSchedule($this->companySetting->schedule),
+            'facebook'             => $this->companySetting->facebook,
+            'instagram'            => $this->companySetting->instagram,
+            'twitter'              => $this->companySetting->twitter,
+            'whatsapp'             => $this->companySetting->whatsapp,
+            'seo_title'            => $this->companySetting->seo_title,
+            'seo_description'      => $this->companySetting->seo_description,
+            'seo_keywords'         => $this->companySetting->seo_keywords,
+            'location_description' => $this->companySetting->location_description
         ]);
     }
 
     protected function rules()
     {
         return [
-            'name'            => 'required|string|max:255',
-            'logo'            => 'nullable|image',
-            'phone'           => 'nullable|string|max:50',
-            'email'           => 'nullable|email|max:255',
-            'map_url'         => 'nullable|url|max:500',
-            'primary_color'   => 'nullable|string|size:7',
-            'secondary_color' => 'nullable|string|size:7',
-            'schedule'        => 'nullable|array',
-            'facebook'        => 'nullable|url|max:255',
-            'instagram'       => 'nullable|url|max:255',
-            'twitter'         => 'nullable|url|max:255',
-            'whatsapp'        => 'nullable|url|max:255',
-            'seo_title'       => 'nullable|string|max:255',
-            'seo_description' => 'nullable|string|max:500',
-            'seo_keywords'    => 'nullable|string|max:255',
+            'name'                    => 'required|string|max:255',
+            'logo'                    => 'nullable|image',
+            'phone'                   => 'nullable|string|max:50',
+            'email'                   => 'nullable|email|max:255',
+            'primary_color'           => 'nullable|string|size:7',
+            'secondary_color'         => 'nullable|string|size:7',
+            'schedule'                => 'nullable|array',
+            'facebook'                => 'nullable|url|max:255',
+            'instagram'               => 'nullable|url|max:255',
+            'twitter'                 => 'nullable|url|max:255',
+            'whatsapp'                => 'nullable|url|max:255',
+            'seo_title'               => 'nullable|string|max:255',
+            'seo_description'         => 'nullable|string|max:500',
+            'seo_keywords'            => 'nullable|string|max:255',
+            'map_url'                 => 'nullable|url|max:500',
+            'location_description'    => 'nullable|string|max:255',
         ];
     }
 
@@ -125,6 +127,7 @@ class Index extends Component
                 'seo_title' => $this->seo_title,
                 'seo_description' => $this->seo_description,
                 'seo_keywords' => $this->seo_keywords,
+                'location_description' => $this->location_description,
             ]
         );
 

@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('logo')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            $table->string('map_url')->nullable();
+            $table->text('map_url')->nullable();
+            $table->string('location_description')->nullable();
 
             // Colores y Branding
             $table->string('primary_color')->nullable();

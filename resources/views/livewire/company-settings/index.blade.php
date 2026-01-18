@@ -67,6 +67,16 @@
                     <span class="text-sm text-red-500">{{ $message }}</span>
                 @enderror
             </flux:field>
+
+
+            <flux:field>
+                <flux:label>Describe la ubicación</flux:label>
+                <flux:input wire:model.defer="location_description" placeholder="Calle 12..." />
+                @error('location_description')
+                    <span class="text-sm text-red-500">{{ $message }}</span>
+                @enderror
+            </flux:field>
+
         </div>
 
         {{-- Sección: Colores y Branding --}}

@@ -15,7 +15,8 @@ class CompanySetting extends Model
         'name', 'logo', 'phone', 'email', 'map_url',
         'primary_color', 'secondary_color', 'schedule',
         'facebook', 'instagram', 'twitter', 'whatsapp',
-        'seo_title', 'seo_description', 'seo_keywords'
+        'seo_title', 'seo_description', 'seo_keywords',
+        'location_description'
     ];
 
     protected $casts = [
