@@ -12,7 +12,7 @@ class HomeContent extends Component
     public function mount()
     {
         $this->companySetting = CompanySetting::first() ?? new CompanySetting();
-        $employees = Employee::where('status', 'active')->get();
+        $this->employees = Employee::where('status', 'active')->get();
     }
 
     public function render()

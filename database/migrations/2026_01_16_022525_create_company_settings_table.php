@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('company_settings', function (Blueprint $table) {
             $table->id();
 
-
             // Información general
             $table->string('name')->nullable();
             $table->string('logo')->nullable();
@@ -24,8 +23,8 @@ return new class extends Migration
             $table->string('location_description')->nullable();
 
             // Colores y Branding
-            $table->string('primary_color')->nullable();
-            $table->string('secondary_color')->nullable();
+            $table->string('primary_color')->default('#1b18cd');
+            $table->string('secondary_color')->default('#000000');
 
             // Calendario / Horario
             $table->json('schedule')->nullable(); // Guardaremos un JSON con los días y horas

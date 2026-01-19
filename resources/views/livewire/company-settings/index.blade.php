@@ -43,14 +43,21 @@
                 @enderror
             </flux:field>
 
-
             <flux:field>
                 <flux:label>Teléfono</flux:label>
-                <flux:input wire:model.defer="phone" placeholder="809-000-0000" />
+                <flux:input id="phone" wire:model.defer="phone" placeholder="809-000-0000" />
                 @error('phone')
                     <span class="text-sm text-red-500">{{ $message }}</span>
                 @enderror
             </flux:field>
+
+            <script>
+                new Cleave('#phone', {
+                    delimiters: ['-', '-'],
+                    blocks: [3, 3, 4],
+                    numericOnly: true
+                });
+            </script>
 
             <flux:field>
                 <flux:label>Correo electrónico</flux:label>

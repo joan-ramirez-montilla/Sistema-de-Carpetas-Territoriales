@@ -37,9 +37,17 @@
         {{-- Phone --}}
         <flux:field>
             <flux:label>Número de teléfono</flux:label>
-            <flux:input wire:model.defer="phone" placeholder="809-000-0000" :invalid="$errors->has('phone')" />
+            <flux:input id="phone" wire:model.defer="phone" placeholder="809-000-0000" :invalid="$errors->has('phone')" />
             <flux:error name="phone" />
         </flux:field>
+
+        <script>
+            new Cleave('#phone', {
+                delimiters: ['-', '-'],
+                blocks: [3, 3, 4],
+                numericOnly: true
+            });
+        </script>
 
         {{-- Status --}}
         <flux:field>
