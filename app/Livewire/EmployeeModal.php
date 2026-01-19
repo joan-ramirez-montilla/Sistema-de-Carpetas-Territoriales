@@ -9,8 +9,14 @@ class EmployeeModal extends Component
 {
     public $showModal = false;
     public $employee = null;
+    public $primaryColor;
 
     protected $listeners = ['openEmployeeModal' => 'openModal'];
+
+    public function mount($primaryColor)
+    {
+        $this->primaryColor = $primaryColor;
+    }
 
     public function openModal($employeeId)
     {

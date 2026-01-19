@@ -18,12 +18,11 @@
 
         <!-- Contenido -->
         <div class="flex items-center justify-center min-h-screen px-0">
-            <div class="inline-block w-full sm:max-w-3xl bg-white rounded-xl shadow-2xl z-50 relative h-[100vh]"
-                x-show="show"
-                x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-95"
-                x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200"
-                x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
-                x-on:click.away="show = false; $wire.closeModal()">
+            <div class="inline-block w-full sm:max-w-3xl bg-white shadow-2xl z-50 relative h-[100vh]"
+                x-show="show" x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-95" x-on:click.away="show = false; $wire.closeModal()">
 
                 @if ($employee)
                     <div class="p-6 h-full overflow-y-auto">
@@ -67,8 +66,10 @@
 
                         <!-- Botón Reservar -->
                         <button
-                            class="w-full py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800
-                                   transition-colors duration-200 mb-8">
+                            class="w-full py-3 text-white font-medium rounded-lg transition-colors duration-200 mb-8"
+                            style="background-color: {{ $primaryColor }};"
+                            onmouseover="this.style.backgroundColor='{{ $primaryColor }}'; this.style.filter='brightness(0.9)';"
+                            onmouseout="this.style.backgroundColor='{{ $primaryColor }}'; this.style.filter='brightness(1)';">
                             Reservar
                         </button>
 

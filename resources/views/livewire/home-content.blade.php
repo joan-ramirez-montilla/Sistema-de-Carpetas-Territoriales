@@ -100,7 +100,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div> {{-- Componente Livewire del Modal --}} <livewire:employee-modal />
+            </div> {{-- Componente Livewire del Modal --}} <livewire:employee-modal :primaryColor="$companySetting->primary_color" />
         </section>
 
         {{-- HORARIO ELEGANTE --}}
