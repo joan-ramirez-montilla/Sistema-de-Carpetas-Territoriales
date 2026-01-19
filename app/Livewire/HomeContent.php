@@ -3,15 +3,16 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\CompanySetting;
+use App\Models\{CompanySetting,Employee};
 
 class HomeContent extends Component
 {
-    public $companySetting;
+    public $companySetting, $employees;
 
     public function mount()
     {
         $this->companySetting = CompanySetting::first() ?? new CompanySetting();
+        $employees = Employee::where('status', 'active')->get();
     }
 
     public function render()
