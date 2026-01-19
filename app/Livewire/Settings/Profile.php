@@ -8,34 +8,47 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Profile extends Component
 {
     use ProfileValidationRules;
+    use WithFileUploads;
 
     public string $name = '';
-
     public string $email = '';
+    public $photo; // <-- NUEVO
 
-    /**
-     * Mount the component.
-     */
     public function mount(): void
     {
         $this->name = Auth::user()->name;
         $this->email = Auth::user()->email;
     }
 
-    /**
-     * Update the profile information for the currently authenticated user.
-     */
     public function updateProfileInformation(): void
     {
         $user = Auth::user();
 
-        $validated = $this->validate($this->profileRules($user->id));
+        // Validación
+        $validated = $this->validate(array_merge(
+            $this->profileRules($user->id),
+            [
+                'photo' => 'nullable|image',
+            ]
+        ));
 
+        // Guardar nombre y correo
         $user->fill($validated);
+
+        // Subir imagen si existe
+        if ($this->photo) {
+            $extension = $this->photo->getClientOriginalExtension();
+            $imageName = 'user-' . uniqid() . '.' . $extension;
+
+            $path = $this->photo->storeAs('photos', $imageName, 'public');
+
+            $user->photo_path = $path;
+        }
 
         if ($user->isDirty('email')) {
             $user->email_verified_at = null;
@@ -46,21 +59,16 @@ class Profile extends Component
         $this->dispatch('profile-updated', name: $user->name);
     }
 
-    /**
-     * Send an email verification notification to the current user.
-     */
     public function resendVerificationNotification(): void
     {
         $user = Auth::user();
 
         if ($user->hasVerifiedEmail()) {
             $this->redirectIntended(default: route('dashboard', absolute: false));
-
             return;
         }
 
         $user->sendEmailVerificationNotification();
-
         Session::flash('status', 'verification-link-sent');
     }
 
