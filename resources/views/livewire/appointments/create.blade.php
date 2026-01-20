@@ -40,7 +40,15 @@
 
                         <input type="text" wire:model="customer_phone"
                             class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
-                            placeholder="Teléfono">
+                            placeholder="Teléfono" id="customer_phone">
+
+                        <script>
+                            new Cleave('#customer_phone', {
+                                delimiters: ['-', '-'],
+                                blocks: [3, 3, 4],
+                                numericOnly: true
+                            });
+                        </script>
                     </div>
                 </section>
 
