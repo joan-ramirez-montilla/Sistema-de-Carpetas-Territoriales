@@ -44,61 +44,50 @@
                     </div>
                 </section>
 
-{{-- 2. SERVICES SELECTION --}}
-<section class="mb-10">
-    <h2 class="text-xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">
-        2. Selecciona el servicio
-    </h2>
+                {{-- 2. SERVICES SELECTION --}}
+                <section class="mb-10">
+                    <h2 class="text-xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">
+                        2. Selecciona el servicio
+                    </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        @foreach ($services as $service)
-            <div
-                wire:click="selectService({{ $service->id }})"
-                class="cursor-pointer flex flex-col items-center gap-3"
-            >
-                {{-- Image wrapper --}}
-                <div
-                    class="relative w-30 h-30 rounded-full flex items-center justify-center"
-                    style="background: {{ $service->color }};"
-                >
-                    {{-- Check --}}
-                    <div
-                        class="absolute top-1 right-1 w-5 h-5 rounded-full
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        @foreach ($services as $service)
+                            <div wire:click="selectService({{ $service->id }})"
+                                class="cursor-pointer flex flex-col items-center gap-3">
+                                {{-- Image wrapper --}}
+                                <div class="relative w-30 h-30 rounded-full flex items-center justify-center"
+                                    style="background: {{ $service->color }};">
+                                    {{-- Check --}}
+                                    <div class="absolute top-1 right-1 w-5 h-5 rounded-full
                                flex items-center justify-center"
-                        style="
+                                        style="
                             background:
-                                {{ $selectedService && $selectedService->id === $service->id
-                                    ? 'var(--color-primary)'
-                                    : 'rgba(255,255,255,0.7)' }};
-                        "
-                    >
-                        @if ($selectedService && $selectedService->id === $service->id)
-                            <i class="fas fa-check text-white text-xs"></i>
-                        @endif
+                                {{ $selectedService && $selectedService->id === $service->id ? 'var(--color-primary)' : 'rgba(255,255,255,0.7)' }};
+                        ">
+                                        @if ($selectedService && $selectedService->id === $service->id)
+                                            <i class="fas fa-check text-white text-xs"></i>
+                                        @endif
+                                    </div>
+
+                                    {{-- Image --}}
+                                    @if ($service->image)
+                                        <img src="{{ asset('storage/services/' . $service->image) }}"
+                                            alt="{{ $service->name }}" class="w-15 h-15 object-contain">
+                                    @else
+                                        <span class="text-base text-white">
+                                            {{ strtoupper(substr($service->name, 0, 1)) }}
+                                        </span>
+                                    @endif
+                                </div>
+
+                                {{-- Text --}}
+                                <p class="text-sm text-center">
+                                    {{ $service->name }}
+                                </p>
+                            </div>
+                        @endforeach
                     </div>
-
-                    {{-- Image --}}
-                    @if ($service->image)
-                        <img
-                            src="{{ asset('storage/services/' . $service->image) }}"
-                            alt="{{ $service->name }}"
-                            class="w-15 h-15 object-contain"
-                        >
-                    @else
-                        <span class="text-base text-white">
-                            {{ strtoupper(substr($service->name, 0, 1)) }}
-                        </span>
-                    @endif
-                </div>
-
-                {{-- Text --}}
-                <p class="text-sm text-center">
-                    {{ $service->name }}
-                </p>
-            </div>
-        @endforeach
-    </div>
-</section>
+                </section>
 
 
 
@@ -110,6 +99,8 @@
                     </h2>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+
                         @foreach ($employees as $employee)
                             <div class="relative cursor-pointer group" wire:click="selectBarber({{ $employee->id }})">
 
@@ -148,7 +139,7 @@
                 </section>
 
                 {{-- 3. DATE SELECTION --}}
-                @if ($currentMonth)
+                @if ($currentMonth && $selectedEmployee)
                     <section class="mb-8">
                         <h2 class="text-xl font-bold mb-4" style="font-family:'Playfair Display', serif;">
                             3. Selecciona la fecha
@@ -200,22 +191,31 @@
                 @endif
 
                 {{-- 4. TIME SELECTION --}}
-                <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">
-                        4. Selecciona el horario
-                    </h2>
+                @if ($selectedDate)
+                    <section class="mb-8">
+                        <h2 class="text-xl font-bold mb-4">
+                            4. Selecciona el horario
+                        </h2>
 
-                    <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
-                        @foreach ($timeSlots as $time)
-                            <label wire:click="$set('selectedTime', '{{ $time }}')"
-                                class="flex items-center justify-center border rounded-xl h-12 cursor-pointer transition-all duration-200
-                                      {{ $selectedTime == $time ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'bg-white text-gray-800 border-gray-200' }}">
-                                <input type="radio" value="{{ $time }}" class="hidden">
-                                <span class="font-semibold">{{ $time }}</span>
-                            </label>
-                        @endforeach
-                    </div>
-                </section>
+                        @if (empty($timeSlots))
+                            <p class="text-sm text-gray-500">
+                                No hay horarios disponibles para este día
+                            </p>
+                        @endif
+
+                        <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+                            @foreach ($timeSlots as $slot)
+                                <button wire:click="$set('selectedTime','{{ $slot['value'] }}')"
+                                    class="h-12 rounded-xl border font-medium transition
+                    {{ $selectedTime === $slot['value']
+                        ? 'bg-[var(--color-primary)] text-white'
+                        : 'bg-white border-gray-200 hover:bg-gray-100' }}">
+                                    {{ $slot['label'] }}
+                                </button>
+                            @endforeach
+                        </div>
+                    </section>
+                @endif
 
 
 

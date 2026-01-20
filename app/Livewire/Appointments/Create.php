@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Appointments;
 
-use Carbon\Carbon;
 use Livewire\Component;
+use Carbon\Carbon;
 use App\Models\Employee;
 use App\Models\Appointment;
 use App\Models\CompanySetting;
@@ -12,62 +12,99 @@ use App\Models\Service;
 class Create extends Component
 {
     public CompanySetting $companySetting;
+
     public $employees;
+    public $services;
 
     public $selectedEmployee = null;
+    public $selectedService = null;
+
     public $selectedDate = null;
     public $selectedTime = null;
 
     public $customer_name = '';
     public $customer_phone = '';
 
-    public $availableMonths = [];
-    public $currentMonthIndex = 0;
+    public array $timeSlots = [];
 
-    public $services;
-    public $selectedService = null;
+    public array $availableMonths = [];
+    public int $currentMonthIndex = 0;
 
     private const DAYS_RANGE = 15;
-    private const TIME_SLOTS = [
-        '10:00', '10:30', '11:00', '11:30', '12:00', '12:30',
-        '13:00', '13:30', '14:00', '14:30', '15:00', '15:30',
-        '16:00', '16:20', '16:40', '17:00'
-    ];
+    private const INTERVAL = 45;
+
+    /* ===================== MOUNT ===================== */
 
     public function mount(): void
     {
-        $this->initializeCompanySettings();
-        $this->loadActiveEmployees();
-        $this->loadActiveServices();
+        $this->companySetting = CompanySetting::first() ?? new CompanySetting();
+        $this->employees = Employee::where('status', 'active')->get();
+        $this->services = Service::all();
         $this->generateAvailableDates();
     }
 
-    private function initializeCompanySettings(): void
+    /* ===================== WATCHERS ===================== */
+
+    public function updatedSelectedEmployee()
     {
-        $this->companySetting = CompanySetting::first() ?? new CompanySetting();
+        $this->selectedDate = null;
+        $this->selectedTime = null;
+        $this->timeSlots = [];
     }
 
-    private function loadActiveEmployees(): void
+    public function updatedSelectedDate()
     {
-        $this->employees = Employee::where('status', 'active')->get();
+        $this->selectedTime = null;
+        $this->loadAvailableTimeSlots();
     }
 
-    private function loadActiveServices(): void
-    {
-        $this->services = Service::all();
-    }
+    /* ===================== SELECTION ===================== */
 
-    public function selectBarber(int $id): void
+    public function selectBarber(int $id)
     {
         $this->selectedEmployee = Employee::find($id);
+
+        // Limpieza forzada
+        $this->selectedDate = null;
+        $this->selectedTime = null;
+        $this->timeSlots = [];
     }
 
-    public function selectService(int $id): void
+    public function selectService(int $id)
     {
         $this->selectedService = Service::find($id);
     }
 
-    public function previousMonth(): void
+    /* ===================== CALENDAR ===================== */
+
+    private function generateAvailableDates(): void
+    {
+        $start = Carbon::today();
+        $months = [];
+
+        for ($i = 0; $i < self::DAYS_RANGE; $i++) {
+            $date = $start->copy()->addDays($i);
+            $key = $date->format('Y-m');
+
+            if (!isset($months[$key])) {
+                $months[$key] = [
+                    'monthName' => $this->spanishMonth($date->format('m')),
+                    'year' => $date->format('Y'),
+                    'dates' => [],
+                ];
+            }
+
+            $months[$key]['dates'][] = [
+                'value' => $date->format('Y-m-d'),
+                'number' => $date->format('d'),
+                'day' => $this->spanishShortDay($date->format('D')),
+            ];
+        }
+
+        $this->availableMonths = array_values($months);
+    }
+
+    public function previousMonth()
     {
         if ($this->currentMonthIndex > 0) {
             $this->currentMonthIndex--;
@@ -75,7 +112,7 @@ class Create extends Component
         }
     }
 
-    public function nextMonth(): void
+    public function nextMonth()
     {
         if ($this->currentMonthIndex < count($this->availableMonths) - 1) {
             $this->currentMonthIndex++;
@@ -83,122 +120,131 @@ class Create extends Component
         }
     }
 
-    private function generateAvailableDates(): void
+    /* ===================== TIME SLOTS CORE ===================== */
+    private function loadAvailableTimeSlots(): void
     {
-        $startDate = Carbon::today();
-        $months = [];
-
-        for ($i = 0; $i < self::DAYS_RANGE; $i++) {
-            $date = $startDate->copy()->addDays($i);
-            $monthKey = $date->format('Y-m');
-
-            if (!isset($months[$monthKey])) {
-                $months[$monthKey] = $this->createMonthStructure($date);
-            }
-
-            $months[$monthKey]['dates'][] = $this->createDateStructure($date);
+        if (!$this->selectedEmployee || !$this->selectedDate) {
+            $this->timeSlots = [];
+            return;
         }
 
-        $this->availableMonths = array_values($months);
-        $this->currentMonthIndex = 0;
+        $employee = $this->selectedEmployee;
+        $date = Carbon::parse($this->selectedDate);
+
+        $dayName = $this->spanishFullDay($date->format('D'));
+        $schedule = $employee->schedule[$dayName] ?? null;
+
+        if (!$schedule || !$schedule['active']) {
+            $this->timeSlots = [];
+            return;
+        }
+
+        $start = Carbon::createFromFormat('H:i', $schedule['start']);
+        $end   = Carbon::createFromFormat('H:i', $schedule['end']);
+
+        $takenTimes = Appointment::where('employee_id', $employee->id)
+            ->whereDate('appointment_date', $this->selectedDate)
+            ->pluck('appointment_time')
+            ->map(function ($time) {
+                return Carbon::parse($time)->format('H:i');
+            })
+            ->toArray();
+
+        $slots = [];
+
+        while ($start->lt($end)) {
+            $time24 = $start->format('H:i'); // valor real para comparar
+            $timeAMPM = $start->format('g:i A'); // formato para mostrar
+
+            // excluir horas pasadas si es hoy
+            if ($date->isToday() && $start->lt(now())) {
+                $start->addMinutes(self::INTERVAL);
+                continue;
+            }
+
+            // excluir horas ya tomadas
+            if (!in_array($time24, $takenTimes)) {
+                $slots[] = [
+                    'value' => $time24,
+                    'label' => $timeAMPM,
+                ];
+            }
+
+            $start->addMinutes(self::INTERVAL);
+        }
+
+        $this->timeSlots = $slots;
     }
 
-    private function createMonthStructure(Carbon $date): array
-    {
-        return [
-            'monthName' => $this->getSpanishMonthName($date->format('m')),
-            'year' => $date->format('Y'),
-            'dates' => [],
-        ];
-    }
-
-    private function createDateStructure(Carbon $date): array
-    {
-        return [
-            'value' => $date->format('Y-m-d'),
-            'day' => $this->getSpanishDayName($date->format('D')),
-            'number' => $date->format('d'),
-        ];
-    }
-
-    private function getSpanishMonthName(string $monthNumber): string
-    {
-        $months = [
-            '01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo',
-            '04' => 'Abril', '05' => 'Mayo', '06' => 'Junio',
-            '07' => 'Julio', '08' => 'Agosto', '09' => 'Septiembre',
-            '10' => 'Octubre', '11' => 'Noviembre', '12' => 'Diciembre',
-        ];
-
-        return $months[$monthNumber];
-    }
-
-    private function getSpanishDayName(string $englishDay): string
-    {
-        $days = [
-            'Mon' => 'Lun', 'Tue' => 'Mar', 'Wed' => 'Mié',
-            'Thu' => 'Jue', 'Fri' => 'Vie', 'Sat' => 'Sáb',
-            'Sun' => 'Dom',
-        ];
-
-        return $days[$englishDay];
-    }
-
-    public function getTimeSlots(): array
-    {
-        return self::TIME_SLOTS;
-    }
-
-    public function getCurrentMonth(): ?array
-    {
-        return $this->availableMonths[$this->currentMonthIndex] ?? null;
-    }
+    /* ===================== STORE ===================== */
 
     protected $rules = [
-        'customer_name'   => 'required|string|min:3',
-        'customer_phone'  => 'required|string|min:10',
-        'selectedEmployee'=> 'required',
-        'selectedService'  => 'required',
-        'selectedDate'    => 'required|date',
-        'selectedTime'    => 'required',
+        'customer_name' => 'required|min:3',
+        'customer_phone' => 'required|min:10',
+        'selectedService' => 'required',
+        'selectedEmployee' => 'required',
+        'selectedDate' => 'required|date',
+        'selectedTime' => 'required',
     ];
 
     public function storeAppointment()
     {
         $this->validate();
 
+        // Seguridad: evitar doble reserva
+        $exists = Appointment::where('employee_id', $this->selectedEmployee->id)
+            ->whereDate('appointment_date', $this->selectedDate)
+            ->where('appointment_time', $this->selectedTime)
+            ->exists();
+
+        if ($exists) {
+            $this->addError('selectedTime', 'Este horario ya fue tomado.');
+            return;
+        }
+
         Appointment::create([
-            'client_name'       => $this->customer_name,
-            'phone'             => $this->customer_phone,
-            'service_id'        => $this->selectedService->id,
-            'employee_id'       => $this->selectedEmployee->id,
-            'appointment_date'  => $this->selectedDate,
-            'appointment_time'  => $this->selectedTime,
-            'notes'             => null,
+            'client_name' => $this->customer_name,
+            'phone' => $this->customer_phone,
+            'service_id' => $this->selectedService->id,
+            'employee_id' => $this->selectedEmployee->id,
+            'appointment_date' => $this->selectedDate,
+            'appointment_time' => $this->selectedTime,
         ]);
 
-        // Resetear formulario
-        $this->reset([
-            'customer_name',
-            'customer_phone',
-            'selectedEmployee',
-            'selectedDate',
-            'selectedTime',
-            'selectedService',
-        ]);
+        dd('Hacer una pantalla de reserva (o verificar si hacer un redirect).');
+    }
 
-        // Opcional: volver al primer mes
-        $this->currentMonthIndex = 0;
+    /* ===================== HELPERS ===================== */
 
-        // Mensaje de éxito
-        session()->flash('success', '✅ Cita agendada correctamente');
+    private function spanishMonth($m)
+    {
+        return [
+            '01'=>'Enero','02'=>'Febrero','03'=>'Marzo','04'=>'Abril',
+            '05'=>'Mayo','06'=>'Junio','07'=>'Julio','08'=>'Agosto',
+            '09'=>'Septiembre','10'=>'Octubre','11'=>'Noviembre','12'=>'Diciembre'
+        ][$m];
+    }
+
+    private function spanishShortDay($d)
+    {
+        return [
+            'Mon'=>'Lun','Tue'=>'Mar','Wed'=>'Mié',
+            'Thu'=>'Jue','Fri'=>'Vie','Sat'=>'Sáb','Sun'=>'Dom'
+        ][$d];
+    }
+
+    private function spanishFullDay($d)
+    {
+        return [
+            'Mon'=>'Lunes','Tue'=>'Martes','Wed'=>'Miércoles',
+            'Thu'=>'Jueves','Fri'=>'Viernes','Sat'=>'Sábado','Sun'=>'Domingo'
+        ][$d];
     }
 
     public function render()
     {
         return view('livewire.appointments.create', [
-            'timeSlots' => $this->getTimeSlots(),
-            'currentMonth' => $this->getCurrentMonth(),
+            'currentMonth' => $this->availableMonths[$this->currentMonthIndex] ?? null,
         ]);
     }
 }
