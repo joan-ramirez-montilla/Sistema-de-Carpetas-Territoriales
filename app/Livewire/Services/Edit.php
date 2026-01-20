@@ -50,17 +50,26 @@ class Edit extends Component
     {
         $validated = $this->validate();
 
+        // Si NO se sube nueva imagen, conservar la actual
+        if (!$this->image) {
+            $validated['image'] = $this->service->image;
+        }
+
         // Si el usuario sube una nueva imagen
         if ($this->image) {
 
-            // Eliminar imagen anterior si existe
-            if ($this->service->image && Storage::disk('public')->exists('services/' . $this->service->image)) {
+            // Eliminar imagen anterior
+            if (
+                $this->service->image &&
+                Storage::disk('public')->exists('services/' . $this->service->image)
+            ) {
                 Storage::disk('public')->delete('services/' . $this->service->image);
             }
 
             // Guardar nueva imagen
             $extension = $this->image->getClientOriginalExtension();
             $imageName = 'service-' . uniqid() . '-' . rand(1000, 9999) . '.' . $extension;
+
             $this->image->storeAs('services', $imageName, 'public');
 
             $validated['image'] = $imageName;

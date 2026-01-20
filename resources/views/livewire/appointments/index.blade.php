@@ -7,27 +7,31 @@
         </div>
     </div>
 
-
     {{-- Filtros --}}
     <div class="flex flex-col sm:flex-row gap-4 mb-4">
 
         @if (auth()->user()->role == 'admin')
-            {{-- Empleado --}}
             <div>
-                <flux:select wire:model="filterEmployee" label="Empleado">
+                <flux:select wire:model.live="filterEmployee" label="Empleado">
                     <option value="">Todos</option>
+                    @foreach ($employees as $employee)
+                        <option value="{{ $employee->id }}">
+                            {{ $employee->user->name }}
+                        </option>
+                    @endforeach
                 </flux:select>
             </div>
         @endif
 
+
         {{-- Fecha --}}
         <div>
-            <flux:input type="date" wire:model="filterDate" label="Fecha" />
+            <flux:input type="date" wire:model.live="filterDate" label="Fecha" />
         </div>
 
         {{-- Estado --}}
         <div>
-            <flux:select wire:model="filterStatus" label="Estado">
+            <flux:select wire:model.live="filterStatus" label="Estado">
                 <option value="">Todos</option>
                 <option value="scheduled">Agendada</option>
                 <option value="completed">Completada</option>
@@ -42,6 +46,7 @@
             <thead class="bg-gray-50 dark:bg-gray-800">
                 <tr>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Cliente</th>
+                    <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Empleado</th>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Celular</th>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Servicio</th>
                     <th class="px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200">Fecha</th>
@@ -60,6 +65,10 @@
                         </td>
 
                         <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
+                            {{ $appointment->employee->user->name }}
+                        </td>
+
+                        <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
                             {{ $appointment->phone }}
                         </td>
 
@@ -68,7 +77,7 @@
                         </td>
 
                         <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
-                            {{ $appointment->appointment_date->format('d/m/Y') }}
+                            {{ $appointment->appointment_date }}
                         </td>
 
                         <td class="px-4 py-3 text-gray-800 dark:text-gray-100">
@@ -78,25 +87,18 @@
                         <td class="px-4 py-3">
                             <flux:badge
                                 :color="
-                                                                $appointment->status === 'scheduled' ? 'blue' :
-                                                                ($appointment->status === 'completed' ? 'green' : 'red')
+                                                                    $appointment->status === 'scheduled' ? 'blue' :
+                                                                    ($appointment->status === 'completed' ? 'green' : 'red')
                                 ">
                                 {{ ucfirst($appointment->status) }}
                             </flux:badge>
                         </td>
 
                         <td class="px-4 py-3">
-                            <div class="flex gap-3">
-                                <flux:button href="{{ route('appointments.edit', $appointment) }}" size="sm"
-                                    icon="pencil">
-                                    Editar
-                                </flux:button>
-
-                                <flux:button wire:click="delete({{ $appointment->id }})" variant="danger" size="sm"
-                                    icon="trash">
-                                    Eliminar
-                                </flux:button>
-                            </div>
+                            <flux:button wire:click="delete({{ $appointment->id }})" variant="danger" size="sm"
+                                icon="trash">
+                                Eliminar
+                            </flux:button>
                         </td>
 
                     </tr>

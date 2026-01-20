@@ -2,7 +2,7 @@
 
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\{HomeController, AppointmentController};
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -42,5 +42,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::livewire('/', 'appointments.index')->name('index');
     });
 });
+
+Route::prefix('citas')->name('appointments.')->group(function () {
+    Route::get('/agendar', [AppointmentController::class, 'create'])->name('create');
+});
+
 
 require __DIR__.'/settings.php';

@@ -1,5 +1,5 @@
 @extends('layouts.site')
 
 @section('content')
-    @livewire('home-content')
+    @livewire('appointments.create')
 @endsection

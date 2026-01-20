@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('client_name');
             $table->string('phone');
             $table->foreignId('service_id')->constrained('services')->onDelete('cascade');
+            $table->foreignId('employee_id')->constrained('services')->onDelete('cascade');
             $table->date('appointment_date');
             $table->time('appointment_time');
             $table->enum('status', ['scheduled', 'completed', 'canceled'])->default('scheduled');

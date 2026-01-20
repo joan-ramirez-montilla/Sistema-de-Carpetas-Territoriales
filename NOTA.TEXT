@@ -8,11 +8,9 @@ $this->dispatch('notify',
 
 
 PENDIENTE:
-Que los usuarios tengan fotos de perfil.
-EN LA HOME, poner los barberos para que puedan ver su portafolio.
+Hacer la pantalla para la cita.
 
 Crear una session de calendario para solo los admin, para que puedan agregar dias de fiesta o no laborables.
-En la home muestrar informacion de la empresa y calendario para que los usuario agenden cita.
 Trabajar la logica de alerta (ya luego integral la api de facebook).
 
 
@@ -37,7 +35,6 @@ Pantalla 1: telefono y nombre
 patalla 2: seleciona el barbero
 pantalla 3: seleciona el serivicio
 pantalla 4: fecha y hora disponible
-
 
 https://static.vecteezy.com/system/resources/previews/012/995/479/non_2x/barber-shop-mobile-phone-app-interface-template-free-vector.jpg
 

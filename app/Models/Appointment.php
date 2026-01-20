@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\{Service, Employee};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -17,6 +18,7 @@ class Appointment extends Model
         'appointment_time',
         'status',
         'notes',
+        'employee_id'
     ];
 
     /**
@@ -25,5 +27,10 @@ class Appointment extends Model
     public function service()
     {
         return $this->belongsTo(Service::class);
+    }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
     }
 }
