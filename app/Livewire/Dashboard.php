@@ -18,17 +18,26 @@ class Dashboard extends Component
     {
         $this->registeredEmployees = Employee::count();
 
-        $this->todayAppointments = Appointment::whereDate('created_at', Carbon::today())->count();
+        // Hoy (año actual)
+        $this->todayAppointments = Appointment::whereDate('appointment_date', Carbon::today())
+            ->whereYear('appointment_date', Carbon::now()->year)
+            ->count();
 
-        $this->monthlyAppointments = Appointment::whereMonth('created_at', Carbon::now()->month)->count();
+        // Mes actual (año actual)
+        $this->monthlyAppointments = Appointment::whereMonth('appointment_date', Carbon::now()->month)
+            ->whereYear('appointment_date', Carbon::now()->year)
+            ->count();
 
-        $this->pendingAppointments = Appointment::where('status', 'pending')->count();
+        // Pendientes (año actual)
+        $this->pendingAppointments = Appointment::where('status', 'pending')
+            ->whereYear('appointment_date', Carbon::now()->year)
+            ->count();
 
-        // Datos para el gráfico mensual
+        // Datos para el gráfico mensual (año actual)
         $this->monthlyAppointmentsChart = [];
         for ($m = 1; $m <= 12; $m++) {
-            $this->monthlyAppointmentsChart[] = Appointment::whereMonth('created_at', $m)
-                ->whereYear('created_at', Carbon::now()->year)
+            $this->monthlyAppointmentsChart[] = Appointment::whereMonth('appointment_date', $m)
+                ->whereYear('appointment_date', Carbon::now()->year)
                 ->count();
         }
     }

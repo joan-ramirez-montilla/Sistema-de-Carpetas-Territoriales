@@ -4,10 +4,7 @@ namespace App\Livewire\Appointments;
 
 use Livewire\Component;
 use Carbon\Carbon;
-use App\Models\Employee;
-use App\Models\Appointment;
-use App\Models\CompanySetting;
-use App\Models\Service;
+use App\Models\{CompanySetting, Service, Appointment, Employee};
 
 class Create extends Component
 {
