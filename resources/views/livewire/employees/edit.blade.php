@@ -62,6 +62,7 @@
 
         @include('components.schedule', [
             'schedule' => $schedule,
+            'availableHours' => $availableHours,
             'title' => 'Calendario y Horario',
             'description' =>
                 'Selecciona los días de la semana y define la hora de inicio y fin de cada jornada laboral.',

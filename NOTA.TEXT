@@ -8,9 +8,21 @@ $this->dispatch('notify',
 
 
 PENDIENTE:
+
+poner esto desde la configuracion de la empresa:
+    private const DAYS_RANGE = 15;
+    private const INTERVAL = 45;
+
 Manimular las citas desde el panel
 
-g
+Ajustar el diseno un poco
+
+Agregar Twilio para SMS
+
+
+
+
+
 Categorías de corte
 
 Fade / Desvanecido

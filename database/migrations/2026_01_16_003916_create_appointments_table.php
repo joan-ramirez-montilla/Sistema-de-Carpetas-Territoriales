@@ -22,11 +22,10 @@ return new class extends Migration
             $table->enum('status', ['scheduled', 'completed', 'canceled'])->default('scheduled');
             $table->text('notes')->nullable();
 
-            $table->unique([
-                'employee_id',
-                'appointment_date',
-                'appointment_time'
-            ]);
+            $table->unique(
+                ['employee_id', 'appointment_date', 'appointment_time'],
+                'appointments_emp_date_time_unique'
+            );
 
             $table->softDeletes();
             $table->timestamps();

@@ -5,12 +5,13 @@ namespace App\Livewire\Employees;
 use App\Models\User;
 use Livewire\Component;
 use App\Traits\HasSchedule;
-use App\Models\{CompanySetting, Employee};
+use App\Traits\HasAvailableHours;
 use Illuminate\Support\Facades\Hash;
+use App\Models\{CompanySetting, Employee};
 
 class Edit extends Component
 {
-    use HasSchedule;
+    use HasSchedule, HasAvailableHours;
 
     public Employee $employee;
     public $name;
@@ -91,6 +92,8 @@ class Edit extends Component
 
     public function render()
     {
-        return view('livewire.employees.edit');
+        return view('livewire.employees.edit', [
+            'availableHours' => $this->availableHours
+        ]);
     }
 }
