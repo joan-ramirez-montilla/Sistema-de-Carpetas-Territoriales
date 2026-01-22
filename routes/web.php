@@ -4,7 +4,7 @@ use Livewire\Livewire;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{HomeController, AppointmentController};
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::livewire('/', 'home-content')->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
@@ -44,8 +44,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::prefix('citas')->name('appointments.')->group(function () {
-    Route::get('/agendar', [AppointmentController::class, 'create'])->name('create');
+    Route::livewire('/agendar', 'appointments.create')->name('create');
 });
-
 
 require __DIR__.'/settings.php';

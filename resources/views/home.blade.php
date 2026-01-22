@@ -1,5 +1,0 @@
-@extends('layouts.site')
-
-@section('content')
-    @livewire('home-content')
-@endsection

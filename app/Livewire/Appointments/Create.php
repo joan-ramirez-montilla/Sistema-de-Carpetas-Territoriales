@@ -242,6 +242,6 @@ class Create extends Component
     {
         return view('livewire.appointments.create', [
             'currentMonth' => $this->availableMonths[$this->currentMonthIndex] ?? null,
-        ]);
+        ])->layout('layouts.client');
     }
 }
