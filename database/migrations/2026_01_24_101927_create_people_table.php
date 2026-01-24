@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->foreignId('position_id')->nullable()->constrained();
             $table->foreignId('organization_id')->nullable()->constrained();
+            $table->enum('circumscription', ['1','2','3','4','5','6','7','8'])->nullable();
 
             $table->foreignId('province_id')->nullable()->constrained();
             $table->foreignId('municipality_id')->nullable()->constrained();

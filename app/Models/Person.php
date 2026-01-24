@@ -14,7 +14,12 @@ class Person extends Model
         'office_phone',
         'email',
         'address',
-        'city_id'
+        'position_id',
+        'organization_id',
+        'province_id',
+        'municipality_id',
+        'district_id',
+        'circumscription'
     ];
 
     public function city()

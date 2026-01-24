@@ -4,6 +4,7 @@
     {
       "id": 1,
       "name": "Distrito Nacional",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 101,
@@ -15,6 +16,7 @@
     {
       "id": 2,
       "name": "Azua",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 201,
@@ -80,6 +82,7 @@
     {
       "id": 3,
       "name": "Baoruco",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 301,
@@ -111,6 +114,7 @@
     {
       "id": 4,
       "name": "Barahona",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 401,
@@ -172,6 +176,7 @@
     {
       "id": 5,
       "name": "Dajabón",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 501,
@@ -203,6 +208,7 @@
     {
       "id": 6,
       "name": "Duarte",
+      "circunscripcion": 2,
       "municipalities": [
         {
           "id": 601,
@@ -244,6 +250,7 @@
     {
       "id": 7,
       "name": "Elías Piña",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 701,
@@ -280,6 +287,7 @@
     {
       "id": 8,
       "name": "El Seibo",
+      "circunscripcion": 4,
       "municipalities": [
         {
           "id": 801,
@@ -296,6 +304,7 @@
     {
       "id": 9,
       "name": "Espaillat",
+      "circunscripcion": 2,
       "municipalities": [
         {
           "id": 901,
@@ -322,6 +331,7 @@
     {
       "id": 10,
       "name": "Hato Mayor",
+      "circunscripcion": 4,
       "municipalities": [
         {
           "id": 1001,
@@ -343,6 +353,7 @@
     {
       "id": 11,
       "name": "Hermanas Mirabal",
+      "circunscripcion": 2,
       "municipalities": [
         {
           "id": 1101,
@@ -364,6 +375,7 @@
     {
       "id": 12,
       "name": "Independencia",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 1201,
@@ -400,6 +412,7 @@
     {
       "id": 13,
       "name": "La Altagracia",
+      "circunscripcion": 4,
       "municipalities": [
         {
           "id": 1301,
@@ -416,6 +429,7 @@
     {
       "id": 14,
       "name": "La Romana",
+      "circunscripcion": 4,
       "municipalities": [
         {
           "id": 1401,
@@ -437,6 +451,7 @@
     {
       "id": 15,
       "name": "La Vega",
+      "circunscripcion": 2,
       "municipalities": [
         {
           "id": 1501,
@@ -463,6 +478,7 @@
     {
       "id": 16,
       "name": "María Trinidad Sánchez",
+      "circunscripcion": 2,
       "municipalities": [
         {
           "id": 1601,
@@ -489,6 +505,7 @@
     {
       "id": 17,
       "name": "Monseñor Nouel",
+      "circunscripcion": 2,
       "municipalities": [
         {
           "id": 1701,
@@ -510,6 +527,7 @@
     {
       "id": 18,
       "name": "Monte Cristi",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 1801,
@@ -546,6 +564,7 @@
     {
       "id": 19,
       "name": "Monte Plata",
+      "circunscripcion": 5,
       "municipalities": [
         {
           "id": 1901,
@@ -577,6 +596,7 @@
     {
       "id": 20,
       "name": "Pedernales",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 2001,
@@ -593,6 +613,7 @@
     {
       "id": 21,
       "name": "Peravia",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 2101,
@@ -609,6 +630,7 @@
     {
       "id": 22,
       "name": "Puerto Plata",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 2201,
@@ -660,6 +682,7 @@
     {
       "id": 23,
       "name": "Samaná",
+      "circunscripcion": 4,
       "municipalities": [
         {
           "id": 2301,
@@ -681,6 +704,7 @@
     {
       "id": 24,
       "name": "San Cristóbal",
+      "circunscripcion": 5,
       "municipalities": [
         {
           "id": 2401,
@@ -727,6 +751,7 @@
     {
       "id": 25,
       "name": "San José de Ocoa",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 2501,
@@ -748,6 +773,7 @@
     {
       "id": 26,
       "name": "San Juan",
+      "circunscripcion": 3,
       "municipalities": [
         {
           "id": 2601,
@@ -784,6 +810,7 @@
     {
       "id": 27,
       "name": "San Pedro de Macorís",
+      "circunscripcion": 4,
       "municipalities": [
         {
           "id": 2701,
@@ -820,6 +847,7 @@
     {
       "id": 28,
       "name": "Santiago",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 2801,
@@ -871,6 +899,7 @@
     {
       "id": 29,
       "name": "Santiago Rodríguez",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 2901,
@@ -892,6 +921,7 @@
     {
       "id": 30,
       "name": "Santo Domingo",
+      "circunscripcion": 5,
       "municipalities": [
         {
           "id": 3001,
@@ -933,6 +963,7 @@
     {
       "id": 31,
       "name": "Valverde",
+      "circunscripcion": 1,
       "municipalities": [
         {
           "id": 3101,
@@ -952,5 +983,5 @@
       ]
     }
   ],
-  "note": "Dataset administrativo completo de la República Dominicana con 31 provincias, 158 municipios y 229 distritos municipales oficiales según la ONE 2024"
+  "note": "Dataset administrativo completo de la República Dominicana con 31 provincias, 158 municipios, 229 distritos municipales y sus circunscripciones electorales oficiales según la JCE 2024"
 }

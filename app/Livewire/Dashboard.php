@@ -2,14 +2,18 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\{Employee, Appointment};
 use Carbon\Carbon;
+use Livewire\Component;
+use App\Models\{Province, Municipality, Employee, Appointment, Person};
 
 class Dashboard extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard');
+        return view('livewire.dashboard', [
+            'totalPeople'          => Person::count(),
+            'activeProvinces'      => Province::where('is_active', true)->count(),
+            'activeMunicipalities' => Municipality::where('is_active', true)->count(),
+        ]);
     }
 }

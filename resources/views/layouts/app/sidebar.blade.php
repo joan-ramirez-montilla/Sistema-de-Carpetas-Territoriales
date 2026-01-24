@@ -19,6 +19,12 @@
                 <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')">
                     Inicio
                 </flux:sidebar.item>
+
+
+                <flux:sidebar.item icon="users" :href="route('people.index')"
+                    :current="request()->routeIs('people.*')">
+                    Personas
+                </flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>
 
