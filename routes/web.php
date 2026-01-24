@@ -3,7 +3,6 @@
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Route;
 
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::livewire('dashboard', 'dashboard')->name('dashboard');
 

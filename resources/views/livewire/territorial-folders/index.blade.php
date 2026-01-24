@@ -14,17 +14,17 @@
             </div>
         </div>
 
+        {{--
         <div class="flex items-center gap-3">
-            <flux:button wire:click="exportPdf" variant="ghost" class="hidden sm:flex">
-                <i class="fas fa-download mr-2"></i>
-                Exportar PDF
-            </flux:button>
-            {{--
+                <flux:button wire:click="exportPdf" variant="ghost" class="hidden sm:flex">
+                    <i class="fas fa-download mr-2"></i>
+                    Exportar PDF
+                </flux:button>
                 <flux:button href="#" variant="primary" icon="plus">
                     Nueva Carpeta
                 </flux:button>
-            --}}
-        </div>
+            </div>
+        --}}
     </div>
 
     {{-- Tarjetas de Estadísticas --}}
@@ -239,6 +239,10 @@
                                         </span>
                                     </div>
                                 </div>
+                                <flux:button wire:click="exportPdf({{ $folder['id'] }})" variant="ghost" class="hidden sm:flex mt-5">
+                                    <i class="fas fa-download mr-2"></i>
+                                    Exportar PDF
+                                </flux:button>
                             </div>
                         </div>
                     </div>

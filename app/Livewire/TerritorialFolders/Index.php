@@ -7,6 +7,7 @@ use App\Models\Region;
 use Livewire\Component;
 use App\Models\District;
 use App\Models\Province;
+use Barryvdh\DomPDF\PDF;
 use App\Models\Municipality;
 use App\Models\Organization;
 use Livewire\WithPagination;
@@ -21,11 +22,11 @@ class Index extends Component
     public $selectedRegion = null;
     public $selectedFolder = null;
 
-    public function updatedSelectedProvince()
+    public function updatedSelectedRegion()
     {
+        $this->selectedProvince = null;
         $this->selectedMunicipality = null;
         $this->selectedDistrict = null;
-        $this->selectedRegion = null;
         $this->selectedFolder = null;
         $this->resetPage();
     }
@@ -33,19 +34,19 @@ class Index extends Component
     public function updatedSelectedMunicipality()
     {
         $this->selectedDistrict = null;
-        $this->selectedRegion = null;
+        $this->selectedFolder = null;
+        $this->resetPage();
+    }
+
+    public function updatedSelectedProvince()
+    {
+        $this->selectedMunicipality = null;
+        $this->selectedDistrict = null;
         $this->selectedFolder = null;
         $this->resetPage();
     }
 
     public function updatedSelectedDistrict()
-    {
-        $this->selectedRegion = null;
-        $this->selectedFolder = null;
-        $this->resetPage();
-    }
-
-    public function updatedselectedRegion()
     {
         $this->selectedFolder = null;
         $this->resetPage();
@@ -56,16 +57,51 @@ class Index extends Component
         $this->selectedFolder = $folderId;
     }
 
-    public function exportExcel()
+    public function exportPdf($folder)
     {
-        // TODO: Implementar exportación a Excel
-        $this->dispatch('notify', message: 'Exportación a Excel en desarrollo');
-    }
+        $membersQuery = Person::where('organization_id', $folder);
 
-    public function exportPdf()
-    {
-        // TODO: Implementar exportación a PDF
-        $this->dispatch('notify', message: 'Exportación a PDF en desarrollo');
+        if ($this->selectedProvince) {
+            $membersQuery->where('province_id', $this->selectedProvince);
+        }
+
+        if ($this->selectedMunicipality) {
+            $membersQuery->where('municipality_id', $this->selectedMunicipality);
+        }
+
+        if ($this->selectedDistrict) {
+            $membersQuery->where('district_id', $this->selectedDistrict);
+        }
+
+        $members = $membersQuery
+            ->orderBy('full_name')
+            ->get(['full_name', 'national_id', 'position_id'])
+            ->map(function ($person) {
+                return [
+                    'position' => $person->position->name ?? 'Sin cargo',
+                    'full_name' => $person->full_name,
+                    'national_id' => $person->national_id,
+                ];
+            });
+
+        $data = [
+            'folder' => Organization::find($folder)->name ?? 'Sin organización',
+            'filters' => [
+                'region' => $this->selectedRegion ? Region::find($this->selectedRegion)->name : 'Todas',
+                'province' => $this->selectedProvince ? Province::find($this->selectedProvince)->name : 'Todas',
+                'municipality' => $this->selectedMunicipality ? Municipality::find($this->selectedMunicipality)->name : 'Todas',
+                'district' => $this->selectedDistrict ? District::find($this->selectedDistrict)->name : 'Todas',
+            ],
+            'members' => $members,
+            'date' => now()->format('Y-m-d'),
+        ];
+
+        $pdf = app('dompdf.wrapper');
+        $pdf->loadView('report', $data);
+
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->output();
+        }, 'carpeta_' . $folder . '.pdf');
     }
 
     public function render()
@@ -104,7 +140,6 @@ class Index extends Component
         }
 
         // Calcular estadísticas
-        $totalFolders = 8; // TODO: Calcular desde modelo de carpetas
         $totalMembers = Person::count();
         $activeProvinces = Province::where('is_active', true)->count();
         $activeMunicipalities = Municipality::where('is_active', true)->count();
@@ -129,25 +164,7 @@ class Index extends Component
                 ];
             });
 
-        // Filtrar carpetas según filtros seleccionados
-
-        if ($this->selectedProvince) {
-            $folders = $folders->filter(function ($folder) {
-                return $folder['province'] === Province::find($this->selectedProvince)?->name;
-            });
-        }
-
-        if ($this->selectedMunicipality) {
-            $folders = $folders->filter(function ($folder) {
-                return $folder['municipality'] === Municipality::find($this->selectedMunicipality)?->name;
-            });
-        }
-
-        if ($this->selectedDistrict) {
-            $folders = $folders->filter(function ($folder) {
-                return $folder['district'] === District::find($this->selectedDistrict)?->name;
-            });
-        }
+        $totalFolders = 5;
 
         // Obtener miembros de la carpeta seleccionada
         $members = collect();
@@ -163,6 +180,8 @@ class Index extends Component
                     ];
                 });
         }
+
+
 
         return view('livewire.territorial-folders.index', [
             'regions' => $regions,
