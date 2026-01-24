@@ -1,10 +1,52 @@
 {
   "country": "República Dominicana",
+  "regions": [
+    {
+      "id": 1,
+      "name": "Cibao Noroeste"
+    },
+    {
+      "id": 2,
+      "name": "Cibao Norte"
+    },
+    {
+      "id": 3,
+      "name": "Cibao Sur"
+    },
+    {
+      "id": 4,
+      "name": "Cibao Nordeste"
+    },
+    {
+      "id": 5,
+      "name": "El Valle"
+    },
+    {
+      "id": 6,
+      "name": "Valdesia"
+    },
+    {
+      "id": 7,
+      "name": "Enriquillo"
+    },
+    {
+      "id": 8,
+      "name": "Ozama o Metropolitana"
+    },
+    {
+      "id": 9,
+      "name": "Higuamo"
+    },
+    {
+      "id": 10,
+      "name": "Yuma"
+    }
+  ],
   "provinces": [
     {
       "id": 1,
       "name": "Distrito Nacional",
-      "circunscripcion": 1,
+      "region_id": 8,
       "municipalities": [
         {
           "id": 101,
@@ -16,7 +58,7 @@
     {
       "id": 2,
       "name": "Azua",
-      "circunscripcion": 3,
+      "region_id": 6,
       "municipalities": [
         {
           "id": 201,
@@ -82,7 +124,7 @@
     {
       "id": 3,
       "name": "Baoruco",
-      "circunscripcion": 3,
+      "region_id": 7,
       "municipalities": [
         {
           "id": 301,
@@ -102,7 +144,14 @@
         {
           "id": 304,
           "name": "Tamayo",
-          "districts": ["Cabeza de Toro", "Mena", "Monserrat", "Santa Bárbara-El 6", "Santana", "Uvilla"]
+          "districts": [
+            "Cabeza de Toro",
+            "Mena",
+            "Monserrat",
+            "Santa Bárbara-El 6",
+            "Santana",
+            "Uvilla"
+          ]
         },
         {
           "id": 305,
@@ -114,7 +163,7 @@
     {
       "id": 4,
       "name": "Barahona",
-      "circunscripcion": 3,
+      "region_id": 7,
       "municipalities": [
         {
           "id": 401,
@@ -176,7 +225,7 @@
     {
       "id": 5,
       "name": "Dajabón",
-      "circunscripcion": 1,
+      "region_id": 1,
       "municipalities": [
         {
           "id": 501,
@@ -208,12 +257,17 @@
     {
       "id": 6,
       "name": "Duarte",
-      "circunscripcion": 2,
+      "region_id": 2,
       "municipalities": [
         {
           "id": 601,
           "name": "San Francisco de Macorís",
-          "districts": ["Cenoví", "Jaya", "La Peña", "Presidente Don Antonio Guzmán Fernández"]
+          "districts": [
+            "Cenoví",
+            "Jaya",
+            "La Peña",
+            "Presidente Don Antonio Guzmán Fernández"
+          ]
         },
         {
           "id": 602,
@@ -243,14 +297,18 @@
         {
           "id": 607,
           "name": "Villa Riva",
-          "districts": ["Agua Santa del Yuna", "Barraquito", "Cristo Rey de Guaraguao"]
+          "districts": [
+            "Agua Santa del Yuna",
+            "Barraquito",
+            "Cristo Rey de Guaraguao"
+          ]
         }
       ]
     },
     {
       "id": 7,
       "name": "Elías Piña",
-      "circunscripcion": 3,
+      "region_id": 5,
       "municipalities": [
         {
           "id": 701,
@@ -287,12 +345,16 @@
     {
       "id": 8,
       "name": "El Seibo",
-      "circunscripcion": 4,
+      "region_id": 10,
       "municipalities": [
         {
           "id": 801,
           "name": "Santa Cruz de El Seibo",
-          "districts": ["Pedro Sánchez", "San Francisco-Vicentillo", "Santa Lucía"]
+          "districts": [
+            "Pedro Sánchez",
+            "San Francisco-Vicentillo",
+            "Santa Lucía"
+          ]
         },
         {
           "id": 802,
@@ -304,12 +366,21 @@
     {
       "id": 9,
       "name": "Espaillat",
-      "circunscripcion": 2,
+      "region_id": 2,
       "municipalities": [
         {
           "id": 901,
           "name": "Moca",
-          "districts": ["Canca La Reina", "El Higüerito", "José Contreras", "Juan López", "La Ortega", "Las Lagunas", "Monte de la Jagua", "San Víctor"]
+          "districts": [
+            "Canca La Reina",
+            "El Higüerito",
+            "José Contreras",
+            "Juan López",
+            "La Ortega",
+            "Las Lagunas",
+            "Monte de la Jagua",
+            "San Víctor"
+          ]
         },
         {
           "id": 902,
@@ -331,7 +402,7 @@
     {
       "id": 10,
       "name": "Hato Mayor",
-      "circunscripcion": 4,
+      "region_id": 9,
       "municipalities": [
         {
           "id": 1001,
@@ -353,7 +424,7 @@
     {
       "id": 11,
       "name": "Hermanas Mirabal",
-      "circunscripcion": 2,
+      "region_id": 4,
       "municipalities": [
         {
           "id": 1101,
@@ -375,7 +446,7 @@
     {
       "id": 12,
       "name": "Independencia",
-      "circunscripcion": 3,
+      "region_id": 7,
       "municipalities": [
         {
           "id": 1201,
@@ -412,12 +483,16 @@
     {
       "id": 13,
       "name": "La Altagracia",
-      "circunscripcion": 4,
+      "region_id": 10,
       "municipalities": [
         {
           "id": 1301,
           "name": "Salvaleón de Higüey",
-          "districts": ["La Otra Banda", "Lagunas de Nisibón", "Verón-Punta Cana"]
+          "districts": [
+            "La Otra Banda",
+            "Lagunas de Nisibón",
+            "Verón-Punta Cana"
+          ]
         },
         {
           "id": 1302,
@@ -429,7 +504,7 @@
     {
       "id": 14,
       "name": "La Romana",
-      "circunscripcion": 4,
+      "region_id": 10,
       "municipalities": [
         {
           "id": 1401,
@@ -451,7 +526,7 @@
     {
       "id": 15,
       "name": "La Vega",
-      "circunscripcion": 2,
+      "region_id": 3,
       "municipalities": [
         {
           "id": 1501,
@@ -478,12 +553,17 @@
     {
       "id": 16,
       "name": "María Trinidad Sánchez",
-      "circunscripcion": 2,
+      "region_id": 2,
       "municipalities": [
         {
           "id": 1601,
           "name": "Nagua",
-          "districts": ["Arroyo al Medio", "Arroyo Salado", "La Entrada", "San José de Matanzas"]
+          "districts": [
+            "Arroyo al Medio",
+            "Arroyo Salado",
+            "La Entrada",
+            "San José de Matanzas"
+          ]
         },
         {
           "id": 1602,
@@ -505,12 +585,18 @@
     {
       "id": 17,
       "name": "Monseñor Nouel",
-      "circunscripcion": 2,
+      "region_id": 3,
       "municipalities": [
         {
           "id": 1701,
           "name": "Bonao",
-          "districts": ["Arroyo al Medio", "Arroyo Frío", "Juan Adrián", "La Salvia-Los Quemados", "Sabana del Puerto"]
+          "districts": [
+            "Arroyo al Medio",
+            "Arroyo Frío",
+            "Juan Adrián",
+            "La Salvia-Los Quemados",
+            "Sabana del Puerto"
+          ]
         },
         {
           "id": 1702,
@@ -527,7 +613,7 @@
     {
       "id": 18,
       "name": "Monte Cristi",
-      "circunscripcion": 1,
+      "region_id": 1,
       "municipalities": [
         {
           "id": 1801,
@@ -564,7 +650,7 @@
     {
       "id": 19,
       "name": "Monte Plata",
-      "circunscripcion": 5,
+      "region_id": 9,
       "municipalities": [
         {
           "id": 1901,
@@ -596,7 +682,7 @@
     {
       "id": 20,
       "name": "Pedernales",
-      "circunscripcion": 3,
+      "region_id": 7,
       "municipalities": [
         {
           "id": 2001,
@@ -613,12 +699,22 @@
     {
       "id": 21,
       "name": "Peravia",
-      "circunscripcion": 3,
+      "region_id": 6,
       "municipalities": [
         {
           "id": 2101,
           "name": "Baní",
-          "districts": ["Catalina", "El Carretón", "El Limonal", "Las Barías", "Matanzas", "Paya", "Sabana Buey", "Villa Fundación", "Villa Sombrero"]
+          "districts": [
+            "Catalina",
+            "El Carretón",
+            "El Limonal",
+            "Las Barías",
+            "Matanzas",
+            "Paya",
+            "Sabana Buey",
+            "Villa Fundación",
+            "Villa Sombrero"
+          ]
         },
         {
           "id": 2102,
@@ -630,7 +726,7 @@
     {
       "id": 22,
       "name": "Puerto Plata",
-      "circunscripcion": 1,
+      "region_id": 2,
       "municipalities": [
         {
           "id": 2201,
@@ -682,7 +778,7 @@
     {
       "id": 23,
       "name": "Samaná",
-      "circunscripcion": 4,
+      "region_id": 2,
       "municipalities": [
         {
           "id": 2301,
@@ -704,12 +800,19 @@
     {
       "id": 24,
       "name": "San Cristóbal",
-      "circunscripcion": 5,
+      "region_id": 6,
       "municipalities": [
         {
           "id": 2401,
           "name": "San Cristóbal",
-          "districts": ["Bajos de Haina", "El Cacao", "Cambita El Pueblecito", "La Cuchilla", "San José del Puerto", "Villa Altagracia"]
+          "districts": [
+            "Bajos de Haina",
+            "El Cacao",
+            "Cambita El Pueblecito",
+            "La Cuchilla",
+            "San José del Puerto",
+            "Villa Altagracia"
+          ]
         },
         {
           "id": 2402,
@@ -751,12 +854,19 @@
     {
       "id": 25,
       "name": "San José de Ocoa",
-      "circunscripcion": 3,
+      "region_id": 6,
       "municipalities": [
         {
           "id": 2501,
           "name": "San José de Ocoa",
-          "districts": ["El Naranjal", "El Pinar", "La Ciénaga", "Nizao-Las Auyamas", "Rancho Arriba", "Sabana Larga"]
+          "districts": [
+            "El Naranjal",
+            "El Pinar",
+            "La Ciénaga",
+            "Nizao-Las Auyamas",
+            "Rancho Arriba",
+            "Sabana Larga"
+          ]
         },
         {
           "id": 2502,
@@ -773,12 +883,22 @@
     {
       "id": 26,
       "name": "San Juan",
-      "circunscripcion": 3,
+      "region_id": 5,
       "municipalities": [
         {
           "id": 2601,
           "name": "San Juan de la Maguana",
-          "districts": ["El Rosario", "Guanito", "Hato del Padre", "La Jagua", "Las Maguanas-Hato Nuevo", "Las Charcas de María Nova", "Pedro Corto", "Sabana Alta", "Sabaneta"]
+          "districts": [
+            "El Rosario",
+            "Guanito",
+            "Hato del Padre",
+            "La Jagua",
+            "Las Maguanas-Hato Nuevo",
+            "Las Charcas de María Nova",
+            "Pedro Corto",
+            "Sabana Alta",
+            "Sabaneta"
+          ]
         },
         {
           "id": 2602,
@@ -810,7 +930,7 @@
     {
       "id": 27,
       "name": "San Pedro de Macorís",
-      "circunscripcion": 4,
+      "region_id": 9,
       "municipalities": [
         {
           "id": 2701,
@@ -847,12 +967,18 @@
     {
       "id": 28,
       "name": "Santiago",
-      "circunscripcion": 1,
+      "region_id": 1,
       "municipalities": [
         {
           "id": 2801,
           "name": "Santiago de los Caballeros",
-          "districts": ["Baitoa", "Hato del Yaque", "La Canela", "Pedro García", "San Francisco de Jacagua"]
+          "districts": [
+            "Baitoa",
+            "Hato del Yaque",
+            "La Canela",
+            "Pedro García",
+            "San Francisco de Jacagua"
+          ]
         },
         {
           "id": 2802,
@@ -899,12 +1025,17 @@
     {
       "id": 29,
       "name": "Santiago Rodríguez",
-      "circunscripcion": 1,
+      "region_id": 1,
       "municipalities": [
         {
           "id": 2901,
           "name": "San Ignacio de Sabaneta",
-          "districts": ["Cana Chapetón", "Guayajayuco", "Los Almácigos", "Juan de Herrera"]
+          "districts": [
+            "Cana Chapetón",
+            "Guayajayuco",
+            "Los Almácigos",
+            "Juan de Herrera"
+          ]
         },
         {
           "id": 2902,
@@ -921,7 +1052,7 @@
     {
       "id": 30,
       "name": "Santo Domingo",
-      "circunscripcion": 5,
+      "region_id": 8,
       "municipalities": [
         {
           "id": 3001,
@@ -963,7 +1094,7 @@
     {
       "id": 31,
       "name": "Valverde",
-      "circunscripcion": 1,
+      "region_id": 1,
       "municipalities": [
         {
           "id": 3101,
@@ -983,5 +1114,5 @@
       ]
     }
   ],
-  "note": "Dataset administrativo completo de la República Dominicana con 31 provincias, 158 municipios, 229 distritos municipales y sus circunscripciones electorales oficiales según la JCE 2024"
+  "note": "Dataset administrativo completo de la República Dominicana con regiones, provincias, municipios, distritos municipales y circunscripciones electorales (JCE 2024). Incluye 10 regiones, 31 provincias, 158 municipios y 229 distritos municipales."
 }

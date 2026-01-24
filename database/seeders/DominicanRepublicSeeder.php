@@ -4,8 +4,13 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
-use App\Models\{Province, Municipality, District};
 use Illuminate\Support\Facades\DB;
+use App\Models\{
+    Region,
+    Province,
+    Municipality,
+    District
+};
 
 class DominicanRepublicSeeder extends Seeder
 {
@@ -21,29 +26,69 @@ class DominicanRepublicSeeder extends Seeder
 
         DB::transaction(function () use ($json) {
 
+            /**
+             * ==========================
+             * 1️⃣ REGIONS
+             * ==========================
+             */
+            $regionsMap = [];
+
+            foreach ($json['regions'] as $regionData) {
+                $region = Region::firstOrCreate(
+                    ['id' => $regionData['id']],
+                    [
+                        'name' => $regionData['name'],
+                        'is_active' => true
+                    ]
+                );
+
+                // Mapa para lookup rápido
+                $regionsMap[$regionData['id']] = $region->id;
+            }
+
+            /**
+             * ==========================
+             * 2️⃣ PROVINCES
+             * ==========================
+             */
             foreach ($json['provinces'] as $provinceData) {
 
                 $province = Province::firstOrCreate(
-                    ['name' => $provinceData['name']],
-                    ['is_active' => true]
+                    ['id' => $provinceData['id']],
+                    [
+                        'name' => $provinceData['name'],
+                        'region_id' => $regionsMap[$provinceData['region_id']] ?? null,
+                        'is_active' => true
+                    ]
                 );
 
+                /**
+                 * ==========================
+                 * 3️⃣ MUNICIPALITIES
+                 * ==========================
+                 */
                 foreach ($provinceData['municipalities'] as $municipalityData) {
 
                     $municipality = Municipality::firstOrCreate(
+                        ['id' => $municipalityData['id']],
                         [
                             'name' => $municipalityData['name'],
                             'province_id' => $province->id,
-                        ],
-                        ['is_active' => true]
+                            'is_active' => true
+                        ]
                     );
 
+                    /**
+                     * ==========================
+                     * 4️⃣ DISTRICTS
+                     * ==========================
+                     */
                     foreach ($municipalityData['districts'] as $districtName) {
 
                         District::firstOrCreate(
                             [
                                 'name' => $districtName,
-                                'municipality_id' => $municipality->id,
+                                'municipality_id' => $municipality->id
                             ],
                             ['is_active' => true]
                         );
