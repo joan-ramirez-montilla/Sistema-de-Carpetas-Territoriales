@@ -31,24 +31,10 @@
         rel="stylesheet">
 
     <style>
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Playfair Display', serif !important;
-        }
-
         body {
         color: black !important;
         }
 
-        body,
-        p,
-        span {
-
-
-            font-family: 'Inter', sans-serif !important;
-        }
 
         /* Animación de pulso para el texto */
         @keyframes pulse-slow {
@@ -73,6 +59,18 @@
 
 <body>
     {{ $slot }}
+
+    <script>
+        document.addEventListener('livewire:load', () => {
+            Livewire.onError(statusCode => {
+                if (statusCode === 419 || statusCode === 401) {
+                    window.location.reload();
+                    return false;
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

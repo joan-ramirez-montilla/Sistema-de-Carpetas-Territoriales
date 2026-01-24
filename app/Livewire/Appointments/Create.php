@@ -27,8 +27,16 @@ class Create extends Component
     public array $availableMonths = [];
     public int $currentMonthIndex = 0;
 
+    public bool $appointmentConfirmed = false;
+    public $lastAppointment = null;
+
     private const DAYS_RANGE = 15;
     private const INTERVAL = 45;
+
+    public bool $showVerificationModal = false;
+
+    public int $generatedVerificationCode = 0; // código enviado
+    public int $enteredVerificationCode = 0;   // código ingresado
 
     /* ===================== MOUNT ===================== */
 
@@ -39,6 +47,13 @@ class Create extends Component
         $this->services = Service::all();
         $this->generateAvailableDates();
     }
+
+
+    public function openEditProfile()
+    {
+        $this->dispatch('open-modal', name: 'edit-profile');
+    }
+
 
     /* ===================== WATCHERS ===================== */
 
@@ -184,31 +199,80 @@ class Create extends Component
         'selectedTime' => 'required',
     ];
 
+    protected function createAppointment()
+    {
+        $this->lastAppointment = Appointment::create([
+            'client_name'      => $this->customer_name,
+            'phone'            => $this->customer_phone,
+            'service_id'       => $this->selectedService->id,
+            'employee_id'      => $this->selectedEmployee->id,
+            'appointment_date' => $this->selectedDate,
+            'appointment_time' => $this->selectedTime,
+        ]);
+
+        $this->appointmentConfirmed = true;
+
+        // Reset verification data
+        $this->generatedVerificationCode = 0;
+        $this->enteredVerificationCode = 0;
+    }
+
     public function storeAppointment()
     {
         $this->validate();
 
-        // Seguridad: evitar doble reserva
+        // Prevent double booking
         $exists = Appointment::where('employee_id', $this->selectedEmployee->id)
             ->whereDate('appointment_date', $this->selectedDate)
             ->where('appointment_time', $this->selectedTime)
             ->exists();
 
         if ($exists) {
-            $this->addError('selectedTime', 'Este horario ya fue tomado.');
+            $this->addError('selectedTime', 'This time slot is already taken.');
             return;
         }
 
-        Appointment::create([
-            'client_name' => $this->customer_name,
-            'phone' => $this->customer_phone,
-            'service_id' => $this->selectedService->id,
-            'employee_id' => $this->selectedEmployee->id,
-            'appointment_date' => $this->selectedDate,
-            'appointment_time' => $this->selectedTime,
-        ]);
+        // Check if this phone already has appointments
+        $hasPreviousAppointments = Appointment::where('phone', $this->customer_phone)->exists();
 
-        dd('Hacer una pantalla de reserva (o verificar si hacer un redirect).');
+        if (!$hasPreviousAppointments) {
+
+            // Generate and send code only once
+            if ($this->generatedVerificationCode === 0) {
+                $this->generatedVerificationCode = rand(1111, 9999);
+
+                // 👉 Aquí envías el código por WhatsApp
+                // $this->sendWhatsappCode($this->generatedVerificationCode);
+
+                $this->showVerificationModal = true;
+                return;
+            }
+
+            // If code not confirmed yet, stop here
+            if ($this->generatedVerificationCode !== $this->enteredVerificationCode) {
+                $this->showVerificationModal = true;
+                return;
+            }
+        }
+
+        $this->createAppointment();
+    }
+
+    public function confirmVerificationCode()
+    {
+        if ($this->generatedVerificationCode !== $this->enteredVerificationCode) {
+            $this->addError(
+                'enteredVerificationCode',
+                'El código de verificación no es correcto. Por favor, verifica e intenta nuevamente.'
+            );
+            return;
+        }
+
+        // Code is valid
+        $this->resetErrorBag('enteredVerificationCode');
+        $this->showVerificationModal = false;
+
+        $this->createAppointment();
     }
 
     /* ===================== HELPERS ===================== */

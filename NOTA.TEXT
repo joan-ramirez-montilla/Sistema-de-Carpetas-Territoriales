@@ -9,6 +9,8 @@ $this->dispatch('notify',
 
 PENDIENTE:
 
+ajuatar el diseno de la confirmacion
+
 poner esto desde la configuracion de la empresa:
     private const DAYS_RANGE = 15;
     private const INTERVAL = 45;
