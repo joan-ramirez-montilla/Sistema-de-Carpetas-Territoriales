@@ -1,0 +1,956 @@
+{
+  "country": "República Dominicana",
+  "provinces": [
+    {
+      "id": 1,
+      "name": "Distrito Nacional",
+      "municipalities": [
+        {
+          "id": 101,
+          "name": "Santo Domingo de Guzmán",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Azua",
+      "municipalities": [
+        {
+          "id": 201,
+          "name": "Azua de Compostela",
+          "districts": [
+            "Barreras",
+            "Barro Arriba",
+            "Clavellina",
+            "Emma Balaguer de Vallejo",
+            "Las Barias-La Estancia",
+            "Las Lomas",
+            "Los Jovillos",
+            "Puerto Viejo"
+          ]
+        },
+        {
+          "id": 202,
+          "name": "Estebanía",
+          "districts": ["Guayabo"]
+        },
+        {
+          "id": 203,
+          "name": "Guayabal",
+          "districts": []
+        },
+        {
+          "id": 204,
+          "name": "Las Charcas",
+          "districts": ["Las Yayas de Viajama"]
+        },
+        {
+          "id": 205,
+          "name": "Las Yayas de Viajama",
+          "districts": ["Villarpando"]
+        },
+        {
+          "id": 206,
+          "name": "Padre Las Casas",
+          "districts": ["La Siembra", "Las Lagunas", "Los Fríos"]
+        },
+        {
+          "id": 207,
+          "name": "Peralta",
+          "districts": []
+        },
+        {
+          "id": 208,
+          "name": "Pueblo Viejo",
+          "districts": []
+        },
+        {
+          "id": 209,
+          "name": "Sabana Yegua",
+          "districts": ["Ganadero", "Proyecto 2-C", "Proyecto 4"]
+        },
+        {
+          "id": 210,
+          "name": "Tábara Arriba",
+          "districts": ["Amiama Gómez", "Los Toros", "Tábara Abajo"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Baoruco",
+      "municipalities": [
+        {
+          "id": 301,
+          "name": "Neiba",
+          "districts": ["El Palmar", "La Estancia", "Vengan a Ver"]
+        },
+        {
+          "id": 302,
+          "name": "Galván",
+          "districts": ["El Salado"]
+        },
+        {
+          "id": 303,
+          "name": "Los Ríos",
+          "districts": ["Las Clavellinas"]
+        },
+        {
+          "id": 304,
+          "name": "Tamayo",
+          "districts": ["Cabeza de Toro", "Mena", "Monserrat", "Santa Bárbara-El 6", "Santana", "Uvilla"]
+        },
+        {
+          "id": 305,
+          "name": "Villa Jaragua",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Barahona",
+      "municipalities": [
+        {
+          "id": 401,
+          "name": "Barahona",
+          "districts": ["El Cachón", "La Guázara", "Villa Central"]
+        },
+        {
+          "id": 402,
+          "name": "Cabral",
+          "districts": []
+        },
+        {
+          "id": 403,
+          "name": "El Peñón",
+          "districts": []
+        },
+        {
+          "id": 404,
+          "name": "Enriquillo",
+          "districts": ["Arroyo Dulce"]
+        },
+        {
+          "id": 405,
+          "name": "Fundación",
+          "districts": ["Pescadería"]
+        },
+        {
+          "id": 406,
+          "name": "Jaquimeyes",
+          "districts": ["Palo Alto"]
+        },
+        {
+          "id": 407,
+          "name": "La Ciénaga",
+          "districts": ["Bahoruco", "Los Patos"]
+        },
+        {
+          "id": 408,
+          "name": "Las Salinas",
+          "districts": []
+        },
+        {
+          "id": 409,
+          "name": "Paraíso",
+          "districts": ["Los Naranjos"]
+        },
+        {
+          "id": 410,
+          "name": "Polo",
+          "districts": []
+        },
+        {
+          "id": 411,
+          "name": "Vicente Noble",
+          "districts": ["Canoa", "Fondo Negro", "Quita Coraza"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Dajabón",
+      "municipalities": [
+        {
+          "id": 501,
+          "name": "Dajabón",
+          "districts": ["Cañongo", "Manuel Bueno"]
+        },
+        {
+          "id": 502,
+          "name": "El Pino",
+          "districts": []
+        },
+        {
+          "id": 503,
+          "name": "Loma de Cabrera",
+          "districts": ["Capotillo", "Santiago de la Cruz"]
+        },
+        {
+          "id": 504,
+          "name": "Partido",
+          "districts": []
+        },
+        {
+          "id": 505,
+          "name": "Restauración",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Duarte",
+      "municipalities": [
+        {
+          "id": 601,
+          "name": "San Francisco de Macorís",
+          "districts": ["Cenoví", "Jaya", "La Peña", "Presidente Don Antonio Guzmán Fernández"]
+        },
+        {
+          "id": 602,
+          "name": "Arenoso",
+          "districts": ["El Aguacate", "Las Coles"]
+        },
+        {
+          "id": 603,
+          "name": "Castillo",
+          "districts": []
+        },
+        {
+          "id": 604,
+          "name": "Eugenio María de Hostos",
+          "districts": ["Sabana Grande"]
+        },
+        {
+          "id": 605,
+          "name": "Las Guáranas",
+          "districts": []
+        },
+        {
+          "id": 606,
+          "name": "Pimentel",
+          "districts": []
+        },
+        {
+          "id": 607,
+          "name": "Villa Riva",
+          "districts": ["Agua Santa del Yuna", "Barraquito", "Cristo Rey de Guaraguao"]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Elías Piña",
+      "municipalities": [
+        {
+          "id": 701,
+          "name": "Comendador",
+          "districts": ["Guayajayuco", "Sabana Larga", "Sabana Cruz"]
+        },
+        {
+          "id": 702,
+          "name": "Bánica",
+          "districts": ["Sabana Cruz", "Sabana Higüero", "Sabana Larga"]
+        },
+        {
+          "id": 703,
+          "name": "El Llano",
+          "districts": ["Guanito"]
+        },
+        {
+          "id": 704,
+          "name": "Hondo Valle",
+          "districts": ["Rancho de la Guardia"]
+        },
+        {
+          "id": 705,
+          "name": "Juan Santiago",
+          "districts": []
+        },
+        {
+          "id": 706,
+          "name": "Pedro Santana",
+          "districts": ["Río Limpio"]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "El Seibo",
+      "municipalities": [
+        {
+          "id": 801,
+          "name": "Santa Cruz de El Seibo",
+          "districts": ["Pedro Sánchez", "San Francisco-Vicentillo", "Santa Lucía"]
+        },
+        {
+          "id": 802,
+          "name": "Miches",
+          "districts": ["El Cedro", "La Gina"]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Espaillat",
+      "municipalities": [
+        {
+          "id": 901,
+          "name": "Moca",
+          "districts": ["Canca La Reina", "El Higüerito", "José Contreras", "Juan López", "La Ortega", "Las Lagunas", "Monte de la Jagua", "San Víctor"]
+        },
+        {
+          "id": 902,
+          "name": "Cayetano Germosén",
+          "districts": []
+        },
+        {
+          "id": 903,
+          "name": "Gaspar Hernández",
+          "districts": ["Joba Arriba", "Veragua", "Villa Magante"]
+        },
+        {
+          "id": 904,
+          "name": "Jamao al Norte",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Hato Mayor",
+      "municipalities": [
+        {
+          "id": 1001,
+          "name": "Hato Mayor del Rey",
+          "districts": ["Guayabo Dulce", "Mata Palacio", "Yerba Buena"]
+        },
+        {
+          "id": 1002,
+          "name": "El Valle",
+          "districts": []
+        },
+        {
+          "id": 1003,
+          "name": "Sabana de la Mar",
+          "districts": ["Elupina Cordero de las Cañitas", "Salcedo"]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Hermanas Mirabal",
+      "municipalities": [
+        {
+          "id": 1101,
+          "name": "Salcedo",
+          "districts": ["Jamao Afuera"]
+        },
+        {
+          "id": 1102,
+          "name": "Tenares",
+          "districts": ["Blanco", "La Peñita"]
+        },
+        {
+          "id": 1103,
+          "name": "Villa Tapia",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Independencia",
+      "municipalities": [
+        {
+          "id": 1201,
+          "name": "Jimaní",
+          "districts": ["Boca de Cachón", "El Limón"]
+        },
+        {
+          "id": 1202,
+          "name": "Cristóbal",
+          "districts": []
+        },
+        {
+          "id": 1203,
+          "name": "Duvergé",
+          "districts": ["Vengan a Ver"]
+        },
+        {
+          "id": 1204,
+          "name": "La Descubierta",
+          "districts": []
+        },
+        {
+          "id": 1205,
+          "name": "Mella",
+          "districts": []
+        },
+        {
+          "id": 1206,
+          "name": "Postrer Río",
+          "districts": ["Guayabal"]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "La Altagracia",
+      "municipalities": [
+        {
+          "id": 1301,
+          "name": "Salvaleón de Higüey",
+          "districts": ["La Otra Banda", "Lagunas de Nisibón", "Verón-Punta Cana"]
+        },
+        {
+          "id": 1302,
+          "name": "San Rafael del Yuma",
+          "districts": ["Boca de Yuma", "Bayahibe"]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "La Romana",
+      "municipalities": [
+        {
+          "id": 1401,
+          "name": "La Romana",
+          "districts": ["Caleta", "Cumayasa"]
+        },
+        {
+          "id": 1402,
+          "name": "Guaymate",
+          "districts": []
+        },
+        {
+          "id": 1403,
+          "name": "Villa Hermosa",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "La Vega",
+      "municipalities": [
+        {
+          "id": 1501,
+          "name": "Concepción de La Vega",
+          "districts": ["El Ranchito", "Río Verde Arriba"]
+        },
+        {
+          "id": 1502,
+          "name": "Constanza",
+          "districts": ["La Sabina", "Tireo"]
+        },
+        {
+          "id": 1503,
+          "name": "Jarabacoa",
+          "districts": ["Buena Vista", "Manabao"]
+        },
+        {
+          "id": 1504,
+          "name": "Jima Abajo",
+          "districts": ["Rincón"]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "María Trinidad Sánchez",
+      "municipalities": [
+        {
+          "id": 1601,
+          "name": "Nagua",
+          "districts": ["Arroyo al Medio", "Arroyo Salado", "La Entrada", "San José de Matanzas"]
+        },
+        {
+          "id": 1602,
+          "name": "Cabrera",
+          "districts": ["Arroyo Salado", "La Entrada"]
+        },
+        {
+          "id": 1603,
+          "name": "El Factor",
+          "districts": ["El Pozo"]
+        },
+        {
+          "id": 1604,
+          "name": "Río San Juan",
+          "districts": ["Clara"]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Monseñor Nouel",
+      "municipalities": [
+        {
+          "id": 1701,
+          "name": "Bonao",
+          "districts": ["Arroyo al Medio", "Arroyo Frío", "Juan Adrián", "La Salvia-Los Quemados", "Sabana del Puerto"]
+        },
+        {
+          "id": 1702,
+          "name": "Maimón",
+          "districts": []
+        },
+        {
+          "id": 1703,
+          "name": "Piedra Blanca",
+          "districts": ["Juan López"]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Monte Cristi",
+      "municipalities": [
+        {
+          "id": 1801,
+          "name": "San Fernando de Monte Cristi",
+          "districts": ["Cana Chapetón", "Hatillo Palma", "Villa Elisa"]
+        },
+        {
+          "id": 1802,
+          "name": "Castañuela",
+          "districts": ["Palo Verde"]
+        },
+        {
+          "id": 1803,
+          "name": "Guayubín",
+          "districts": ["Cana Chapetón", "Hatillo Palma", "Villa Elisa"]
+        },
+        {
+          "id": 1804,
+          "name": "Las Matas de Santa Cruz",
+          "districts": []
+        },
+        {
+          "id": 1805,
+          "name": "Pepillo Salcedo",
+          "districts": []
+        },
+        {
+          "id": 1806,
+          "name": "Villa Vásquez",
+          "districts": ["Jicomé"]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Monte Plata",
+      "municipalities": [
+        {
+          "id": 1901,
+          "name": "Monte Plata",
+          "districts": ["Boyá", "Chirino", "Don Juan"]
+        },
+        {
+          "id": 1902,
+          "name": "Bayaguana",
+          "districts": []
+        },
+        {
+          "id": 1903,
+          "name": "Peralvillo",
+          "districts": []
+        },
+        {
+          "id": 1904,
+          "name": "Sabana Grande de Boyá",
+          "districts": ["Gonzalo", "Majagual"]
+        },
+        {
+          "id": 1905,
+          "name": "Yamasá",
+          "districts": ["Los Botados"]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Pedernales",
+      "municipalities": [
+        {
+          "id": 2001,
+          "name": "Pedernales",
+          "districts": ["José Francisco Peña Gómez", "Juancho"]
+        },
+        {
+          "id": 2002,
+          "name": "Oviedo",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Peravia",
+      "municipalities": [
+        {
+          "id": 2101,
+          "name": "Baní",
+          "districts": ["Catalina", "El Carretón", "El Limonal", "Las Barías", "Matanzas", "Paya", "Sabana Buey", "Villa Fundación", "Villa Sombrero"]
+        },
+        {
+          "id": 2102,
+          "name": "Nizao",
+          "districts": ["Pizarrete", "Santana"]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Puerto Plata",
+      "municipalities": [
+        {
+          "id": 2201,
+          "name": "San Felipe de Puerto Plata",
+          "districts": ["Maimón", "Yásica Arriba"]
+        },
+        {
+          "id": 2202,
+          "name": "Altamira",
+          "districts": ["Río Grande"]
+        },
+        {
+          "id": 2203,
+          "name": "Guananico",
+          "districts": []
+        },
+        {
+          "id": 2204,
+          "name": "Imbert",
+          "districts": []
+        },
+        {
+          "id": 2205,
+          "name": "Los Hidalgos",
+          "districts": []
+        },
+        {
+          "id": 2206,
+          "name": "Luperón",
+          "districts": ["Belloso", "La Isabela", "La Jaiba"]
+        },
+        {
+          "id": 2207,
+          "name": "Sosúa",
+          "districts": ["Cabarete", "Sabaneta de Yásica"]
+        },
+        {
+          "id": 2208,
+          "name": "Villa Isabela",
+          "districts": ["Estero Hondo", "La Jaiba", "Gualete"]
+        },
+        {
+          "id": 2209,
+          "name": "Villa Montellano",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Samaná",
+      "municipalities": [
+        {
+          "id": 2301,
+          "name": "Santa Bárbara de Samaná",
+          "districts": ["Arroyo Barril", "El Limón", "Las Galeras"]
+        },
+        {
+          "id": 2302,
+          "name": "Las Terrenas",
+          "districts": []
+        },
+        {
+          "id": 2303,
+          "name": "Sánchez",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "San Cristóbal",
+      "municipalities": [
+        {
+          "id": 2401,
+          "name": "San Cristóbal",
+          "districts": ["Bajos de Haina", "El Cacao", "Cambita El Pueblecito", "La Cuchilla", "San José del Puerto", "Villa Altagracia"]
+        },
+        {
+          "id": 2402,
+          "name": "Bajos de Haina",
+          "districts": ["El Carril"]
+        },
+        {
+          "id": 2403,
+          "name": "Cambita Garabitos",
+          "districts": ["Cambita El Pueblecito"]
+        },
+        {
+          "id": 2404,
+          "name": "Los Cacaos",
+          "districts": []
+        },
+        {
+          "id": 2405,
+          "name": "Sabana Grande de Palenque",
+          "districts": []
+        },
+        {
+          "id": 2406,
+          "name": "San Gregorio de Nigua",
+          "districts": []
+        },
+        {
+          "id": 2407,
+          "name": "Villa Altagracia",
+          "districts": ["La Cuchilla", "San José del Puerto"]
+        },
+        {
+          "id": 2408,
+          "name": "Yaguate",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "San José de Ocoa",
+      "municipalities": [
+        {
+          "id": 2501,
+          "name": "San José de Ocoa",
+          "districts": ["El Naranjal", "El Pinar", "La Ciénaga", "Nizao-Las Auyamas", "Rancho Arriba", "Sabana Larga"]
+        },
+        {
+          "id": 2502,
+          "name": "Rancho Arriba",
+          "districts": []
+        },
+        {
+          "id": 2503,
+          "name": "Sabana Larga",
+          "districts": []
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "San Juan",
+      "municipalities": [
+        {
+          "id": 2601,
+          "name": "San Juan de la Maguana",
+          "districts": ["El Rosario", "Guanito", "Hato del Padre", "La Jagua", "Las Maguanas-Hato Nuevo", "Las Charcas de María Nova", "Pedro Corto", "Sabana Alta", "Sabaneta"]
+        },
+        {
+          "id": 2602,
+          "name": "Bohechío",
+          "districts": ["Arroyo Cano", "Yaque"]
+        },
+        {
+          "id": 2603,
+          "name": "El Cercado",
+          "districts": ["Batista", "Derrumbadero"]
+        },
+        {
+          "id": 2604,
+          "name": "Juan de Herrera",
+          "districts": ["Jínova"]
+        },
+        {
+          "id": 2605,
+          "name": "Las Matas de Farfán",
+          "districts": ["Carrera de Yeguas", "Matayaya"]
+        },
+        {
+          "id": 2606,
+          "name": "Vallejuelo",
+          "districts": ["Jorjillo"]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "San Pedro de Macorís",
+      "municipalities": [
+        {
+          "id": 2701,
+          "name": "San Pedro de Macorís",
+          "districts": ["Consuelo", "Quisqueya", "Ramón Santana"]
+        },
+        {
+          "id": 2702,
+          "name": "Consuelo",
+          "districts": []
+        },
+        {
+          "id": 2703,
+          "name": "Guayacanes",
+          "districts": []
+        },
+        {
+          "id": 2704,
+          "name": "Quisqueya",
+          "districts": []
+        },
+        {
+          "id": 2705,
+          "name": "Ramón Santana",
+          "districts": []
+        },
+        {
+          "id": 2706,
+          "name": "San José de los Llanos",
+          "districts": ["Gautier"]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Santiago",
+      "municipalities": [
+        {
+          "id": 2801,
+          "name": "Santiago de los Caballeros",
+          "districts": ["Baitoa", "Hato del Yaque", "La Canela", "Pedro García", "San Francisco de Jacagua"]
+        },
+        {
+          "id": 2802,
+          "name": "Bisonó",
+          "districts": []
+        },
+        {
+          "id": 2803,
+          "name": "Jánico",
+          "districts": ["El Caimito", "Juncalito"]
+        },
+        {
+          "id": 2804,
+          "name": "Licey al Medio",
+          "districts": ["Las Palomas"]
+        },
+        {
+          "id": 2805,
+          "name": "Puñal",
+          "districts": ["Canabacoa", "Guayabal"]
+        },
+        {
+          "id": 2806,
+          "name": "Sabana Iglesia",
+          "districts": []
+        },
+        {
+          "id": 2807,
+          "name": "San José de las Matas",
+          "districts": ["El Rubio", "La Cuesta", "Las Placetas"]
+        },
+        {
+          "id": 2808,
+          "name": "Tamboril",
+          "districts": ["Canca La Piedra"]
+        },
+        {
+          "id": 2809,
+          "name": "Villa González",
+          "districts": ["Palmar Arriba"]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Santiago Rodríguez",
+      "municipalities": [
+        {
+          "id": 2901,
+          "name": "San Ignacio de Sabaneta",
+          "districts": ["Cana Chapetón", "Guayajayuco", "Los Almácigos", "Juan de Herrera"]
+        },
+        {
+          "id": 2902,
+          "name": "Los Almácigos",
+          "districts": []
+        },
+        {
+          "id": 2903,
+          "name": "Monción",
+          "districts": ["Canoa"]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Santo Domingo",
+      "municipalities": [
+        {
+          "id": 3001,
+          "name": "Santo Domingo Este",
+          "districts": ["San Luis"]
+        },
+        {
+          "id": 3002,
+          "name": "Santo Domingo Norte",
+          "districts": ["La Victoria"]
+        },
+        {
+          "id": 3003,
+          "name": "Santo Domingo Oeste",
+          "districts": ["Palmarejo-Villa Linda", "Pantoja"]
+        },
+        {
+          "id": 3004,
+          "name": "Boca Chica",
+          "districts": ["La Caleta"]
+        },
+        {
+          "id": 3005,
+          "name": "Los Alcarrizos",
+          "districts": []
+        },
+        {
+          "id": 3006,
+          "name": "Pedro Brand",
+          "districts": ["La Cuaba"]
+        },
+        {
+          "id": 3007,
+          "name": "San Antonio de Guerra",
+          "districts": ["Hato Nuevo"]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Valverde",
+      "municipalities": [
+        {
+          "id": 3101,
+          "name": "Santa Cruz de Mao",
+          "districts": ["Ámina", "Guatapanal", "Jaibón"]
+        },
+        {
+          "id": 3102,
+          "name": "Esperanza",
+          "districts": ["Boca de Mao", "Jicomé"]
+        },
+        {
+          "id": 3103,
+          "name": "Laguna Salada",
+          "districts": ["Cruce de Guayacanes", "Jaibón"]
+        }
+      ]
+    }
+  ],
+  "note": "Dataset administrativo completo de la República Dominicana con 31 provincias, 158 municipios y 229 distritos municipales oficiales según la ONE 2024"
+}
