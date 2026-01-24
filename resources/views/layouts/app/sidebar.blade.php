@@ -7,23 +7,45 @@
 
 <body class="min-h-screen bg-white dark:bg-zinc-800">
 
+
     <flux:sidebar sticky collapsible="mobile"
         class="border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
+
         <flux:sidebar.header>
             <x-app-logo :sidebar="true" href="{{ route('dashboard') }}" wire:navigate />
             <flux:sidebar.collapse class="lg:hidden" />
         </flux:sidebar.header>
 
         <flux:sidebar.nav>
-            <flux:sidebar.group heading="Plataforma" class="grid">
+            <!-- Grupo Plataforma -->
+            <flux:sidebar.group heading="Plataforma">
                 <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')">
                     Inicio
                 </flux:sidebar.item>
 
+                <flux:sidebar.item icon="folder-open" :href="route('territorial-folders.index')"
+                    :current="request()->routeIs('territorial-folders.*')">
+                    Carpetas Territoriales
+                </flux:sidebar.item>
+            </flux:sidebar.group>
+
+            <!-- Grupo Mantenimiento -->
+            <flux:sidebar.group heading="Mantenimiento">
+                <flux:sidebar.item icon="map-pin" href="#">
+                    Provincias
+                </flux:sidebar.item>
+
+                <flux:sidebar.item icon="building-office" href="#">
+                    Municipios
+                </flux:sidebar.item>
+
+                <flux:sidebar.item icon="map" href="#">
+                    Distritos
+                </flux:sidebar.item>
 
                 <flux:sidebar.item icon="users" :href="route('people.index')"
                     :current="request()->routeIs('people.*')">
-                    Personas
+                    Miembros
                 </flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>

@@ -64,7 +64,7 @@ class Create extends Component
             'phone'           => $this->phone,
             'mobile'          => $this->mobile,
             'office_phone'    => $this->office_phone,
-            'email'           => $this->email,
+            'email'           => $this->email ? :null,
             'address'         => $this->address,
             'province_id'     => $this->province_id,
             'municipality_id' => $this->municipality_id,
