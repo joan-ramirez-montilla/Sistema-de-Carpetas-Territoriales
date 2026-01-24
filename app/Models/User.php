@@ -3,7 +3,6 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Employee;
 use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -40,13 +39,6 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $appends = ['role'];
-
-    public function getRoleAttribute(): string
-    {
-        return $this->employee ? 'employee' : 'admin';
-    }
-
     /**
      * Get the attributes that should be cast.
      *
@@ -70,13 +62,5 @@ class User extends Authenticatable
             ->take(2)
             ->map(fn ($word) => Str::substr($word, 0, 1))
             ->implode('');
-    }
-
-    /**
-     * Obtener el empleado asociado al usuario.
-     */
-    public function employee(): HasOne
-    {
-        return $this->hasOne(Employee::class);
     }
 }

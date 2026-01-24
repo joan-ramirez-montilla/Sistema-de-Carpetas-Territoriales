@@ -19,45 +19,10 @@
                 <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')">
                     Inicio
                 </flux:sidebar.item>
-
-                @if (auth()->user()->role == 'admin')
-                    <flux:sidebar.item icon="folder-git-2" :href="route('employees.index')"
-                        :current="request()->routeIs('employees.*')" wire:navigate>
-                        Empleados
-                    </flux:sidebar.item>
-
-                    <flux:sidebar.item icon="book-open-text" :href="route('services.index')"
-                        :current="request()->routeIs('services.*')" wire:navigate>
-                        Servicios
-                    </flux:sidebar.item>
-                @endif
-
-                @if (auth()->user()->role == 'employee')
-                    <flux:sidebar.item icon="book-open-text" :href="route('employees.gallery')"
-                        :current="request()->routeIs('employees.gallery')" wire:navigate>
-                        Galería de Cortes
-                    </flux:sidebar.item>
-                @endif
-
-                <flux:sidebar.item icon="book-open-text" :href="route('appointments.index')"
-                    :current="request()->routeIs('appointments.*')" wire:navigate>
-                    Citas
-                </flux:sidebar.item>
-
             </flux:sidebar.group>
         </flux:sidebar.nav>
 
         <flux:spacer />
-
-
-        @if (auth()->user()->role == 'admin')
-            <flux:sidebar.nav>
-                <flux:sidebar.item icon="home" :href="route('company-settings.index')"
-                    :current="request()->routeIs('company-settings.*')" wire:navigate>
-                    Empresa
-                </flux:sidebar.item>
-            </flux:sidebar.nav>
-        @endif
 
         <x-desktop-user-menu class="hidden lg:block" :name="auth()->user()->name" />
     </flux:sidebar>
