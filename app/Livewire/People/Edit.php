@@ -3,7 +3,7 @@
 namespace App\Livewire\People;
 
 use Livewire\Component;
-use App\Models\{District, Municipality, Person, Province};
+use App\Models\{District, Municipality, Person, Province, Position, Organization};
 
 class Edit extends Component
 {
@@ -12,9 +12,14 @@ class Edit extends Component
     public $full_name, $national_id, $phone, $circumscription, $mobile, $office_phone, $email, $address;
     public $province_id, $municipality_id, $district_id;
 
+    public $position_id, $organization_id;
+
     public $provinces = [];
     public $municipalities = [];
     public $districts = [];
+
+    public $positions = [];
+    public $organizations = [];
 
     protected function rules()
     {
@@ -25,6 +30,8 @@ class Edit extends Component
             'municipality_id' => 'required|exists:municipalities,id',
             'district_id'     => 'nullable|exists:districts,id',
             'circumscription' => 'required|in:1,2,3,4,5,6,7,8',
+            'position_id'     => 'required|exists:positions,id',
+            'organization_id' => 'required|exists:organizations,id',
         ];
     }
 
@@ -34,6 +41,15 @@ class Edit extends Component
 
         // Provincias
         $this->provinces = Province::where('is_active', true)
+            ->orderBy('name')
+            ->get();
+
+        // Posiciones y organizaciones
+        $this->positions = Position::where('is_active', true)
+            ->orderBy('name')
+            ->get();
+
+        $this->organizations = Organization::where('is_active', true)
             ->orderBy('name')
             ->get();
 
@@ -49,7 +65,9 @@ class Edit extends Component
             'province_id'     => $person->province_id,
             'municipality_id' => $person->municipality_id,
             'district_id'     => $person->district_id,
-            'circumscription' => $this->circumscription
+            'circumscription' => $person->circumscription,
+            'position_id'     => $person->position_id,
+            'organization_id' => $person->organization_id,
         ]);
 
         // Precargar dependencias
@@ -106,6 +124,9 @@ class Edit extends Component
             'province_id'     => $this->province_id,
             'municipality_id' => $this->municipality_id,
             'district_id'     => $this->district_id,
+            'circumscription' => $this->circumscription,
+            'position_id'     => $this->position_id,
+            'organization_id' => $this->organization_id,
         ]);
 
         return redirect()

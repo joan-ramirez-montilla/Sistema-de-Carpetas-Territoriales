@@ -101,7 +101,6 @@
             <flux:error name="district_id" />
         </flux:field>
 
-
         {{-- Circunscripción --}}
         <flux:field>
             <flux:label>Circunscripción</flux:label>
@@ -112,6 +111,30 @@
                 @endfor
             </flux:select>
             <flux:error name="circumscription" />
+        </flux:field>
+
+        {{-- Cargo / Posición --}}
+        <flux:field>
+            <flux:label>Posición</flux:label>
+            <flux:select wire:model.live="position_id">
+                <option value="">Seleccione una posición</option>
+                @foreach ($positions as $position)
+                    <option value="{{ $position->id }}">{{ $position->name }}</option>
+                @endforeach
+            </flux:select>
+            <flux:error name="position_id" />
+        </flux:field>
+
+        {{-- Organización --}}
+        <flux:field>
+            <flux:label>Organización</flux:label>
+            <flux:select wire:model.live="organization_id">
+                <option value="">Seleccione una organización</option>
+                @foreach ($organizations as $organization)
+                    <option value="{{ $organization->id }}">{{ $organization->name }}</option>
+                @endforeach
+            </flux:select>
+            <flux:error name="organization_id" />
         </flux:field>
 
         {{-- Actions --}}

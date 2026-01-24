@@ -3,7 +3,7 @@
 namespace App\Livewire\People;
 
 use Livewire\Component;
-use App\Models\{District, Municipality, Person, Province};
+use App\Models\{District, Municipality, Person, Province, Position, Organization};
 
 class Create extends Component
 {
@@ -13,9 +13,15 @@ class Create extends Component
     public $municipality_id;
     public $district_id;
 
+    public $position_id;
+    public $organization_id;
+
     public $provinces = [];
     public $municipalities = [];
     public $districts = [];
+
+    public $positions = [];
+    public $organizations = [];
 
     protected $rules = [
         'full_name'         => 'required|string|min:3',
@@ -23,12 +29,16 @@ class Create extends Component
         'province_id'       => 'required|exists:provinces,id',
         'municipality_id'   => 'required|exists:municipalities,id',
         'district_id'       => 'nullable|exists:districts,id',
-        'circumscription' => 'required|in:1,2,3,4,5,6,7,8'
+        'circumscription'   => 'required|in:1,2,3,4,5,6,7,8',
+        'position_id'       => 'required|exists:positions,id',
+        'organization_id'   => 'required|exists:organizations,id',
     ];
 
     public function mount()
     {
         $this->provinces = Province::where('is_active', true)->orderBy('name')->get();
+        $this->positions = Position::where('is_active', true)->orderBy('name')->get();
+        $this->organizations = Organization::where('is_active', true)->orderBy('name')->get();
     }
 
     public function updatedProvinceId($value)
@@ -64,12 +74,14 @@ class Create extends Component
             'phone'           => $this->phone,
             'mobile'          => $this->mobile,
             'office_phone'    => $this->office_phone,
-            'email'           => $this->email ? :null,
+            'email'           => $this->email ?: null,
             'address'         => $this->address,
             'province_id'     => $this->province_id,
             'municipality_id' => $this->municipality_id,
             'district_id'     => $this->district_id,
-            'circumscription' => $this->circumscription
+            'circumscription' => $this->circumscription,
+            'position_id'     => $this->position_id,
+            'organization_id' => $this->organization_id,
         ]);
 
         return redirect()->route('people.index')

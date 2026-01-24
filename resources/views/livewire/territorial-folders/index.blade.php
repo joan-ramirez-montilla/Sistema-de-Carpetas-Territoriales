@@ -15,17 +15,15 @@
         </div>
 
         <div class="flex items-center gap-3">
-            <flux:button wire:click="exportExcel" variant="ghost" class="hidden sm:flex">
-                <i class="fas fa-file-excel mr-2"></i>
-                Exportar Excel
-            </flux:button>
             <flux:button wire:click="exportPdf" variant="ghost" class="hidden sm:flex">
                 <i class="fas fa-download mr-2"></i>
                 Exportar PDF
             </flux:button>
-            <flux:button href="#" variant="primary" icon="plus">
-                Nueva Carpeta
-            </flux:button>
+            {{--
+                <flux:button href="#" variant="primary" icon="plus">
+                    Nueva Carpeta
+                </flux:button>
+            --}}
         </div>
     </div>
 
@@ -139,7 +137,7 @@
                 <i class="fas fa-map-marker-alt mr-2 text-gray-500"></i>
                 PROVINCIA
             </flux:label>
-            <flux:select wire:model.live="selectedProvince">
+            <flux:select wire:model.live="selectedProvince" :disabled="!$selectedRegion">
                 <option value="">Seleccionar provincia</option>
                 @foreach ($provinces as $province)
                     <option value="{{ $province->id }}">{{ $province->name }}</option>

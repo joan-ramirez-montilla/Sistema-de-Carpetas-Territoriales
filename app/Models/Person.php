@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Organization;
 use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
@@ -30,5 +31,10 @@ class Person extends Model
     public function records()
     {
         return $this->hasMany(TerritorialFolderRecord::class);
+    }
+
+    public function organization()
+    {
+        return $this->belongsTo(Organization::class);
     }
 }

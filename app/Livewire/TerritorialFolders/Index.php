@@ -2,12 +2,13 @@
 
 namespace App\Livewire\TerritorialFolders;
 
+use App\Models\Person;
+use App\Models\Region;
+use Livewire\Component;
+use App\Models\District;
 use App\Models\Province;
 use App\Models\Municipality;
-use App\Models\District;
-use App\Models\Region;
-use App\Models\Person;
-use Livewire\Component;
+use App\Models\Organization;
 use Livewire\WithPagination;
 
 class Index extends Component
@@ -108,27 +109,25 @@ class Index extends Component
         $activeProvinces = Province::where('is_active', true)->count();
         $activeMunicipalities = Municipality::where('is_active', true)->count();
 
-        // Simular carpetas (esto debería venir de un modelo TerritorialFolder)
-        $folders = collect([
-            [
-                'id' => 1,
-                'name' => 'Carpeta Provincial Zonificada',
-                'province' => 'Azua',
-                'municipality' => 'Azua',
-                'district' => '54956',
-                'region' => 'Cibao noroeste',
-                'members_count' => 8,
-            ],
-            [
-                'id' => 2,
-                'name' => 'Carpeta Provincial Zonificada',
-                'province' => 'Azua',
-                'municipality' => 'Azua',
-                'district' => '54956',
-                'region' => 'Cibao noroeste',
-                'members_count' => 1,
-            ],
-        ]);
+        $folders = Person::query()
+            ->selectRaw('organization_id, COUNT(*) as members_count')
+            ->when($this->selectedProvince, fn($q) => $q->where('province_id', $this->selectedProvince))
+            ->when($this->selectedMunicipality, fn($q) => $q->where('municipality_id', $this->selectedMunicipality))
+            ->when($this->selectedDistrict, fn($q) => $q->where('district_id', $this->selectedDistrict))
+            ->groupBy('organization_id')
+            ->orderBy('members_count', 'desc')
+            ->get()
+            ->map(function ($item) {
+                return [
+                    'id' => $item->organization_id,
+                    'name' => Organization::find($item->organization_id)->name ?? 'Sin organización',
+                    'province' => Province::find($item->province_id)?->name ?? null,
+                    'municipality' => Municipality::find($item->municipality_id)?->name ?? null,
+                    'district' => District::find($item->district_id)?->name ?? null,
+                    'region' => Region::find($item->region_id)?->name ?? null,
+                    'members_count' => $item->members_count,
+                ];
+            });
 
         // Filtrar carpetas según filtros seleccionados
 
@@ -153,39 +152,16 @@ class Index extends Component
         // Obtener miembros de la carpeta seleccionada
         $members = collect();
         if ($this->selectedFolder) {
-            // TODO: Obtener miembros reales de la carpeta seleccionada
-            $members = collect([
-                [
-                    'position' => 'Presidente(a)',
-                    'full_name' => 'CARLOS A RAMIREZ',
-                    'national_id' => '010-0006672-8',
-                ],
-                [
-                    'position' => '1er. Vice-presidente(a)',
-                    'full_name' => 'ROSA NUÑEZ',
-                    'national_id' => '010-0008641-1',
-                ],
-                [
-                    'position' => '2do. Vice-presidente(a)',
-                    'full_name' => 'ELVIN ANT PERALTA',
-                    'national_id' => '010-0065567-8',
-                ],
-                [
-                    'position' => '3er. Vice-presidente(a)',
-                    'full_name' => 'ANGEL BLADIMIR MP.',
-                    'national_id' => '010-0084299-5',
-                ],
-                [
-                    'position' => 'Secretario(a) General',
-                    'full_name' => 'BRENDA OGANDO',
-                    'national_id' => '010-0100405-8',
-                ],
-                [
-                    'position' => '1er. Secretario(a) General',
-                    'full_name' => 'RAFAEL PEREZ',
-                    'national_id' => '019-0051095-6',
-                ],
-            ]);
+            $members = Person::where('organization_id', $this->selectedFolder)
+                ->orderBy('full_name')
+                ->get(['full_name', 'national_id', 'position_id'])
+                ->map(function ($person) {
+                    return [
+                        'position' => $person->position->name ?? 'Sin cargo',
+                        'full_name' => $person->full_name,
+                        'national_id' => $person->national_id,
+                    ];
+                });
         }
 
         return view('livewire.territorial-folders.index', [

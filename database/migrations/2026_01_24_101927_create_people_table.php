@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('office_phone')->nullable();
             $table->string('email')->nullable()->unique();
             $table->string('address')->nullable();
-            $table->foreignId('position_id')->nullable()->constrained();
-            $table->foreignId('organization_id')->nullable()->constrained();
+            $table->foreignId('position_id')->constrained();
+            $table->foreignId('organization_id')->constrained();
             $table->enum('circumscription', ['1','2','3','4','5','6','7','8'])->nullable();
 
             $table->foreignId('province_id')->nullable()->constrained();
