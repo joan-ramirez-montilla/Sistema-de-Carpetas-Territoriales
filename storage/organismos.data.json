@@ -1,0 +1,12 @@
+{
+  "organizations": [
+    { "id": 1, "name": "Carpeta Provincial Zonificada" },
+    { "id": 2, "name": "Carpeta Zonal" },
+    { "id": 3, "name": "Carpeta Municipal Zonificado" },
+    { "id": 4, "name": "Carpeta Distrito Mun. No Zonificado" },
+    { "id": 5, "name": "Carpeta Municipal No Zonificado" },
+    { "id": 6, "name": "Carpeta Provincial No Zonificada" },
+    { "id": 7, "name": "Carpeta Distrito Mun. Zonificada" },
+    { "id": 8, "name": "Carpeta Regional Zonificado" }
+  ]
+}
