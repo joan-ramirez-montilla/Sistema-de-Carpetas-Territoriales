@@ -33,6 +33,11 @@ class Person extends Model
         return $this->hasMany(TerritorialFolderRecord::class);
     }
 
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
     public function organization()
     {
         return $this->belongsTo(Organization::class);

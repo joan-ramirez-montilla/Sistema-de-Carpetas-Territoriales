@@ -106,13 +106,12 @@ class Index extends Component
 
     public function render()
     {
-
-     // Obtener regiones
+        // Obtener regiones
         $regions = Region::where('is_active', true)
             ->orderBy('name')
             ->get();
 
-        // Obtener provincias segun region seleccionada
+        // Obtener provincias según región seleccionada
         $provinces = collect();
         if ($this->selectedRegion) {
             $provinces = Province::where('region_id', $this->selectedRegion)
@@ -144,32 +143,85 @@ class Index extends Component
         $activeProvinces = Province::where('is_active', true)->count();
         $activeMunicipalities = Municipality::where('is_active', true)->count();
 
-        $folders = Person::query()
-            ->selectRaw('organization_id, COUNT(*) as members_count')
-            ->when($this->selectedProvince, fn($q) => $q->where('province_id', $this->selectedProvince))
-            ->when($this->selectedMunicipality, fn($q) => $q->where('municipality_id', $this->selectedMunicipality))
-            ->when($this->selectedDistrict, fn($q) => $q->where('district_id', $this->selectedDistrict))
+        // Obtener carpetas con filtros
+        $foldersQuery = Person::query()
+            ->selectRaw('organization_id, COUNT(*) as members_count');
+
+        // Aplicar filtros a las carpetas SIN usar whereHas (que da error)
+        if ($this->selectedRegion) {
+            $foldersQuery->whereIn('province_id',
+                Province::where('region_id', $this->selectedRegion)->pluck('id')
+            );
+        }
+
+        if ($this->selectedProvince) {
+            $foldersQuery->where('province_id', $this->selectedProvince);
+        }
+
+        if ($this->selectedMunicipality) {
+            $foldersQuery->where('municipality_id', $this->selectedMunicipality);
+        }
+
+        if ($this->selectedDistrict) {
+            $foldersQuery->where('district_id', $this->selectedDistrict);
+        }
+
+        $folders = $foldersQuery
             ->groupBy('organization_id')
             ->orderBy('members_count', 'desc')
             ->get()
             ->map(function ($item) {
+                // Para obtener los datos de ubicación, necesitas consultar una persona del grupo
+                $samplePerson = Person::where('organization_id', $item->organization_id)
+                    ->when($this->selectedRegion, function ($q) {
+                        $q->whereIn('province_id',
+                            Province::where('region_id', $this->selectedRegion)->pluck('id')
+                        );
+                    })
+                    ->when($this->selectedProvince, fn($q) => $q->where('province_id', $this->selectedProvince))
+                    ->when($this->selectedMunicipality, fn($q) => $q->where('municipality_id', $this->selectedMunicipality))
+                    ->when($this->selectedDistrict, fn($q) => $q->where('district_id', $this->selectedDistrict))
+                    ->first();
+
                 return [
                     'id' => $item->organization_id,
                     'name' => Organization::find($item->organization_id)->name ?? 'Sin organización',
-                    'province' => Province::find($item->province_id)?->name ?? null,
-                    'municipality' => Municipality::find($item->municipality_id)?->name ?? null,
-                    'district' => District::find($item->district_id)?->name ?? null,
-                    'region' => Region::find($item->region_id)?->name ?? null,
+                    'province' => $samplePerson ? (Province::find($samplePerson->province_id)?->name ?? null) : null,
+                    'municipality' => $samplePerson ? (Municipality::find($samplePerson->municipality_id)?->name ?? null) : null,
+                    'district' => $samplePerson ? (District::find($samplePerson->district_id)?->name ?? null) : null,
+                    'region' => $samplePerson && $samplePerson->province_id ?
+                        (Region::find(Province::find($samplePerson->province_id)?->region_id)?->name ?? null) : null,
                     'members_count' => $item->members_count,
                 ];
             });
 
-        $totalFolders = 5;
+        $totalFolders = $folders->count();
 
-        // Obtener miembros de la carpeta seleccionada
+        // Obtener miembros de la carpeta seleccionada CON LOS MISMOS FILTROS
         $members = collect();
         if ($this->selectedFolder) {
-            $members = Person::where('organization_id', $this->selectedFolder)
+            $membersQuery = Person::where('organization_id', $this->selectedFolder);
+
+            // Aplicar los mismos filtros que en el reporte PDF SIN usar whereHas
+            if ($this->selectedRegion) {
+                $membersQuery->whereIn('province_id',
+                    Province::where('region_id', $this->selectedRegion)->pluck('id')
+                );
+            }
+
+            if ($this->selectedProvince) {
+                $membersQuery->where('province_id', $this->selectedProvince);
+            }
+
+            if ($this->selectedMunicipality) {
+                $membersQuery->where('municipality_id', $this->selectedMunicipality);
+            }
+
+            if ($this->selectedDistrict) {
+                $membersQuery->where('district_id', $this->selectedDistrict);
+            }
+
+            $members = $membersQuery
                 ->orderBy('full_name')
                 ->get(['full_name', 'national_id', 'position_id'])
                 ->map(function ($person) {
@@ -180,8 +232,6 @@ class Index extends Component
                     ];
                 });
         }
-
-
 
         return view('livewire.territorial-folders.index', [
             'regions' => $regions,
