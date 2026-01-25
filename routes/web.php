@@ -56,4 +56,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 require __DIR__.'/settings.php';
 
-Route::livewire('/', 'home-content')->name('home');
+// Ruta raíz - redirige a dashboard si está autenticado, si no a login
+Route::get('/', function () {
+    return auth()->check() ? redirect('/dashboard') : redirect('/login');
+})->name('home');
+
+// Ruta comodín para rutas no encontradas - redirige a dashboard si está autenticado
+Route::fallback(function () {
+    return auth()->check() ? redirect('/dashboard') : redirect('/login');
+});
