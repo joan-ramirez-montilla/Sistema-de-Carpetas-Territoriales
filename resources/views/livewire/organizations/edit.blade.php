@@ -6,15 +6,12 @@
     </div>
 
     {{-- Form --}}
-    <form wire:submit="update" class="max-w-2xl space-y-6">
+    <form wire:submit.prevent="save" class="max-w-2xl space-y-6">
 
         <flux:field>
-            <flux:label for="name">Nombre</flux:label>
-            <flux:input wire:model.blur="form.name" id="name" type="text" placeholder="Ej: Comité de Base"
-                @error('form.name') error @enderror />
-            @error('form.name')
-                <flux:error>{{ $message }}</flux:error>
-            @enderror
+            <flux:label>Nombre</flux:label>
+            <flux:input wire:model.defer="name" placeholder="Ej: Comité de Base" :invalid="$errors->has('name')" />
+            <flux:error name="name" />
         </flux:field>
 
         {{-- Actions --}}

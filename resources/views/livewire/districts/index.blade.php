@@ -69,11 +69,12 @@
 
                                 <flux:button wire:click="toggleActive({{ $district->id }})"
                                     variant="{{ $district->is_active ? 'ghost' : 'primary' }}" size="sm"
-                                    icon="{{ $district->is_active ? 'x-circle' : 'check-circle' }}">
+                                    icon="{{ $district->is_active ? 'x-circle' : 'check-circle' }}"
+                                    class="min-w-[120px]">
                                     {{ $district->is_active ? 'Desactivar' : 'Activar' }}
                                 </flux:button>
 
-                                <flux:button wire:click="delete({{ $district->id }})" variant="danger" size="sm"
+                                <flux:button wire:click="confirmDelete({{ $district->id }})" variant="danger" size="sm"
                                     icon="trash">
                                     Eliminar
                                 </flux:button>
@@ -100,5 +101,31 @@
     <div class="flex justify-end">
         {{ $districts->links('components.flux-pagination') }}
     </div>
+
+    {{-- Delete Confirmation Modal --}}
+    <flux:modal name="confirm-delete" wire:model="showDeleteModal" @close="closeDeleteModal" focusable class="max-w-lg">
+        <form wire:submit="delete" class="space-y-6">
+            <div>
+                <flux:heading size="lg">¿Estás seguro de que quieres eliminar este distrito?</flux:heading>
+                <flux:subheading>
+                    Esta acción no se puede deshacer. Se eliminará permanentemente el distrito
+                    @if($districtToDelete)
+                        <strong>"{{ $districtToDelete->name }}"</strong>
+                    @endif
+                </flux:subheading>
+            </div>
+
+            <div class="flex justify-end space-x-2 rtl:space-x-reverse">
+                <flux:modal.close>
+                    <flux:button variant="ghost">
+                        Cancelar
+                    </flux:button>
+                </flux:modal.close>
+                <flux:button type="submit" variant="danger">
+                    Eliminar
+                </flux:button>
+            </div>
+        </form>
+    </flux:modal>
 
 </div>

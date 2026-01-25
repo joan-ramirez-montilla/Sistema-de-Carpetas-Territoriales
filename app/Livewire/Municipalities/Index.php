@@ -3,6 +3,7 @@
 namespace App\Livewire\Municipalities;
 
 use App\Models\Municipality;
+use Illuminate\Database\QueryException;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -12,6 +13,8 @@ class Index extends Component
 
     public $search = '';
     public $perPage = 10;
+    public $municipalityToDelete = null;
+    public $showDeleteModal = false;
 
     protected $queryString = [
         'search' => ['except' => ''],
@@ -22,10 +25,35 @@ class Index extends Component
         $this->resetPage();
     }
 
-    public function delete(Municipality $municipality)
+    public function confirmDelete(Municipality $municipality)
     {
-        $municipality->delete();
-        $this->resetPage();
+        $this->municipalityToDelete = $municipality;
+        $this->showDeleteModal = true;
+    }
+
+    public function closeDeleteModal()
+    {
+        $this->showDeleteModal = false;
+        $this->municipalityToDelete = null;
+    }
+
+    public function delete()
+    {
+        if ($this->municipalityToDelete) {
+            try {
+                $this->municipalityToDelete->delete();
+                $this->resetPage();
+                $this->dispatch('notify', ['type' => 'success', 'message' => 'Municipio eliminado con éxito.']);
+            } catch (QueryException $e) {
+                if ($e->getCode() == 23000 || str_contains($e->getMessage(), '23000') || str_contains($e->getMessage(), 'Integrity constraint violation')) {
+                    $this->dispatch('notify', ['type' => 'error', 'message' => 'No se puede eliminar este municipio porque tiene registros relacionados.']);
+                } else {
+                    $this->dispatch('notify', ['type' => 'error', 'message' => 'Ocurrió un error al intentar eliminar el municipio.']);
+                }
+            } finally {
+                $this->closeDeleteModal();
+            }
+        }
     }
 
     public function toggleActive(Municipality $municipality)

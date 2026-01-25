@@ -69,7 +69,7 @@
                                     Editar
                                 </flux:button>
 
-                                <flux:button wire:click="delete({{ $person->id }})" variant="danger" size="sm"
+                                <flux:button wire:click="confirmDelete({{ $person->id }})" variant="danger" size="sm"
                                     icon="trash">
                                     Eliminar
                                 </flux:button>
@@ -96,5 +96,31 @@
     <div class="flex justify-end">
         {{ $people->links('components.flux-pagination') }}
     </div>
+
+    {{-- Delete Confirmation Modal --}}
+    <flux:modal name="confirm-delete" wire:model="showDeleteModal" @close="closeDeleteModal" focusable class="max-w-lg">
+        <form wire:submit="delete" class="space-y-6">
+            <div>
+                <flux:heading size="lg">¿Estás seguro de que quieres eliminar esta persona?</flux:heading>
+                <flux:subheading>
+                    Esta acción no se puede deshacer. Se eliminará permanentemente la persona
+                    @if($personToDelete)
+                        <strong>"{{ $personToDelete->full_name }}"</strong>
+                    @endif
+                </flux:subheading>
+            </div>
+
+            <div class="flex justify-end space-x-2 rtl:space-x-reverse">
+                <flux:modal.close>
+                    <flux:button variant="ghost">
+                        Cancelar
+                    </flux:button>
+                </flux:modal.close>
+                <flux:button type="submit" variant="danger">
+                    Eliminar
+                </flux:button>
+            </div>
+        </form>
+    </flux:modal>
 
 </div>

@@ -69,11 +69,12 @@
 
                                 <flux:button wire:click="toggleActive({{ $organization->id }})"
                                     variant="{{ $organization->is_active ? 'ghost' : 'primary' }}" size="sm"
-                                    icon="{{ $organization->is_active ? 'x-circle' : 'check-circle' }}">
+                                    icon="{{ $organization->is_active ? 'x-circle' : 'check-circle' }}"
+                                    class="min-w-[120px]">
                                     {{ $organization->is_active ? 'Desactivar' : 'Activar' }}
                                 </flux:button>
 
-                                <flux:button wire:click="delete({{ $organization->id }})" variant="danger"
+                                <flux:button wire:click="confirmDelete({{ $organization->id }})" variant="danger"
                                     size="sm" icon="trash">
                                     Eliminar
                                 </flux:button>
@@ -100,5 +101,31 @@
     <div class="flex justify-end">
         {{ $organizations->links('components.flux-pagination') }}
     </div>
+
+    {{-- Delete Confirmation Modal --}}
+    <flux:modal name="confirm-delete" wire:model="showDeleteModal" @close="closeDeleteModal" focusable class="max-w-lg">
+        <form wire:submit="delete" class="space-y-6">
+            <div>
+                <flux:heading size="lg">¿Estás seguro de que quieres eliminar esta organización?</flux:heading>
+                <flux:subheading>
+                    Esta acción no se puede deshacer. Se eliminará permanentemente la organización
+                    @if($organizationToDelete)
+                        <strong>"{{ $organizationToDelete->name }}"</strong>
+                    @endif
+                </flux:subheading>
+            </div>
+
+            <div class="flex justify-end space-x-2 rtl:space-x-reverse">
+                <flux:modal.close>
+                    <flux:button variant="ghost">
+                        Cancelar
+                    </flux:button>
+                </flux:modal.close>
+                <flux:button type="submit" variant="danger">
+                    Eliminar
+                </flux:button>
+            </div>
+        </form>
+    </flux:modal>
 
 </div>
