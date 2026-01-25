@@ -10,6 +10,18 @@ class Index extends Component
 {
     use WithPagination;
 
+    public $search = '';
+    public $perPage = 10;
+
+    protected $queryString = [
+        'search' => ['except' => ''],
+    ];
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function delete(Person $person)
     {
         $person->delete();
@@ -18,8 +30,20 @@ class Index extends Component
 
     public function render()
     {
+        $query = Person::query();
+
+        // Búsqueda por nombre o cédula
+        if ($this->search) {
+            $query->where(function ($q) {
+                $q->where('full_name', 'like', '%' . $this->search . '%')
+                  ->orWhere('national_id', 'like', '%' . $this->search . '%');
+            });
+        }
+
+        $people = $query->latest()->paginate($this->perPage);
+
         return view('livewire.people.index', [
-            'people' =>  Person::latest()->paginate(10)
+            'people' => $people
         ]);
     }
 }
