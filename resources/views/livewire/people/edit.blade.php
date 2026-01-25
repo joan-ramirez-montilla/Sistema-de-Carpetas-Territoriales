@@ -23,28 +23,32 @@
         {{-- Cédula --}}
         <flux:field>
             <flux:label>Cédula</flux:label>
-            <flux:input wire:model.defer="national_id" :invalid="$errors->has('national_id')" />
+            <flux:input wire:model.defer="national_id" x-data="dominicanoInput('national_id')" @input="formatNationalId"
+                placeholder="000-0000000-0" maxlength="13" :invalid="$errors->has('national_id')" />
             <flux:error name="national_id" />
         </flux:field>
 
         {{-- Teléfono --}}
         <flux:field>
             <flux:label>Teléfono</flux:label>
-            <flux:input wire:model.defer="phone" :invalid="$errors->has('phone')" />
+            <flux:input wire:model.defer="phone" x-data="dominicanoInput('phone')" @input="formatPhone" placeholder="809-000-0000"
+                maxlength="12" :invalid="$errors->has('phone')" />
             <flux:error name="phone" />
         </flux:field>
 
         {{-- Celular --}}
         <flux:field>
             <flux:label>Celular</flux:label>
-            <flux:input wire:model.defer="mobile" :invalid="$errors->has('mobile')" />
+            <flux:input wire:model.defer="mobile" x-data="dominicanoInput('mobile')" @input="formatPhone"
+                placeholder="829-000-0000" maxlength="12" :invalid="$errors->has('mobile')" />
             <flux:error name="mobile" />
         </flux:field>
 
         {{-- Teléfono oficina --}}
         <flux:field>
             <flux:label>Teléfono oficina</flux:label>
-            <flux:input wire:model.defer="office_phone" />
+            <flux:input wire:model.defer="office_phone" x-data="dominicanoInput('office_phone')" @input="formatPhone"
+                placeholder="809-000-0000" maxlength="12" :invalid="$errors->has('office_phone')" />
             <flux:error name="office_phone" />
         </flux:field>
 
@@ -149,3 +153,46 @@
         </div>
     </form>
 </div>
+
+<script>
+    function dominicanoInput(fieldName) {
+        return {
+            formatNationalId(e) {
+                let value = e.target.value.replace(/\D/g, '');
+
+                if (value.length > 11) {
+                    value = value.slice(0, 11);
+                }
+
+                if (value.length <= 3) {
+                    e.target.value = value;
+                } else if (value.length <= 10) {
+                    e.target.value = value.slice(0, 3) + '-' + value.slice(3);
+                } else {
+                    e.target.value = value.slice(0, 3) + '-' + value.slice(3, 10) + '-' + value.slice(10);
+                }
+
+                // Actualizar wire:model
+                @this.set(fieldName, e.target.value);
+            },
+            formatPhone(e) {
+                let value = e.target.value.replace(/\D/g, '');
+
+                if (value.length > 10) {
+                    value = value.slice(0, 10);
+                }
+
+                if (value.length <= 3) {
+                    e.target.value = value;
+                } else if (value.length <= 6) {
+                    e.target.value = value.slice(0, 3) + '-' + value.slice(3);
+                } else {
+                    e.target.value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6);
+                }
+
+                // Actualizar wire:model
+                @this.set(fieldName, e.target.value);
+            }
+        }
+    }
+</script>

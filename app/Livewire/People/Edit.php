@@ -25,6 +25,10 @@ class Edit extends Component
     {
         return [
             'full_name'       => 'required|string|min:3',
+            'national_id'     => 'nullable|regex:/^\d{3}-\d{7}-\d{1}$/',
+            'phone'           => 'nullable|regex:/^\d{3}-\d{3}-\d{4}$/',
+            'mobile'          => 'nullable|regex:/^\d{3}-\d{3}-\d{4}$/',
+            'office_phone'    => 'nullable|regex:/^\d{3}-\d{3}-\d{4}$/',
             'email'           => 'nullable|email|max:255|unique:people,email,' . $this->person->id,
             'province_id'     => 'required|exists:provinces,id',
             'municipality_id' => 'required|exists:municipalities,id',
