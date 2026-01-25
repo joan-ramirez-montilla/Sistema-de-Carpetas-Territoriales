@@ -31,21 +31,39 @@
 
             <!-- Grupo Mantenimiento -->
             <flux:sidebar.group heading="Mantenimiento">
-                <flux:sidebar.item icon="map-pin" href="#">
+                <flux:sidebar.item icon="globe-alt" :href="route('regions.index')"
+                    :current="request()->routeIs('regions.*')">
+                    Regiones
+                </flux:sidebar.item>
+
+                <flux:sidebar.item icon="map-pin" :href="route('provinces.index')"
+                    :current="request()->routeIs('provinces.*')">
                     Provincias
                 </flux:sidebar.item>
 
-                <flux:sidebar.item icon="building-office" href="#">
+                <flux:sidebar.item icon="building-office" :href="route('municipalities.index')"
+                    :current="request()->routeIs('municipalities.*')">
                     Municipios
                 </flux:sidebar.item>
 
-                <flux:sidebar.item icon="map" href="#">
+                <flux:sidebar.item icon="map" :href="route('districts.index')"
+                    :current="request()->routeIs('districts.*')">
                     Distritos
                 </flux:sidebar.item>
 
                 <flux:sidebar.item icon="users" :href="route('people.index')"
                     :current="request()->routeIs('people.*')">
                     Miembros
+                </flux:sidebar.item>
+
+                <flux:sidebar.item icon="briefcase" :href="route('positions.index')"
+                    :current="request()->routeIs('positions.*')">
+                    Cargos
+                </flux:sidebar.item>
+
+                <flux:sidebar.item icon="squares-2x2" :href="route('organizations.index')"
+                    :current="request()->routeIs('organizations.*')">
+                    Organizaciones
                 </flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>

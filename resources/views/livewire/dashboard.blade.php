@@ -138,8 +138,8 @@
             </div>
 
             <div class="space-y-3">
-                <div
-                    class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    onclick="window.location.href='{{ route('regions.index') }}'">
                     <div class="flex items-center gap-3">
                         <i class="fas fa-globe text-blue-600 dark:text-blue-400"></i>
                         <div>
@@ -150,8 +150,8 @@
                     <i class="fas fa-chevron-right text-gray-400"></i>
                 </div>
 
-                <div
-                    class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    onclick="window.location.href='{{ route('provinces.index') }}'">
                     <div class="flex items-center gap-3">
                         <i class="fas fa-map-marker-alt text-rose-600 dark:text-rose-400"></i>
                         <div>
@@ -163,8 +163,8 @@
                     <i class="fas fa-chevron-right text-gray-400"></i>
                 </div>
 
-                <div
-                    class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    onclick="window.location.href='{{ route('municipalities.index') }}'">
                     <div class="flex items-center gap-3">
                         <i class="fas fa-building text-emerald-600 dark:text-emerald-400"></i>
                         <div>
@@ -176,8 +176,8 @@
                     <i class="fas fa-chevron-right text-gray-400"></i>
                 </div>
 
-                <div
-                    class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    onclick="window.location.href='{{ route('districts.index') }}'">
                     <div class="flex items-center gap-3">
                         <i class="fas fa-map text-purple-600 dark:text-purple-400"></i>
                         <div>
@@ -222,8 +222,8 @@
                     <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
 
-                <div
-                    class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    onclick="window.location.href='{{ route('positions.index') }}'">
                     <div class="flex items-center gap-3">
                         <i class="fas fa-briefcase text-amber-600 dark:text-amber-400"></i>
                         <div>
@@ -234,8 +234,8 @@
                     <i class="fas fa-chevron-right text-gray-400"></i>
                 </div>
 
-                <div
-                    class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    onclick="window.location.href='{{ route('organizations.index') }}'">
                     <div class="flex items-center gap-3">
                         <i class="fas fa-sitemap text-teal-600 dark:text-teal-400"></i>
                         <div>
