@@ -2,35 +2,35 @@
   "positions": [
     {
       "id": 1,
-      "name": "PRESIDENTE(A)"
+      "name": "PRESIDENTE"
     },
     {
       "id": 2,
-      "name": "1ER. VICE-PRESIDENTE(A)"
+      "name": "1ER VICE-PRESIDENTE"
     },
     {
       "id": 3,
-      "name": "2DO. VICE-PRESIDENTE(A)"
+      "name": "2DO VICE-PRESIDENTE"
     },
     {
       "id": 4,
-      "name": "3ER. VICE-PRESIDENTE(A)"
+      "name": "3ER VICE-PRESIDENTE"
     },
     {
       "id": 5,
-      "name": "SECRETARIO(A) GENERAL"
+      "name": "SECRETARIO GENERAL"
     },
     {
       "id": 6,
-      "name": "1ER. SECRETARIO(A) GENERAL"
+      "name": "1ER SECRETARIO GENERAL"
     },
     {
       "id": 7,
-      "name": "2DO. SUB-SECRETARIO(A) GENERAL"
+      "name": "2DO SUB-SECRETARIO GENERAL"
     },
     {
       "id": 8,
-      "name": "3ER. SUB-SECRETARIO(A) GENERAL"
+      "name": "3ER SUB-SECRETARIO GENERAL"
     },
     {
       "id": 9,
@@ -42,51 +42,51 @@
     },
     {
       "id": 11,
-      "name": "2DO. SECRETARIO(A) GENERAL"
+      "name": "2DO SECRETARIO GENERAL"
     },
     {
       "id": 12,
-      "name": "3ER. SECRETARIO(A) GENERAL"
+      "name": "3ER SECRETARIO GENERAL"
     },
     {
       "id": 13,
-      "name": "SECRETARIO(A) DE ORGANIZACION"
+      "name": "SECRETARIO DE ORGANIZACIÓN"
     },
     {
       "id": 14,
-      "name": "SECRETARIO(A) ELECTORAL"
+      "name": "SECRETARIO ELECTORAL"
     },
     {
       "id": 15,
-      "name": "SECRETARIO(A) DE EDUCACION Y DOCTRINA"
+      "name": "SECRETARIO DE EDUCACIÓN Y DOCTRINA"
     },
     {
       "id": 16,
-      "name": "SECRETARIO(A) DE TRANSFORMACION DIGITAL E INNOVACION"
+      "name": "SECRETARIO DE TRANSFORMACION DIGITAL E INNOVACION"
     },
     {
       "id": 17,
-      "name": "SECRETARIO(A) DE FINANZAS"
+      "name": "SECRETARIO DE FINANZAS"
     },
     {
       "id": 18,
-      "name": "PRESIDENTE(A) DE LA COMISION DE ETICA Y DISCIPLINA"
+      "name": "PRESIDENTE DE LA COMISION DE ÉTICA Y DISCIPLINA"
     },
     {
       "id": 19,
-      "name": "SECRETARIO(A) DE COMUNICACION"
+      "name": "SECRETARIO DE COMUNICACIÓN"
     },
     {
       "id": 20,
-      "name": "SECRETARIO(A) DE GESTION CON LA SOCIEDAD CIVIL"
+      "name": "SECRETARIO DE GESTIÓN CON LA SOCIEDAD CIVIL"
     },
     {
       "id": 21,
-      "name": "SECRETARIO(A) DE ACTAS Y CORRESPONDENCIA"
+      "name": "SECRETARIO DE ACTAS Y CORRESPONDENCIA"
     },
     {
       "id": 22,
-      "name": "SECRETARIO(A) DE LA SEGURIDAD SOCIAL"
+      "name": "SECRETARIO DE LA SEGURIDAD SOCIAL"
     },
     {
       "id": 23,
@@ -94,59 +94,59 @@
     },
     {
       "id": 24,
-      "name": "PRESIDENTE(A) DEL FRENTE DE LA JUVENTUD"
+      "name": "PRESIDENTE DEL FRENTE DE LA JUVENTUD"
     },
     {
       "id": 25,
-      "name": "PRESIDENTE(A) DEL FRENTE AGROPECUARIO"
+      "name": "PRESIDENTE DEL FRENTE AGROPECUARIO"
     },
     {
       "id": 26,
-      "name": "PRESIDENTE(A) DEL FRENTE BARRIAL Y COMUNAL"
+      "name": "PRESIDENTE DEL FRENTE BARRIAL Y COMUNAL"
     },
     {
       "id": 27,
-      "name": "PRESIDENTE(A) DEL FRENTE DE ABOGADOS"
+      "name": "PRESIDENTE DEL FRENTE DE ABOGADOS"
     },
     {
       "id": 28,
-      "name": "PRESIDENTE(A) DEL FRENTE DE COOPERATIVISMOS Y ECONOMIA SOCIAL"
+      "name": "PRESIDENTE DEL FRENTE DE COOPERATIVISMOS Y ECONOMIA SOCIAL"
     },
     {
       "id": 29,
-      "name": "PRESIDENTE(A) DEL FRENTE DE DEPORTE"
+      "name": "PRESIDENTE DEL FRENTE DE DEPORTE"
     },
     {
       "id": 30,
-      "name": "PRESIDENTE(A) DEL FRENTE DE MICROS, PEQUEOS Y MEDIANOS EMPRESARIOS"
+      "name": "PRESIDENTE DEL FRENTE DE MICROS PEQUEÑOS Y MEDIANOS EMPRESARIOS"
     },
     {
       "id": 31,
-      "name": "PRESIDENTE(A) DEL FRENTE DE RELIGIOSOS/ CULTOS"
+      "name": "PRESIDENTE DEL FRENTE DE RELIGIOSOS CULTOS"
     },
     {
       "id": 32,
-      "name": "PRESIDENTE(A) DEL FRENTE DE SALUD"
+      "name": "PRESIDENTE DEL FRENTE DE SALUD"
     },
     {
       "id": 33,
-      "name": "PRESIDENTE(A) DEL FRENTE DE SEGURIDAD SOCIAL"
+      "name": "PRESIDENTE DEL FRENTE DE SEGURIDAD SOCIAL"
     },
     {
       "id": 34,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO ADMINISTRATIVO"
+      "name": "DIRECTOR DEL DEPARTAMENTO ADMINISTRATIVO"
     },
     {
       "id": 35,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE TRANSPORTE"
+      "name": "DIRECTOR DEL DEPARTAMENTO DE TRANSPORTE"
     },
     {
       "id": 36,
-      "name": "DIRECTOR(A) DE RELACIONES PUBLICAS"
+      "name": "DIRECTOR DE RELACIONES PÚBLICAS"
     },
     {
       "id": 37,
-      "name": "DIRECTOR(A) DE PRENSA"
+      "name": "DIRECTOR DE PRENSA"
     },
     {
       "id": 38,
@@ -154,19 +154,19 @@
     },
     {
       "id": 39,
-      "name": "1ER. SUB-SECRETARIO(A) GENERAL"
+      "name": "1ER SUB-SECRETARIO GENERAL"
     },
     {
       "id": 40,
-      "name": "VICEPRESIDENTE(A) DE LA COMISION ETICA Y DISCIPLINA"
+      "name": "VICEPRESIDENTE DE LA COMISION ÉTICA Y DISCIPLINA"
     },
     {
       "id": 41,
-      "name": "PRESIDENTE(A) DEL FRENTE DE ROBLES MODERNOS"
+      "name": "PRESIDENTE DEL FRENTE DE ROBLES MODERNOS"
     },
     {
       "id": 42,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE PRENSA"
+      "name": "DIRECTOR DEL DEPARTAMENTO DE PRENSA"
     },
     {
       "id": 43,
@@ -178,11 +178,11 @@
     },
     {
       "id": 45,
-      "name": "SECRETARIO(A) DE LA COMISION ETICA Y DISCIPLINA"
+      "name": "SECRETARIO DE LA COMISION ÉTICA Y DISCIPLINA"
     },
     {
       "id": 46,
-      "name": "MIEMBRO DE LA COMISION DE ETICA Y DISCIPLINA"
+      "name": "MIEMBRO DE LA COMISION DE ÉTICA Y DISCIPLINA"
     },
     {
       "id": 47,
@@ -190,63 +190,63 @@
     },
     {
       "id": 48,
-      "name": "SECRETARIO(A) DE ASUNTOS MUNICIPALES"
+      "name": "SECRETARIO DE ASUNTOS MUNICIPALES"
     },
     {
       "id": 49,
-      "name": "SECRETARIO(A) DE FRENTES SECTORIALES Y SOCIEDAD"
+      "name": "SECRETARIO DE FRENTES SECTORIALES Y SOCIEDAD"
     },
     {
       "id": 50,
-      "name": "SECRETARIO(A) TECNICO Y DE POLITICAS PUBLICAS"
+      "name": "SECRETARIO TÉCNICO Y DE POLÍTICAS PÚBLICAS"
     },
     {
       "id": 51,
-      "name": "SECRETARIO(A) DE MEDIO AMBIENTE Y RECURSOS NATURALES"
+      "name": "SECRETARIO DE MEDIO AMBIENTE Y RECURSOS NATURALES"
     },
     {
       "id": 52,
-      "name": "SECRETARIO(A) DE ASUNTOS ECONMICOS"
+      "name": "SECRETARIO DE ASUNTOS ECONÓMICOS"
     },
     {
       "id": 53,
-      "name": "DIRECTOR(A) LEGAL"
+      "name": "DIRECTOR LEGAL"
     },
     {
       "id": 54,
-      "name": "PRESIDENTE(A) DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
+      "name": "PRESIDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
     },
     {
       "id": 55,
-      "name": "PRESIDENTE(A) DEL FRENTE SINDICAL"
+      "name": "PRESIDENTE DEL FRENTE SINDICAL"
     },
     {
       "id": 56,
-      "name": "PRESIDENTE(A) DEL FRENTE DE CONTADORES PUBLICOS"
+      "name": "PRESIDENTE DEL FRENTE DE CONTADORES PÚBLICOS"
     },
     {
       "id": 57,
-      "name": "PRESIDENTE(A) DEL FRENTE DE EMPRESARIOS Y COMERCIANTES"
+      "name": "PRESIDENTE DEL FRENTE DE EMPRESARIOS Y COMERCIANTES"
     },
     {
       "id": 58,
-      "name": "PRESIDENTE(A) DEL FRENTE DE PROFESIONALES"
+      "name": "PRESIDENTE DEL FRENTE DE PROFESIONALES"
     },
     {
       "id": 59,
-      "name": "PRESIDENTE(A) DEL FRENTE DE TECNICOS"
+      "name": "PRESIDENTE DEL FRENTE DE TÉCNICOS"
     },
     {
       "id": 60,
-      "name": "PRESIDENTE(A) DEL FRENTE ELECTRICO"
+      "name": "PRESIDENTE DEL FRENTE ELECTRICO"
     },
     {
       "id": 61,
-      "name": "PRESIDENTE(A) DEL FRENTE MAGISTERIAL"
+      "name": "PRESIDENTE DEL FRENTE MAGISTERIAL"
     },
     {
       "id": 62,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE CONTRALORIA Y PRESUPUESTO"
+      "name": "DIRECTOR DEL DEPARTAMENTO DE CONTRALORIA Y PRESUPUESTO"
     },
     {
       "id": 63,
@@ -254,1939 +254,1551 @@
     },
     {
       "id": 64,
-      "name": "PRESIDENTE(A) DE CONSEJREO DE REGIDOS O DE LA JUNTA MUNICIPAL DEL PARTIDO"
+      "name": "PRESIDENTE DE CONSEJREO DE REGIDOS O DE LA JUNTA MUNICIPAL DEL PARTIDO"
     },
     {
       "id": 65,
-      "name": "SECRETARIO(A) DE FRENTES SECTORIALES Y SOCIEDAD CIVIL"
-    },
-    {
-      "id": 66,
-      "name": "SECRETARIO(A) COORDINACIN DE LOS FRENTES SECTORIALES"
-    },
-    {
-      "id": 67,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE RELACIONES PUBLICAS Y PROTOCOLO"
-    },
-    {
-      "id": 68,
-      "name": "SECRETARIO DE LA SEGURIDAD SOCIAL"
-    },
-    {
-      "id": 69,
-      "name": "2DA. VICE-PRESIDENTE(A)"
-    },
-    {
-      "id": 70,
-      "name": "SECRETARIO GENERAL"
-    },
-    {
-      "id": 71,
-      "name": "1ER SUB SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 72,
-      "name": "2DO. SUB SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 73,
-      "name": "3ER. SUB SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 74,
-      "name": "SECRETARIO DE ORGANIZACIN"
-    },
-    {
-      "id": 75,
-      "name": "SECRETARIO(A) DE EDUCACION Y DOTRINA"
-    },
-    {
-      "id": 76,
-      "name": "SECRETARIO DE TRANSFOMACION DIGITAL E INNOVACION"
-    },
-    {
-      "id": 77,
-      "name": "SECRETARIO(A) DE FINAZAS"
-    },
-    {
-      "id": 78,
-      "name": "FICAL ADJUNTO"
-    },
-    {
-      "id": 79,
-      "name": "PRESIDENTE DE LA COMISION DE ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 80,
-      "name": "VICEPRESIDNTE DE LA COMISION DE ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 81,
-      "name": "SECRETARIO DE LA COMISION ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 82,
-      "name": "SECRETARIO DE ASUNTOS MUNICIPALES"
-    },
-    {
-      "id": 83,
-      "name": "SECRETARIO DE COMUNICACIN"
-    },
-    {
-      "id": 84,
       "name": "SECRETARIO DE FRENTES SECTORIALES Y SOCIEDAD CIVIL"
     },
     {
-      "id": 85,
-      "name": "SECRETARIO TECNICO Y DE POLITICAS PUBLICAS"
+      "id": 66,
+      "name": "SECRETARIO COORDINACION DE LOS FRENTES SECTORIALES"
     },
     {
-      "id": 86,
+      "id": 67,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE RELACIONES PÚBLICAS Y PROTOCOLO"
+    },
+    {
+      "id": 68,
+      "name": "2DA VICE-PRESIDENTE"
+    },
+    {
+      "id": 69,
+      "name": "1ER SUB SECRETARIO GENERAL"
+    },
+    {
+      "id": 70,
+      "name": "2DO SUB SECRETARIO GENERAL"
+    },
+    {
+      "id": 71,
+      "name": "3ER SUB SECRETARIO GENERAL"
+    },
+    {
+      "id": 72,
+      "name": "SECRETARIO DE EDUCACIÓN Y DOTRINA"
+    },
+    {
+      "id": 73,
+      "name": "SECRETARIO DE TRANSFOMACION DIGITAL E INNOVACION"
+    },
+    {
+      "id": 74,
+      "name": "SECRETARIO DE FINAZAS"
+    },
+    {
+      "id": 75,
+      "name": "FICAL ADJUNTO"
+    },
+    {
+      "id": 76,
+      "name": "VICEPRESIDNTE DE LA COMISION DE ÉTICA Y DISCIPLINA"
+    },
+    {
+      "id": 77,
       "name": "SECRETARIO DE ACTAS Y CORRESPONDENCIAS"
     },
     {
-      "id": 87,
-      "name": "SECRETARIO DE MEDIO AMBIENTE Y RECURSOS NATURALES"
-    },
-    {
-      "id": 88,
+      "id": 78,
       "name": "SECRETARIO DE ASUNTOS ECONMICOS"
     },
     {
-      "id": 89,
-      "name": "DIRECTOR LEGAL"
-    },
-    {
-      "id": 90,
-      "name": "PRESIDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
-    },
-    {
-      "id": 91,
+      "id": 79,
       "name": "PRESIDENTA FRENTE DE LAS MUJERES"
     },
     {
-      "id": 92,
-      "name": "PRESIDENTE DEL FRENTE DE LA JUVENTUD"
-    },
-    {
-      "id": 93,
+      "id": 80,
       "name": "PRESINTE DEL FRENTE SINDICAL"
     },
     {
-      "id": 94,
+      "id": 81,
       "name": "PRESINTE DEL FRENTE AGROPECUARIO"
     },
     {
-      "id": 95,
-      "name": "PRESIDENTE DEL FRENTE BARRIAL Y COMUNAL"
+      "id": 82,
+      "name": "PRESIDENTE FRENTE DE CONTADORES PÚBLICOS"
     },
     {
-      "id": 96,
-      "name": "PRESIDENTE DEL FRENTE DE ABOGADOS"
-    },
-    {
-      "id": 97,
-      "name": "PRESIDENTE FRENTE DE CONTADORES PUBLICOS"
-    },
-    {
-      "id": 98,
+      "id": 83,
       "name": "PRESIDENTE DE FRENTE DE COOPERATIVISMO Y ECONOMIA SOCIAL"
     },
     {
-      "id": 99,
+      "id": 84,
       "name": "PRESIDENTE DEL FRENTE DE DEPORTES"
     },
     {
-      "id": 100,
+      "id": 85,
       "name": "PRESIDENT DEL FRENTE DE EMPRESARIOS Y COMERCIANTES"
     },
     {
-      "id": 101,
-      "name": "PRESIDENTE DEL FRENTE DE MICROS, PEQUEOS, MEDIANOS EMPRESARIOS"
+      "id": 86,
+      "name": "PRESIDENTE DEL FRENTE DE MICROS PEQUEÑOS MEDIANOS EMPRESARIOS"
     },
     {
-      "id": 102,
+      "id": 87,
       "name": "PRESIDENTE FRENTE DE PROFESIONALES"
     },
     {
-      "id": 103,
+      "id": 88,
       "name": "PRESIDENTE FRENTE DE CULTOS"
     },
     {
-      "id": 104,
+      "id": 89,
       "name": "PRESIDENTE DEL FRETE DE SALUD"
     },
     {
-      "id": 105,
-      "name": "PRESIDENTE DEL FRENTE DE SEGURIDAD SOCIAL"
-    },
-    {
-      "id": 106,
-      "name": "PRESIDENTE DEL FRENTE DE TECNICOS"
-    },
-    {
-      "id": 107,
+      "id": 90,
       "name": "PRESIDNTE DEL FRENTE ELETRICO"
     },
     {
-      "id": 108,
+      "id": 91,
       "name": "PRESIDNTE DEL FRENTE MAGISTERIAL"
     },
     {
-      "id": 109,
-      "name": "PRESIDENTE DEL FRENTE DE ROBLES MODERNOS"
-    },
-    {
-      "id": 110,
-      "name": "DIRECTOR DEL DEPARTAMENTO ADMINISTRATIVO"
-    },
-    {
-      "id": 111,
+      "id": 92,
       "name": "DIRECTOR DEL DEPARTAMENTO DE CONTARLORIA Y PRESUPUESTO"
     },
     {
-      "id": 112,
+      "id": 93,
       "name": "DIRECTOR DEL DEPARTAMENTTO DE TRASPORTE"
     },
     {
-      "id": 113,
-      "name": "DIRECTOR DEL DEPARTAMENTO DE RELACIONES PUBLICAS Y PROTOCOLO"
-    },
-    {
-      "id": 114,
-      "name": "DIRECTOR DEL DEPARTAMENTO DE PRENSA"
-    },
-    {
-      "id": 115,
+      "id": 94,
       "name": "PRESIDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DE PARTIDO"
     },
     {
-      "id": 116,
-      "name": "DIRECTOR DEL DEPARTAMENTO DE CONTRALORIA Y PRESUPUESTO"
+      "id": 95,
+      "name": "VICEPRESIDENTE DE LA COMISION DE ÉTICA Y DISCIPLINA"
     },
     {
-      "id": 117,
-      "name": "DIRECTOR DEL DEPARTAMENTO DE TRANSPORTE"
+      "id": 96,
+      "name": "SECRETARIO DE LA COMISION DE ÉTICA Y DISCIPLINA"
     },
     {
-      "id": 118,
-      "name": "PRESIDENTE DEL FRENTE DE EMPRESARIOS Y COMERCIANTES"
+      "id": 97,
+      "name": "MIEMBRO DE LA COMISION ÉTICA Y DISCIPLINA"
     },
     {
-      "id": 119,
-      "name": "VICEPRESIDENTE DE LA COMISION DE ETICA Y DISCIPLINA"
+      "id": 98,
+      "name": "SECRETARIO ORGANIZACIÓN"
     },
     {
-      "id": 120,
-      "name": "SECRETARIO DE LA COMISION DE ETICA Y DISCIPLINA"
+      "id": 99,
+      "name": "PRESIDENTE DE LA COMISION ÉTICA Y DISCIPLINA"
     },
     {
-      "id": 121,
-      "name": "MIEMBRO DE LA COMISION ETICA Y DISCIPLINA"
+      "id": 100,
+      "name": "SECRETARIO DE FUENTES SECTORIALES Y SOCIEDAD"
     },
     {
-      "id": 122,
-      "name": "SECRETARIO DE ASUNTOS ECONOMICOS"
+      "id": 101,
+      "name": "PRESIDENTE DEL FRENTE FRENTES RELIGIOSOS CULTOS"
     },
     {
-      "id": 123,
-      "name": "SECRETARIO(A) ORGANIZACIN"
+      "id": 102,
+      "name": "\"3ER VICE-PRESIDENTE \""
     },
     {
-      "id": 124,
-      "name": "PRESIDENTE(A) DE LA COMISION ETICA Y DISCIPLINA"
+      "id": 103,
+      "name": "PRESIDENTE DE LA COMISION DE ÉTICA Y CONTROL"
     },
     {
-      "id": 125,
-      "name": "SECRETARIO(A) DE FUENTES SECTORIALES Y SOCIEDAD"
-    },
-    {
-      "id": 126,
-      "name": "PRESIDENTE(A) DEL FRENTE FRENTES RELIGIOSOS/ CULTOS"
-    },
-    {
-      "id": 127,
-      "name": "PRESIDENTE DE LA COMISIN DE TICA Y CONTROL"
-    },
-    {
-      "id": 128,
+      "id": 104,
       "name": "MIEMBRO EXOFICIO"
     },
     {
-      "id": 129,
-      "name": "PRESIDENTE DEL FRENTE SINDICAL"
-    },
-    {
-      "id": 130,
-      "name": "PRESIDENTE DEL FRENTE DE CONTADORES PUBLICOS"
-    },
-    {
-      "id": 131,
-      "name": "PRESIDENTE DEL FRENTE DE PROFESIONALES"
-    },
-    {
-      "id": 132,
+      "id": 105,
       "name": "PRESIDENTE DEL FRENTE ELETRICO"
     },
     {
-      "id": 133,
-      "name": "PRESIDENTE DEL FRENTE MAGISTERIAL"
-    },
-    {
-      "id": 134,
-      "name": "PRESIDENTE DEL FRENTE AGROPECUARIO"
-    },
-    {
-      "id": 135,
+      "id": 106,
       "name": "SECRETARIO GENRAL"
     },
     {
-      "id": 136,
+      "id": 107,
       "name": "SECRETARIO DE TECNOLOGIAS (TICS)"
     },
     {
-      "id": 137,
-      "name": "SECRETARIO DE COMUNICACIN INTERNACIONAL"
+      "id": 108,
+      "name": "SECRETARIO DE COMUNICACIÓN INTERNACIONAL"
     },
     {
-      "id": 138,
+      "id": 109,
       "name": "PRESIDENTE DEL CONSEJO DE DISCIPLINA"
     },
     {
-      "id": 139,
-      "name": "SECRETARIO DE COOPERACION INTERNACIONAL"
+      "id": 110,
+      "name": "SECRETARIO DE COOPERACIÓN INTERNACIONAL"
     },
     {
-      "id": 140,
+      "id": 111,
       "name": "SECRETARIO DE COORDINACION DE LOS FRENTES SECTORIALES"
     },
     {
-      "id": 141,
-      "name": "GESTION SEGURA CIVIL"
+      "id": 112,
+      "name": "GESTIÓN SEGURA CIVIL"
     },
     {
-      "id": 142,
-      "name": "SECRETARIO DE MODERNIZACION"
+      "id": 113,
+      "name": "SECRETARIO DE MODERNIZACIÓN"
     },
     {
-      "id": 143,
+      "id": 114,
       "name": "SECRETARIO EJECUTIVO"
     },
     {
-      "id": 144,
-      "name": "SECRETARIO TECMICO Y DE POLITICAS PUBLICAS"
+      "id": 115,
+      "name": "SECRETARIO TECMICO Y DE POLÍTICAS PÚBLICAS"
     },
     {
-      "id": 145,
-      "name": "SECRETARIO DE ASUNTOS CIENTIFICOS"
+      "id": 116,
+      "name": "SECRETARIO DE ASUNTOS CIENTÍFICOS"
     },
     {
-      "id": 146,
+      "id": 117,
       "name": "DIRECTOR ADMINISTRATIVO"
     },
     {
-      "id": 147,
+      "id": 118,
       "name": "DIRECTOR DE ASISTENCIA SOCIAL"
     },
     {
-      "id": 148,
+      "id": 119,
       "name": "DIRECTOR DE CONTRALORIA Y PRESUPUESTO"
     },
     {
-      "id": 149,
+      "id": 120,
       "name": "DIRECTOR DE CULTURA"
     },
     {
-      "id": 150,
-      "name": "DIRECTOR DE LA CORRUPCION Y LA IMPUNIDAD"
+      "id": 121,
+      "name": "DIRECTOR DE LA CORRUPCIÓN Y LA IMPUNIDAD"
     },
     {
-      "id": 151,
+      "id": 122,
       "name": "DIRECTOR DE LA FAMILIA"
     },
     {
-      "id": 152,
-      "name": "DIRECTOR DE PRENSA"
-    },
-    {
-      "id": 153,
+      "id": 123,
       "name": "DIRECTOR DE PROPAGANDA"
     },
     {
-      "id": 154,
-      "name": "DIRECTOR DE RELACIONES PUBLICAS"
-    },
-    {
-      "id": 155,
+      "id": 124,
       "name": "DIRECTOR DE SEGURIDAD PUBLICA"
     },
     {
-      "id": 156,
+      "id": 125,
       "name": "DIRECTOR DE SEGURIDAD SOCIAL"
     },
     {
-      "id": 157,
+      "id": 126,
       "name": "PRESIDENTE DEL FRENTE DE LOS VIEJOS ROBLES"
     },
     {
-      "id": 158,
+      "id": 127,
       "name": "PRESIDENTE DEL FRENTE DE MICRO Y MEDIANO EMPRESADOS"
     },
     {
-      "id": 159,
+      "id": 128,
       "name": "PRESIDENTE DEL FRENTE DE MUJERES"
     },
     {
-      "id": 160,
+      "id": 129,
       "name": "PRESIDENTE DEL FRENTE RELIGIOSO"
     },
     {
-      "id": 161,
+      "id": 130,
       "name": "PRESIDENTE DEL FRENTE DE SINDICAL"
     },
     {
-      "id": 162,
-      "name": "SECRETARIO(A) DE ASUNTOS ECONOMICOS"
+      "id": 131,
+      "name": "PRESIDENTE DE LA COMISION ÉTICA Y DISPLINA"
     },
     {
-      "id": 163,
-      "name": "PRESIDENTE DE LA COMISION ETICA Y DISPLINA"
-    },
-    {
-      "id": 164,
+      "id": 132,
       "name": "DELEGADO POLITICO ANTE LA JUNTA ELECTORAL (NO APLICA PARA DISTRITOS MUNICIPALES)"
     },
     {
-      "id": 165,
-      "name": "PRESIDENTE DE LA COMISIN DE TICA Y DISCIPLINA"
+      "id": 133,
+      "name": "PRESIDENTE DEL FRENTE DE LA MUJER"
     },
     {
-      "id": 166,
-      "name": "PRESIDENTE"
-    },
-    {
-      "id": 167,
-      "name": "PRESIDENTE(A) DEL FRENTE DE LA MUJER"
-    },
-    {
-      "id": 168,
-      "name": "PRESIDENTE(A) DEL FRENTE DE MAGISTERIAL"
-    },
-    {
-      "id": 169,
-      "name": "SECRETATIO(A) DE LA COMISION ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 170,
-      "name": "PRESIDENTE DE ZONA"
-    },
-    {
-      "id": 171,
-      "name": "MIEMBRO"
-    },
-    {
-      "id": 172,
-      "name": "ALCALDE MUNICIPAL O DIRECTOR DE DISTRITO MUNICIAL DEL PARTIDO"
-    },
-    {
-      "id": 173,
-      "name": "PRESIDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIAPL DEL PARTIDO"
-    },
-    {
-      "id": 174,
-      "name": "PRESIDENTE DEL FRETE DE CONTADORES PUBLICOS"
-    },
-    {
-      "id": 175,
-      "name": "PRESIDENTE DEL FRENTE DE SALUD"
-    },
-    {
-      "id": 176,
-      "name": "SECRETARIO(A) DE MEDIO AMBIENTE Y RECUSOS NATURALES"
-    },
-    {
-      "id": 177,
-      "name": "PRESIDENTE DEL FRENTE DDE COOPERATIVISMO Y ENONOMIA SOCIAL"
-    },
-    {
-      "id": 178,
-      "name": "PRESIDENTE DEL FRENTE DE EMPRESARIO Y COMERCIANTES"
-    },
-    {
-      "id": 179,
-      "name": "PRESIDENTE DEL FRENTE DE MICROSPEQUEOS Y MEDIANOS EMPRESARIOS"
-    },
-    {
-      "id": 180,
-      "name": "PRSIDENTE DEL FRENTE RELIGIOSOS / CULTOS"
-    },
-    {
-      "id": 181,
-      "name": "PRESIDENTE DEL FRENTE ELECTRICO"
-    },
-    {
-      "id": 182,
-      "name": "DIRECTOR DEL DEPARTEMENTO DE PRENSA"
-    },
-    {
-      "id": 183,
-      "name": "2DO. SUB-SECRETARIO (A) GENERAL"
-    },
-    {
-      "id": 184,
-      "name": "PRESIDENTE(A) DE LA COMISIN DE TICA Y DISCIPLINA"
-    },
-    {
-      "id": 185,
-      "name": "SECRETARIO(A) DE COMUNICACIN"
-    },
-    {
-      "id": 186,
-      "name": "SECRETARIO(A) DE TECNOLOGIAS (TICS)"
-    },
-    {
-      "id": 187,
-      "name": "PRESIDENTE DE LA COMISIN DE ASESORES"
-    },
-    {
-      "id": 188,
-      "name": "PRESIDENTE DE LA COMISIN DE ETICA"
-    },
-    {
-      "id": 189,
-      "name": "SECRETARIO(A) DE ASUNTOS INTERNACIONALES"
-    },
-    {
-      "id": 190,
-      "name": "SECRETARIO(A) DE COOPERACIN INTERNACIONAL"
-    },
-    {
-      "id": 191,
-      "name": "SECRETARIO(A) DE GESTIN CON LA SOCIEDAD CIVIL"
-    },
-    {
-      "id": 192,
-      "name": "SECRETARIO(A) DE MODERNIZACIN"
-    },
-    {
-      "id": 193,
-      "name": "SECRETARIO(A) DE ASUNTOS CIENTIFICOS"
-    },
-    {
-      "id": 194,
-      "name": "DIRECTOR (A) ADMINISTRATIVO"
-    },
-    {
-      "id": 195,
-      "name": "DIRECTOR (A) DE CONTRALORIA Y PRESUPUESTO"
-    },
-    {
-      "id": 196,
-      "name": "DIRECTOR(A) CULTURAL"
-    },
-    {
-      "id": 197,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE EQUIPO Y TRANSPORTE"
-    },
-    {
-      "id": 198,
-      "name": "DIRECTOR(A) DE LA FAMILIA"
-    },
-    {
-      "id": 199,
-      "name": "DIRECTOR(A) DE SEGURIDAD PUABLICA"
-    },
-    {
-      "id": 200,
-      "name": "DIRECTOR(A) DE SEGURIDAD SOCIAL"
-    },
-    {
-      "id": 201,
-      "name": "SUPLENTE FISCAL"
-    },
-    {
-      "id": 202,
-      "name": "SECRETARIO(A) EJECUTIVO"
-    },
-    {
-      "id": 203,
-      "name": "DIRECTOR(A) CONTRA LA CORRUPCIN Y LA IMPUNIDAD"
-    },
-    {
-      "id": 204,
-      "name": "DIRECTOR(A) DE ASISTENCIA SOCIAL"
-    },
-    {
-      "id": 205,
-      "name": "DIRECTOR(A) DE PROPAGANDA"
-    },
-    {
-      "id": 206,
-      "name": "PRESIDENTE(A) DEL FRENTE DE LOS VIEJOS ROBLES"
-    },
-    {
-      "id": 207,
-      "name": "REGIDOR DEL PRM"
-    },
-    {
-      "id": 208,
-      "name": "ALCALDE DEL PRM"
-    },
-    {
-      "id": 209,
-      "name": "MIEMBRO EXOFICO"
-    },
-    {
-      "id": 210,
-      "name": "4TO. VICE-PRESIDENTE(A)"
-    },
-    {
-      "id": 211,
-      "name": "5TO. VICE-PRESIDENTE(A)"
-    },
-    {
-      "id": 212,
-      "name": "4TO. SUB-SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 213,
-      "name": "5TO.. SUB-SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 214,
-      "name": "VOCAL DEL PRM"
-    },
-    {
-      "id": 215,
-      "name": "DELEGADO POLICTICO ANTE LA JUNTA ELECTORAL"
-    },
-    {
-      "id": 216,
-      "name": "SECRETARIO DE SUPERVISION PLOICTICA"
-    },
-    {
-      "id": 217,
-      "name": "SECRETARIO DE SOCIEDAD CIVIL"
-    },
-    {
-      "id": 218,
-      "name": "MIEMBRO EXOFICIOS"
-    },
-    {
-      "id": 219,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE ADMINISTRATIVO"
-    },
-    {
-      "id": 220,
-      "name": "4TA VICEPRESIDENTA"
-    },
-    {
-      "id": 221,
-      "name": "5TA VICEPRESIDENTE"
-    },
-    {
-      "id": 222,
-      "name": "1ER SUB SECRETARIO(A)"
-    },
-    {
-      "id": 223,
-      "name": "2DO. SUB SECRETARIO(A)"
-    },
-    {
-      "id": 224,
-      "name": "3ER. SUB SECRETARIO(A)"
-    },
-    {
-      "id": 225,
-      "name": "4TO SUB SECRETARIO(A)"
-    },
-    {
-      "id": 226,
-      "name": "5TO SUB SECRETARIO(A)"
-    },
-    {
-      "id": 227,
-      "name": "SECRETARIO(A) DE TECNOLOGIA"
-    },
-    {
-      "id": 228,
-      "name": "PRESIDENTE COMISION DE ASESORES"
-    },
-    {
-      "id": 229,
-      "name": "PRESIDENTA DEL CONSEJO DE DISCIPLINA"
-    },
-    {
-      "id": 230,
-      "name": "SUPLENTE DE FISCAL"
-    },
-    {
-      "id": 231,
-      "name": "SECRETARIO DE GESTION CON LA SOCIEDAD CIVIL"
-    },
-    {
-      "id": 232,
-      "name": "SECRETARIA DE ACTAS Y CORRESPONDENCIA"
-    },
-    {
-      "id": 233,
-      "name": "SECRETARIO TECNICO Y POLITICAS PUBLICAS"
-    },
-    {
-      "id": 234,
-      "name": "DIRECTOR CONTRA LA CORRUPCION Y LA IMPUNIDAD"
-    },
-    {
-      "id": 235,
-      "name": "DIRECTORA DE ASITENCIA SOCIAL"
-    },
-    {
-      "id": 236,
-      "name": "DIRECTOR DE QUIPO Y TRANSPORTE"
-    },
-    {
-      "id": 237,
-      "name": "DIRECTOR DE FAMILIA"
-    },
-    {
-      "id": 238,
-      "name": "DIRECTORA DE RELACIONES PUBLICAS"
-    },
-    {
-      "id": 239,
-      "name": "PRESIDENTA ZONA A"
-    },
-    {
-      "id": 240,
-      "name": "PRESIDENTE DE LA ZONA B"
-    },
-    {
-      "id": 241,
-      "name": "PRESIDENTE DE LA ZONA C"
-    },
-    {
-      "id": 242,
-      "name": "PRESIDENTE DE LA ZONA D"
-    },
-    {
-      "id": 243,
-      "name": "PRESIDNTE DEL FRENTE DE MUJERES"
-    },
-    {
-      "id": 244,
-      "name": "ALCALDE MINICIPAL O DIRECTOR DE DISTRITO MUNICIPAL DEL PARTIDO"
-    },
-    {
-      "id": 245,
-      "name": "1ER.VICE-PRESIDENTE"
-    },
-    {
-      "id": 246,
-      "name": "2DO. VICEPRESIDENTE"
-    },
-    {
-      "id": 247,
-      "name": "3ER. VICEPRESIDENTE"
-    },
-    {
-      "id": 248,
-      "name": "SECRETARIO(A) DE SOCIEDAD CIVIL"
-    },
-    {
-      "id": 249,
-      "name": "PRESIDENTE FRENTE SINDICAL"
-    },
-    {
-      "id": 250,
-      "name": "MIEMBBRO EXOFICIO"
-    },
-    {
-      "id": 251,
-      "name": "PRESIDENTE DEL FRENTE DE EMPRESARIOS Y COMEERCIANTES"
-    },
-    {
-      "id": 252,
-      "name": "PRESIDENTE DEL FRENTE TECNICOS"
-    },
-    {
-      "id": 253,
-      "name": "ALCALDE MUNICIPAL O DIRECTOR DE DISTRITO MUNUICPAL DEL PARTIDO"
-    },
-    {
-      "id": 254,
-      "name": "DIPUTADO DEL PRM"
-    },
-    {
-      "id": 255,
-      "name": "DIRECTOR(A) DE SEGURIDAD PUBLICAS"
-    },
-    {
-      "id": 256,
-      "name": "1RA. VICE-PRESIDENTE(A)"
-    },
-    {
-      "id": 257,
-      "name": "3RE. SUB-SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 258,
-      "name": "VICEPRESIDENTE(A) DE LA COMISION DE ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 259,
-      "name": "5TO. SUB-SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 260,
-      "name": "SECRETARIO(A) DE TECNOLOGIAS"
-    },
-    {
-      "id": 261,
-      "name": "PRESIDENTE(A) COMISION DE ASESORES"
-    },
-    {
-      "id": 262,
-      "name": "PRESIDENTE(A) COMISION DE ETICA Y CONTROL"
-    },
-    {
-      "id": 263,
-      "name": "PRESIDENTE(A) DEL CONSEJO DE DISCIPLINA"
-    },
-    {
-      "id": 264,
-      "name": "SECRETARIO(A) DE COOPERACION INTERNACIONAL"
-    },
-    {
-      "id": 265,
-      "name": "SECRETARIO(A) DE COORDINACION DE LOS FRENTES SECTORIALES"
-    },
-    {
-      "id": 266,
-      "name": "SECRETARIO(A) MODERNIZACION"
-    },
-    {
-      "id": 267,
-      "name": "DIRECTOR(A) CONTRA LA CORRUPCION Y LA IMPUNIDAD"
-    },
-    {
-      "id": 268,
-      "name": "DIRECTOR(A) DE CULTURA"
-    },
-    {
-      "id": 269,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE PROPAGANDA"
-    },
-    {
-      "id": 270,
-      "name": "DIRECTOR(A) DE SEGURIDAD PUBLICA"
-    },
-    {
-      "id": 271,
-      "name": "PRESIDENTE(A) DEL FRENTE DE COOPERATIVISMO Y ECONOMIA SOCIAL"
-    },
-    {
-      "id": 272,
-      "name": "PRESIDENTE(A) DEL LA ZONA A"
-    },
-    {
-      "id": 273,
-      "name": "PRESIDENTE(A) DEL LA ZONA B"
-    },
-    {
-      "id": 274,
-      "name": "PRESIDENTE(A) DEL LA ZONA C"
-    },
-    {
-      "id": 275,
-      "name": "PRESIDENTE(A) DEL LA ZONA D"
-    },
-    {
-      "id": 276,
-      "name": "DELEGADO POLITICO ANTE JUNTA ELECTORAL"
-    },
-    {
-      "id": 277,
-      "name": "ALCALDE MUNICPAL O DIRECTOR DE DISTRITO MUNICIPAL"
-    },
-    {
-      "id": 278,
-      "name": "SECRETARIO DE MEDIO A,BIENTE Y RECURSOS NATURALES"
-    },
-    {
-      "id": 279,
-      "name": "PRESIDENTE DE FRENTE DE CONTADORES PUBLICOS"
-    },
-    {
-      "id": 280,
-      "name": "PRESIDENTE FRENTE DEPROFESIONALES"
-    },
-    {
-      "id": 281,
-      "name": "PRESIDENTE DEL FRENTEMAGISTERIAL"
-    },
-    {
-      "id": 282,
-      "name": "DIRECTOR DEL DEPARTAMENTO DE TRASPORTE"
-    },
-    {
-      "id": 283,
-      "name": "PRESIDENTE DEL FRENDE DE LOS VIEJOS ROBLES"
-    },
-    {
-      "id": 284,
-      "name": "SECRETARIO DE ASUNTOS LEGALES"
-    },
-    {
-      "id": 285,
-      "name": "DIRECTOR DE EQUIPO Y TRANSPORTE"
-    },
-    {
-      "id": 286,
-      "name": "DIRECTOR DE SEGURIDAD PUBLICAS"
-    },
-    {
-      "id": 287,
-      "name": "PRESIDENTE DEL FRENTES DE ABOGADOS"
-    },
-    {
-      "id": 288,
-      "name": "PRESIDENTE DEL FRENTES TECNICO"
-    },
-    {
-      "id": 289,
-      "name": "PRESIDENTE DEL COOPERATIVISMO Y ECONOMIA SOCIAL"
-    },
-    {
-      "id": 290,
-      "name": "PRESIDENTE DEL FRENTE DE DEPORTE"
-    },
-    {
-      "id": 291,
-      "name": "PRESIDENTE PROVINCIAL"
-    },
-    {
-      "id": 292,
-      "name": "1ER. VICE-PRESIDENTE PROVINCIAL"
-    },
-    {
-      "id": 293,
-      "name": "2DA. VICE-PRESIDENTE PROVINCIAL"
-    },
-    {
-      "id": 294,
-      "name": "3ER. VICE-PRESIDENTE PROVINCIAL"
-    },
-    {
-      "id": 295,
-      "name": "SECRETARIO GENERAL PROVINCIAL"
-    },
-    {
-      "id": 296,
-      "name": "1ER SUB SECRETARIO(A) GENERAL PROVINCIAL"
-    },
-    {
-      "id": 297,
-      "name": "2DO. SUB SECRETARIO(A) GENERAL PROVINCIAL"
-    },
-    {
-      "id": 298,
-      "name": "3ER. SUB SECRETARIO(A) GENERAL PROVINCIAL"
-    },
-    {
-      "id": 299,
-      "name": "DIRECTOR/A) DEL DEPARTAMENTO ADMINISTRATIVO"
-    },
-    {
-      "id": 300,
-      "name": "PRESIDENTE(A) DE LA SEGURIDAD SOCIAL"
-    },
-    {
-      "id": 301,
-      "name": "SECRETARIO DE FRENTES SECTORIALES"
-    },
-    {
-      "id": 302,
-      "name": "PRESIDENTE DEL FRENTE DE COOPERATIVISMO Y ECONOMIA SOCIAL"
-    },
-    {
-      "id": 303,
-      "name": "SECRETARIO DE ASUNTOS INTERNACIONALES"
-    },
-    {
-      "id": 304,
-      "name": "PRESIDENTE DEL CONCEJO DE REGIDORE O DE LA JUNTA MUNICIPAL DEL PARTIDO"
-    },
-    {
-      "id": 305,
-      "name": "SECRETARIO DE SUPERVISION POLITICA"
-    },
-    {
-      "id": 306,
-      "name": "PRESIDENTE FRENTE DE CULTURA"
-    },
-    {
-      "id": 307,
-      "name": "DIPUTADO"
-    },
-    {
-      "id": 308,
-      "name": "REGIDOR"
-    },
-    {
-      "id": 309,
-      "name": "PRESEDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
-    },
-    {
-      "id": 310,
-      "name": "PRESIDENTE(A) DEL FRENTE RELIGIOSOS/ CULTOS"
-    },
-    {
-      "id": 311,
-      "name": "PRESIDENTA DEL FRENTE DE LAS JUVENTUD"
-    },
-    {
-      "id": 312,
-      "name": "MIEMBRO EXSOFICIO"
-    },
-    {
-      "id": 313,
-      "name": "2DO SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 314,
-      "name": "3RO. VICE-PRESIDENTE(A)"
-    },
-    {
-      "id": 315,
-      "name": "PRESIDENTE(A) DEL FRENTE DE LAS MUJERES"
-    },
-    {
-      "id": 316,
-      "name": "PRESIDENTE(A) DEL FRENTE DE CULTO"
-    },
-    {
-      "id": 317,
-      "name": "SECRETARIO(A) DE FRENTES SECTORIALES"
-    },
-    {
-      "id": 318,
-      "name": "PRESIDENTE(A) DEL FRENTE TECNICOS"
-    },
-    {
-      "id": 319,
-      "name": "PRESIDENTE(A) DEL FRENTE DE CULTOS"
-    },
-    {
-      "id": 320,
-      "name": "1ER VICE- PRESIDENTE"
-    },
-    {
-      "id": 321,
-      "name": "2DO VICE- PRESIDENTE"
-    },
-    {
-      "id": 322,
-      "name": "3ER VICE- PRESIDENTE"
-    },
-    {
-      "id": 323,
-      "name": "1ER. SUB- SECRETARIO GENERAL"
-    },
-    {
-      "id": 324,
-      "name": "2DO. SUB- SECRETARIO GENERAL"
-    },
-    {
-      "id": 325,
-      "name": "3ER. SUB- SECRETARIO GENERAL"
-    },
-    {
-      "id": 326,
-      "name": "SECRETARIO DE ELECTORAL"
-    },
-    {
-      "id": 327,
-      "name": "SECRETARIO DE EDUCACION Y DOCTRINA"
-    },
-    {
-      "id": 328,
-      "name": "SECRETARIO DE FINANZAS"
-    },
-    {
-      "id": 329,
-      "name": "VICE-PRESIDENTE DE LA COMISION DE ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 330,
-      "name": "SECRETARIO DE ACTAS Y CORRESPONDECIA"
-    },
-    {
-      "id": 331,
-      "name": "SECRETARIO DE SEGURIDAD SOCIAL"
-    },
-    {
-      "id": 332,
-      "name": "PRESIDENTE DEL FRENTE DE COOPERATIVISMOS Y ECONOMIA SOCIAL"
-    },
-    {
-      "id": 333,
-      "name": "SECRETARIO DE LA COMISION DE ETICA Y DICIPLINA"
-    },
-    {
-      "id": 334,
-      "name": "MIENBRO DE LA COMISION DE ETICA Y DISCIPLINA"
-    },
-    {
-      "id": 335,
-      "name": "SECRETARIO TECNICO DE POLICTICAS PUBLICAS"
-    },
-    {
-      "id": 336,
-      "name": "1ER. VICEPRESIDENTE"
-    },
-    {
-      "id": 337,
-      "name": "FISCAL ABJUNTO"
-    },
-    {
-      "id": 338,
-      "name": "PRESIDENTE FRENTE DE ABOGADOS"
-    },
-    {
-      "id": 339,
-      "name": "PRESIDENTE DEL FRENTE DE COOPERTIVISMO Y ECONOMIA SOCIAL"
-    },
-    {
-      "id": 340,
-      "name": "PRESIDENTE DEL FRENTE DE CULTOS"
-    },
-    {
-      "id": 341,
-      "name": "ALCALDE MUNICIPALNO DIRECTOR DE DISTRITO MUNICIPAL DEL PARTIDO"
-    },
-    {
-      "id": 342,
-      "name": "PRESIDENTE DED FRENTE DE CONTADORES PUBLICOS"
-    },
-    {
-      "id": 343,
-      "name": "PRESIDENTE DEL FRENTE ABOGADOS"
-    },
-    {
-      "id": 344,
-      "name": "1RA. SUB SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 345,
-      "name": "PRESIDENTE DE FRENTE DE ABOGADOS"
-    },
-    {
-      "id": 346,
-      "name": "1ER. SUB SECRETARIO(A) GENERAL"
-    },
-    {
-      "id": 347,
-      "name": "PRESIDENTE(A) CIRCUNSCRIPCION ELECORAL 6 (SI CORRESPONDE)"
-    },
-    {
-      "id": 348,
-      "name": "SECRETARIO (A) GRAL. REGION O CIRCUNSCRIPCION ELECORAL 6 (SI CORRESPONDE)"
-    },
-    {
-      "id": 349,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE SEGURIDAD"
-    },
-    {
-      "id": 350,
-      "name": "DIRECTOR(A) DEL DEPARTAMENTO DE PROTOCOLO"
-    },
-    {
-      "id": 351,
-      "name": "MIEMBRO COMISION EJECUTIVA"
-    },
-    {
-      "id": 352,
-      "name": "PRESIDENTE MUNICIAPL"
-    },
-    {
-      "id": 353,
-      "name": "VICEPRESIDENTE MUNICIPAL"
-    },
-    {
-      "id": 354,
-      "name": "SUB -SECRETARIO GENERAL"
-    },
-    {
-      "id": 355,
-      "name": "DIRECTOR DE OPERACIONES"
-    },
-    {
-      "id": 356,
-      "name": "SECRETARIO DE ASUNTOS ELECTORALES"
-    },
-    {
-      "id": 357,
-      "name": "SECRETARIA DE ASUNTOS ECONOMICOS"
-    },
-    {
-      "id": 358,
-      "name": "SEC. DE ASUNTOS MUNICIPALES"
-    },
-    {
-      "id": 359,
-      "name": "SEC. DE COMUNICACIONES"
-    },
-    {
-      "id": 360,
-      "name": "SEC. COOP. INTERNACIONAL"
-    },
-    {
-      "id": 361,
-      "name": "SECRETARIA DE EDUCACION Y DOCTRINA"
-    },
-    {
-      "id": 362,
-      "name": "SECRETARIA DE FRENTES SECTORIALES"
-    },
-    {
-      "id": 363,
-      "name": "SECRETARIA DE FINANZAS"
-    },
-    {
-      "id": 364,
-      "name": "SECRETARIO DE GESTION SOCIEDAD CIVIL"
-    },
-    {
-      "id": 365,
-      "name": "SECRETARIA MEDIO AMBIENTE Y REC. NAT."
-    },
-    {
-      "id": 366,
-      "name": "SECRETARIA DE MODERNIZACION"
-    },
-    {
-      "id": 367,
-      "name": "SECRETARIA DE TECNOLOGIAS"
-    },
-    {
-      "id": 368,
-      "name": "SECRETARIA EJECUTIVA"
-    },
-    {
-      "id": 369,
-      "name": "SECRETARIA TECNICA Y DE POLICTICAS PUBLICAS"
-    },
-    {
-      "id": 370,
-      "name": "DEPARTAMENTO ADMINISTRATIVO"
-    },
-    {
-      "id": 371,
-      "name": "DEPARTAMENTO CONTRA LA CORRUPCION Y IMPUNIDAD"
-    },
-    {
-      "id": 372,
-      "name": "DEPARTAMENTOS DE ASUNTOS CIETIFICOS"
-    },
-    {
-      "id": 373,
-      "name": "DEPARTAMENTO DE CONTRALORIA Y PRESUPUESTO"
-    },
-    {
-      "id": 374,
-      "name": "DEPARTAMENTO DE CULTURA"
-    },
-    {
-      "id": 375,
-      "name": "DPTO. EQUIPO Y TRAMSPORTE"
-    },
-    {
-      "id": 376,
-      "name": "DPTO. DE LA FAMILIA"
-    },
-    {
-      "id": 377,
-      "name": "DPTO. PRESNSA"
-    },
-    {
-      "id": 378,
-      "name": "DPTO. PROPAGANDA"
-    },
-    {
-      "id": 379,
-      "name": "RELACIONES PUBLICAS Y PROTOCOLO"
-    },
-    {
-      "id": 380,
-      "name": "SEGURIDAD PUBLICA"
-    },
-    {
-      "id": 381,
-      "name": "SEGURIDAD SOCIAL"
-    },
-    {
-      "id": 382,
-      "name": "DPTO. LEGAL"
-    },
-    {
-      "id": 383,
-      "name": "FRENTE DE ABOGADOS"
-    },
-    {
-      "id": 384,
-      "name": "FRENTE DE CONATDORES PUBLICOS"
-    },
-    {
-      "id": 385,
-      "name": "FRENTE DEPORTES"
-    },
-    {
-      "id": 386,
-      "name": "FRENTE DE LA JUVENTUD"
-    },
-    {
-      "id": 387,
-      "name": "FRENTE DE LOS VIEJOS ROBLES"
-    },
-    {
-      "id": 388,
-      "name": "FRENTE MICRO , PEQUEO Y MEDIANO EMPRESARIOS"
-    },
-    {
-      "id": 389,
-      "name": "FRENTE DE MUJERES"
-    },
-    {
-      "id": 390,
-      "name": "FRENTE SALUD"
-    },
-    {
-      "id": 391,
-      "name": "FRENTE TECNICOS"
-    },
-    {
-      "id": 392,
-      "name": "FRENTE MAGISTERIAL"
-    },
-    {
-      "id": 393,
-      "name": "PRESIDENTE DE LA COMISION DE ETICA Y CONTROL"
-    },
-    {
-      "id": 394,
-      "name": "PRESIDENTE DEL CONSEJO DE DICIPLINA"
-    },
-    {
-      "id": 395,
-      "name": "FISCAL DEL CONSEJO DE DICIPLINA"
-    },
-    {
-      "id": 396,
-      "name": "COMINSION MUNICIPAL DE ASESORES"
-    },
-    {
-      "id": 397,
-      "name": "COMISION MUNICIPAL DE ESTRATEGIA"
-    },
-    {
-      "id": 398,
-      "name": "SECRETARIA DE ACTA Y CORREPONDENCIA"
-    },
-    {
-      "id": 399,
-      "name": "DIPUTADO CIRC. NO. 1"
-    },
-    {
-      "id": 400,
-      "name": "DIPUTADO CIRC. NO. 2"
-    },
-    {
-      "id": 401,
-      "name": "DIPUTADO CIRC. NO 3"
-    },
-    {
-      "id": 402,
-      "name": "PRESIDENTE -ORIENTAL 1"
-    },
-    {
-      "id": 403,
-      "name": "PRESIDENTEORIENTAL 1-A"
-    },
-    {
-      "id": 404,
-      "name": "PRESIDENTEORIENTAL 1-B"
-    },
-    {
-      "id": 405,
-      "name": "PRESIDENTEORIENTAL 2"
-    },
-    {
-      "id": 406,
-      "name": "PRESIDENTEORIENTAL 2-A"
-    },
-    {
-      "id": 407,
-      "name": "PRESIDENTEORIENTAL 3"
-    },
-    {
-      "id": 408,
-      "name": "PRESIDENTEORIENTAL 3-A"
-    },
-    {
-      "id": 409,
-      "name": "PRESIDENTEORIENTAL 3-B"
-    },
-    {
-      "id": 410,
-      "name": "SEC. GRAL. ORIENTAL 1"
-    },
-    {
-      "id": 411,
-      "name": "SEC. GRAL. ORIENTAL 1-A"
-    },
-    {
-      "id": 412,
-      "name": "SEC. GRAL. ORIENTAL 2"
-    },
-    {
-      "id": 413,
-      "name": "SEC. GRAL. ORIENTAL 2-A"
-    },
-    {
-      "id": 414,
-      "name": "SEC. GRAL. ORIENTAL 3"
-    },
-    {
-      "id": 415,
-      "name": "SEC. GRAL. ORIENTAL 3-A"
-    },
-    {
-      "id": 416,
-      "name": "SEC. GRAL. ORIENTAL"
-    },
-    {
-      "id": 417,
-      "name": "PRESIDENTE ZONA E"
-    },
-    {
-      "id": 418,
-      "name": "PRESIDENTE ZONA E-1"
-    },
-    {
-      "id": 419,
-      "name": "PRESIDENTE ZONA E-2"
-    },
-    {
-      "id": 420,
-      "name": "PRESIDENTE ZONA F"
-    },
-    {
-      "id": 421,
-      "name": "PRESIDENTE ZONA F-1"
-    },
-    {
-      "id": 422,
-      "name": "PRESIDENTE ZONA F-2"
-    },
-    {
-      "id": 423,
-      "name": "PRESIDENTE ZONA F-3"
-    },
-    {
-      "id": 424,
-      "name": "PRESIDENTE ZONA G"
-    },
-    {
-      "id": 425,
-      "name": "PRESIDENTE ZONA G-1"
-    },
-    {
-      "id": 426,
-      "name": "PRESIDENTE ZONA H"
-    },
-    {
-      "id": 427,
-      "name": "PRESIDENTE ZONA H-1"
-    },
-    {
-      "id": 428,
-      "name": "PRESIDENTE ZONA H-2"
-    },
-    {
-      "id": 429,
-      "name": "PRESIDENTE ZONA I"
-    },
-    {
-      "id": 430,
-      "name": "PRESIDENTE ZONA I-1"
-    },
-    {
-      "id": 431,
-      "name": "PRESIDENTE ZONA I-2"
-    },
-    {
-      "id": 432,
-      "name": "PRESIDENTE ZONA I-3"
-    },
-    {
-      "id": 433,
-      "name": "PRESIDENTE ZONA A"
-    },
-    {
-      "id": 434,
-      "name": "PRESIDENTE ZONA A-1"
-    },
-    {
-      "id": 435,
-      "name": "PRESIDENTE ZONA A-2"
-    },
-    {
-      "id": 436,
-      "name": "PRESIDENTE ZONA A-3"
-    },
-    {
-      "id": 437,
-      "name": "PRESIDENTE ZONA A-4"
-    },
-    {
-      "id": 438,
-      "name": "PRESIDENTE ZONA A-5"
-    },
-    {
-      "id": 439,
-      "name": "PRESIDENTE ZONA B"
-    },
-    {
-      "id": 440,
-      "name": "PRESIDENTE ZONA B-1"
-    },
-    {
-      "id": 441,
-      "name": "PRESIDENTE ZONA B-2"
-    },
-    {
-      "id": 442,
-      "name": "PRESIDENTE ZONA B-3"
-    },
-    {
-      "id": 443,
-      "name": "PRESIDENTE ZONA B-4"
-    },
-    {
-      "id": 444,
-      "name": "PRESIDENTE ZONA B-5"
-    },
-    {
-      "id": 445,
-      "name": "PRESIDENTE ZONA B-6"
-    },
-    {
-      "id": 446,
-      "name": "PRESIDENTE ZONA C"
-    },
-    {
-      "id": 447,
-      "name": "PRESIDENTE ZONA C-1"
-    },
-    {
-      "id": 448,
-      "name": "PRESIDENTE ZONA C-2"
-    },
-    {
-      "id": 449,
-      "name": "PRESIDENTE ZONA C-3"
-    },
-    {
-      "id": 450,
-      "name": "PRESIDENTE ZONA C-4"
-    },
-    {
-      "id": 451,
-      "name": "PRESIDENTE ZONA D"
-    },
-    {
-      "id": 452,
-      "name": "PRESIDENTE ZONA D-1"
-    },
-    {
-      "id": 453,
-      "name": "PRESIDENTE ZONA D-2"
-    },
-    {
-      "id": 454,
-      "name": "PRESIDENTE ZONA D-3"
-    },
-    {
-      "id": 455,
-      "name": "PRESIDENTE ZONA D-4"
-    },
-    {
-      "id": 456,
-      "name": "PRESIDENTE ZONA J"
-    },
-    {
-      "id": 457,
-      "name": "PRESIDENTE ZONA J-1"
-    },
-    {
-      "id": 458,
-      "name": "PRESIDENTE ZONA"
-    },
-    {
-      "id": 459,
-      "name": "PRESIDENTE ZONA -1"
-    },
-    {
-      "id": 460,
-      "name": "PRESIDENTE ZONA -2"
-    },
-    {
-      "id": 461,
-      "name": "PRESIDENTE ZONA -3"
-    },
-    {
-      "id": 462,
-      "name": "PRESIDENTE ZONA -4"
-    },
-    {
-      "id": 463,
-      "name": "PRESIDENTE ZONA -5"
-    },
-    {
-      "id": 464,
-      "name": "PRESIDENTE ZONA -6"
-    },
-    {
-      "id": 465,
-      "name": "PRESIDENTE ZONA K"
-    },
-    {
-      "id": 466,
-      "name": "PRESIDENTE ZONA N"
-    },
-    {
-      "id": 467,
-      "name": "PRESIDENTE ZONA N-1"
-    },
-    {
-      "id": 468,
-      "name": "PRESIDENTE ZONA N-2"
-    },
-    {
-      "id": 469,
-      "name": "PRESIDENTE ZONA N-3"
-    },
-    {
-      "id": 470,
-      "name": "PRESIDENTE ZONA N-4"
-    },
-    {
-      "id": 471,
-      "name": "PRESIDENTE ZONA N-5"
-    },
-    {
-      "id": 472,
-      "name": "PRESIDENTE ZONA N-6"
-    },
-    {
-      "id": 473,
-      "name": "PRESIDENTE ZONA N-7"
-    },
-    {
-      "id": 474,
-      "name": "PRESIDENTE ZONA N-8"
-    },
-    {
-      "id": 475,
-      "name": "PRESIDENTE ZONA O"
-    },
-    {
-      "id": 476,
-      "name": "PRESIDENTE ZONA O-1"
-    },
-    {
-      "id": 477,
-      "name": "PRESIDENTE ZONA O-2"
-    },
-    {
-      "id": 478,
-      "name": "PRESIDENTE ZONA O-3"
-    },
-    {
-      "id": 479,
-      "name": "PRESIDENTE ZONA O-4"
-    },
-    {
-      "id": 480,
-      "name": "PRESIDENTE ZONA O-6"
-    },
-    {
-      "id": 481,
-      "name": "PRESIDENTE ZONA P"
-    },
-    {
-      "id": 482,
-      "name": "PRESIDENTE ZONA P-1"
-    },
-    {
-      "id": 483,
-      "name": "PRESIDENTE ZONA P-2"
-    },
-    {
-      "id": 484,
-      "name": "PRESIDENTE ZONA P-3"
-    },
-    {
-      "id": 485,
-      "name": "PRESIDENTE ZONA Q"
-    },
-    {
-      "id": 486,
-      "name": "PRESIDENTE ZONA Q-1"
-    },
-    {
-      "id": 487,
-      "name": "PRESIDENTE ZONA Q-2"
-    },
-    {
-      "id": 488,
-      "name": "PRESIDENTE ZONA Q-3"
-    },
-    {
-      "id": 489,
-      "name": "PRESIDENTE ZONA Q-4"
-    },
-    {
-      "id": 490,
-      "name": "PRESIDENTE ZONA Q-5"
-    },
-    {
-      "id": 491,
-      "name": "PRESIDENTE ZONA Q-6"
-    },
-    {
-      "id": 492,
-      "name": "PRESIDENTE ZONA R"
-    },
-    {
-      "id": 493,
-      "name": "PRESIDENTE ZONA R-1"
-    },
-    {
-      "id": 494,
-      "name": "PRESIDENTE ZONA R-2"
-    },
-    {
-      "id": 495,
-      "name": "PRESIDENTE ZONA S"
-    },
-    {
-      "id": 496,
-      "name": "PRESIDENTE ZONA S-1"
-    },
-    {
-      "id": 497,
-      "name": "PRESIDENTE ZONA S-2"
-    },
-    {
-      "id": 498,
-      "name": "PRESIDENTE ZONA X-1"
-    },
-    {
-      "id": 499,
-      "name": "PRESIDENTE ZONA X-3"
-    },
-    {
-      "id": 500,
-      "name": "PRESIDENTE ZONA T"
-    },
-    {
-      "id": 501,
-      "name": "PRESIDENTE ZONA T-1"
-    },
-    {
-      "id": 502,
-      "name": "PRESIDENTE ZONA T-2"
-    },
-    {
-      "id": 503,
-      "name": "PRESIDENTE ZONA T-3"
-    },
-    {
-      "id": 504,
-      "name": "PRESIDENTE ZONA U"
-    },
-    {
-      "id": 505,
-      "name": "PRESIDENTE ZONA U-2"
-    },
-    {
-      "id": 506,
-      "name": "PRESIDENTE ZONA Y"
-    },
-    {
-      "id": 507,
-      "name": "PRESIDENTE ZONA Y-2"
-    },
-    {
-      "id": 508,
-      "name": "PRESIDENTE ZONA Z"
-    },
-    {
-      "id": 509,
-      "name": "PRESIDENTE ZONA Z-1"
-    },
-    {
-      "id": 510,
-      "name": "PRESIDENTE ZONA X"
-    },
-    {
-      "id": 511,
-      "name": "PRESIDENTE ZONA X-2"
-    },
-    {
-      "id": 512,
-      "name": "PRESIDENTE ZONA X-4"
-    },
-    {
-      "id": 513,
-      "name": "PRESIDENTE ZONA X-5"
-    },
-    {
-      "id": 514,
-      "name": "PRESIDENTE ZONA X-"
-    },
-    {
-      "id": 515,
-      "name": "PRESIDENTE ZONA X-8"
-    },
-    {
-      "id": 516,
-      "name": "PRESIDENTE ZONA X-10"
-    },
-    {
-      "id": 517,
-      "name": "PRESIDENTE ZONA U-1"
-    },
-    {
-      "id": 518,
-      "name": "PRESIDENTE ZONA U-3"
-    },
-    {
-      "id": 519,
-      "name": "PRESIDENTE ZONA Y-1"
-    },
-    {
-      "id": 520,
-      "name": "MIEMBRO MUJERES"
-    },
-    {
-      "id": 521,
-      "name": "MIEMBRO JUVENTUD"
-    },
-    {
-      "id": 522,
-      "name": "PRESIDENTE(A) DEL FRENTE DE DEPORTES"
-    },
-    {
-      "id": 523,
-      "name": "SECRETARIO DE ASUNTOS ECOMICOS"
-    },
-    {
-      "id": 524,
+      "id": 134,
       "name": "PRESIDENTE DEL FRENTE DE MAGISTERIAL"
     },
     {
-      "id": 525,
-      "name": "PRESINTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
+      "id": 135,
+      "name": "SECRETATIO DE LA COMISION ÉTICA Y DISCIPLINA"
     },
     {
-      "id": 526,
-      "name": "PRESINTE DEL FRENTE DE LAS MUJERES"
+      "id": 136,
+      "name": "PRESIDENTE DE ZONA"
     },
     {
-      "id": 527,
-      "name": "PRESIDENTE DEL FRENTE DE MICROS, PEQUEOS Y MEDIANOS EMPRESARIOS"
+      "id": 137,
+      "name": "MIEMBRO"
     },
     {
-      "id": 528,
-      "name": "DIRECTOR DEPARTAMENTO ADMINISTRATIVO"
+      "id": 138,
+      "name": "ALCALDE MUNICIPAL O DIRECTOR DE DISTRITO MUNICIAL DEL PARTIDO"
     },
     {
-      "id": 529,
-      "name": "DIRECTOR DEPARTAMENTO DE TRANSPORTE"
+      "id": 139,
+      "name": "PRESIDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIAPL DEL PARTIDO"
     },
     {
-      "id": 530,
-      "name": "MIEMBROS EXOFICIO"
+      "id": 140,
+      "name": "PRESIDENTE DEL FRETE DE CONTADORES PÚBLICOS"
     },
     {
-      "id": 531,
-      "name": "PRESIDENTE(A) DEL FRENTE DE SINDICAL"
+      "id": 141,
+      "name": "SECRETARIO DE MEDIO AMBIENTE Y RECUSOS NATURALES"
     },
     {
-      "id": 532,
-      "name": "PRESIDENTE(A) DEL FRENTE AGROPECUAIO"
+      "id": 142,
+      "name": "PRESIDENTE DEL FRENTE DDE COOPERATIVISMO Y ENONOMIA SOCIAL"
     },
     {
-      "id": 533,
-      "name": "PRESIDENTE(A) DEL FRENTE DE BARRIAL Y COMUNAL"
+      "id": 143,
+      "name": "PRESIDENTE DEL FRENTE DE EMPRESARIO Y COMERCIANTES"
     },
     {
-      "id": 534,
-      "name": "SECRETARIO DE COMUNICACION"
+      "id": 144,
+      "name": "PRSIDENTE DEL FRENTE RELIGIOSOS CULTOS"
     },
     {
-      "id": 535,
-      "name": "SECRETARIO DE FRENTE SECTORIALES Y SOCIEDAD CIVIL"
+      "id": 145,
+      "name": "DIRECTOR DEL DEPARTEMENTO DE PRENSA"
     },
     {
-      "id": 536,
-      "name": "SECRETARIO DE ACTAS Y CORRESPONDENCIA"
+      "id": 146,
+      "name": "PRESIDENTE DE LA COMISION DE ASESORES"
     },
     {
-      "id": 537,
-      "name": "PRESIDENTE DEL FRENTE DE MICO Y PEQUEO Y MEDIANOS EMPRESARIOSPR"
+      "id": 147,
+      "name": "PRESIDENTE DE LA COMISION DE ÉTICA"
     },
     {
-      "id": 538,
-      "name": "PRESIDENTE DEL FRENTE ROBLES MODERNOS"
+      "id": 148,
+      "name": "SECRETARIO DE ASUNTOS INTERNACIONALES"
     },
     {
-      "id": 539,
-      "name": "DIRECTOR DEL DEPARTAMENTOS ADMINISTRATIVO"
+      "id": 149,
+      "name": "DIRECTOR CULTURAL"
     },
     {
-      "id": 540,
-      "name": "DIRECTOR DEL DEPARTAMENTO DE RELACIONES PBLICAS Y PROTOCOLO"
+      "id": 150,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE EQUIPO Y TRANSPORTE"
     },
     {
-      "id": 541,
-      "name": "SECRETARIO(A) ORGANIZACION"
+      "id": 151,
+      "name": "SUPLENTE FISCAL"
     },
     {
-      "id": 542,
-      "name": "IRECTOR(A) DEL DEPARTAMENTO DE TRANSPORTE"
+      "id": 152,
+      "name": "DIRECTOR CONTRA LA CORRUPCIÓN Y LA IMPUNIDAD"
     },
     {
-      "id": 543,
-      "name": "DIRECTOR(A) DE RELACIONES PUBLICAS Y PROTOCOLO"
+      "id": 153,
+      "name": "REGIDOR DEL PRM"
     },
     {
-      "id": 544,
-      "name": "COORDINADOR DE LOS FRENTES SECTORIALES"
+      "id": 154,
+      "name": "ALCALDE DEL PRM"
     },
     {
-      "id": 545,
-      "name": "COORDINADOR DEL SECTOR EXTERNO"
+      "id": 155,
+      "name": "MIEMBRO EXOFICO"
     },
     {
-      "id": 546,
+      "id": 156,
+      "name": "4TO VICE-PRESIDENTE"
+    },
+    {
+      "id": 157,
+      "name": "5TO VICE-PRESIDENTE"
+    },
+    {
+      "id": 158,
+      "name": "4TO SUB-SECRETARIO GENERAL"
+    },
+    {
+      "id": 159,
+      "name": "5TO SUB-SECRETARIO GENERAL"
+    },
+    {
+      "id": 160,
+      "name": "VOCAL DEL PRM"
+    },
+    {
+      "id": 161,
+      "name": "DELEGADO POLICTICO ANTE LA JUNTA ELECTORAL"
+    },
+    {
+      "id": 162,
+      "name": "SECRETARIO DE SUPERVISION PLOICTICA"
+    },
+    {
+      "id": 163,
+      "name": "SECRETARIO DE SOCIEDAD CIVIL"
+    },
+    {
+      "id": 164,
+      "name": "MIEMBRO EXOFICIOS"
+    },
+    {
+      "id": 165,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE ADMINISTRATIVO"
+    },
+    {
+      "id": 166,
+      "name": "4TA VICEPRESIDENTA"
+    },
+    {
+      "id": 167,
+      "name": "5TA VICEPRESIDENTE"
+    },
+    {
+      "id": 168,
+      "name": "1ER SUB SECRETARIO"
+    },
+    {
+      "id": 169,
+      "name": "2DO SUB SECRETARIO"
+    },
+    {
+      "id": 170,
+      "name": "3ER SUB SECRETARIO"
+    },
+    {
+      "id": 171,
+      "name": "4TO SUB SECRETARIO"
+    },
+    {
+      "id": 172,
+      "name": "5TO SUB SECRETARIO"
+    },
+    {
+      "id": 173,
+      "name": "SECRETARIO DE TECNOLOGIA"
+    },
+    {
+      "id": 174,
+      "name": "PRESIDENTE COMISION DE ASESORES"
+    },
+    {
+      "id": 175,
+      "name": "PRESIDENTA DEL CONSEJO DE DISCIPLINA"
+    },
+    {
+      "id": 176,
+      "name": "SUPLENTE DE FISCAL"
+    },
+    {
+      "id": 177,
+      "name": "SECRETARIA DE ACTAS Y CORRESPONDENCIA"
+    },
+    {
+      "id": 178,
+      "name": "SECRETARIO TÉCNICO Y POLÍTICAS PÚBLICAS"
+    },
+    {
+      "id": 179,
+      "name": "DIRECTORA DE ASITENCIA SOCIAL"
+    },
+    {
+      "id": 180,
+      "name": "DIRECTOR DE QUIPO Y TRANSPORTE"
+    },
+    {
+      "id": 181,
+      "name": "DIRECTOR DE FAMILIA"
+    },
+    {
+      "id": 182,
+      "name": "DIRECTORA DE RELACIONES PÚBLICAS"
+    },
+    {
+      "id": 183,
+      "name": "PRESIDENTA ZONA A"
+    },
+    {
+      "id": 184,
+      "name": "PRESIDENTE DE LA ZONA B"
+    },
+    {
+      "id": 185,
+      "name": "PRESIDENTE DE LA ZONA C"
+    },
+    {
+      "id": 186,
+      "name": "PRESIDENTE DE LA ZONA D"
+    },
+    {
+      "id": 187,
+      "name": "PRESIDNTE DEL FRENTE DE MUJERES"
+    },
+    {
+      "id": 188,
+      "name": "ALCALDE MINICIPAL O DIRECTOR DE DISTRITO MUNICIPAL DEL PARTIDO"
+    },
+    {
+      "id": 189,
+      "name": "2DO VICEPRESIDENTE"
+    },
+    {
+      "id": 190,
+      "name": "3ER VICEPRESIDENTE"
+    },
+    {
+      "id": 191,
+      "name": "PRESIDENTE FRENTE SINDICAL"
+    },
+    {
+      "id": 192,
+      "name": "MIEMBBRO EXOFICIO"
+    },
+    {
+      "id": 193,
+      "name": "PRESIDENTE DEL FRENTE DE EMPRESARIOS Y COMEERCIANTES"
+    },
+    {
+      "id": 194,
+      "name": "PRESIDENTE DEL FRENTE TÉCNICOS"
+    },
+    {
+      "id": 195,
+      "name": "ALCALDE MUNICIPAL O DIRECTOR DE DISTRITO MUNUICPAL DEL PARTIDO"
+    },
+    {
+      "id": 196,
+      "name": "DIPUTADO DEL PRM"
+    },
+    {
+      "id": 197,
+      "name": "DIRECTOR DE SEGURIDAD PÚBLICAS"
+    },
+    {
+      "id": 198,
+      "name": "1RA VICE-PRESIDENTE"
+    },
+    {
+      "id": 199,
+      "name": "3RE SUB-SECRETARIO GENERAL"
+    },
+    {
+      "id": 200,
+      "name": "SECRETARIO DE TECNOLOGIAS"
+    },
+    {
+      "id": 201,
+      "name": "PRESIDENTE COMISION DE ÉTICA Y CONTROL"
+    },
+    {
+      "id": 202,
+      "name": "SECRETARIO MODERNIZACIÓN"
+    },
+    {
+      "id": 203,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE PROPAGANDA"
+    },
+    {
+      "id": 204,
+      "name": "PRESIDENTE DEL FRENTE DE COOPERATIVISMO Y ECONOMIA SOCIAL"
+    },
+    {
+      "id": 205,
+      "name": "PRESIDENTE DEL LA ZONA A"
+    },
+    {
+      "id": 206,
+      "name": "PRESIDENTE DEL LA ZONA B"
+    },
+    {
+      "id": 207,
+      "name": "PRESIDENTE DEL LA ZONA C"
+    },
+    {
+      "id": 208,
+      "name": "PRESIDENTE DEL LA ZONA D"
+    },
+    {
+      "id": 209,
+      "name": "DELEGADO POLITICO ANTE JUNTA ELECTORAL"
+    },
+    {
+      "id": 210,
+      "name": "ALCALDE MUNICPAL O DIRECTOR DE DISTRITO MUNICIPAL"
+    },
+    {
+      "id": 211,
+      "name": "SECRETARIO DE MEDIO A BIENTE Y RECURSOS NATURALES"
+    },
+    {
+      "id": 212,
+      "name": "PRESIDENTE DE FRENTE DE CONTADORES PÚBLICOS"
+    },
+    {
+      "id": 213,
+      "name": "PRESIDENTE FRENTE DEPROFESIONALES"
+    },
+    {
+      "id": 214,
+      "name": "PRESIDENTE DEL FRENTEMAGISTERIAL"
+    },
+    {
+      "id": 215,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE TRASPORTE"
+    },
+    {
+      "id": 216,
+      "name": "PRESIDENTE DEL FRENDE DE LOS VIEJOS ROBLES"
+    },
+    {
+      "id": 217,
+      "name": "SECRETARIO DE ASUNTOS LEGALES"
+    },
+    {
+      "id": 218,
+      "name": "DIRECTOR DE EQUIPO Y TRANSPORTE"
+    },
+    {
+      "id": 219,
+      "name": "PRESIDENTE DEL FRENTES DE ABOGADOS"
+    },
+    {
+      "id": 220,
+      "name": "PRESIDENTE DEL FRENTES TÉCNICO"
+    },
+    {
+      "id": 221,
+      "name": "PRESIDENTE DEL COOPERATIVISMO Y ECONOMIA SOCIAL"
+    },
+    {
+      "id": 222,
+      "name": "PRESIDENTE PROVINCIAL"
+    },
+    {
+      "id": 223,
+      "name": "1ER VICE-PRESIDENTE PROVINCIAL"
+    },
+    {
+      "id": 224,
+      "name": "2DA VICE-PRESIDENTE PROVINCIAL"
+    },
+    {
+      "id": 225,
+      "name": "3ER VICE-PRESIDENTE PROVINCIAL"
+    },
+    {
+      "id": 226,
+      "name": "SECRETARIO GENERAL PROVINCIAL"
+    },
+    {
+      "id": 227,
+      "name": "1ER SUB SECRETARIO GENERAL PROVINCIAL"
+    },
+    {
+      "id": 228,
+      "name": "2DO SUB SECRETARIO GENERAL PROVINCIAL"
+    },
+    {
+      "id": 229,
+      "name": "3ER SUB SECRETARIO GENERAL PROVINCIAL"
+    },
+    {
+      "id": 230,
+      "name": "DIRECTOR A) DEL DEPARTAMENTO ADMINISTRATIVO"
+    },
+    {
+      "id": 231,
+      "name": "PRESIDENTE DE LA SEGURIDAD SOCIAL"
+    },
+    {
+      "id": 232,
+      "name": "SECRETARIO DE FRENTES SECTORIALES"
+    },
+    {
+      "id": 233,
+      "name": "PRESIDENTE DEL CONCEJO DE REGIDORE O DE LA JUNTA MUNICIPAL DEL PARTIDO"
+    },
+    {
+      "id": 234,
+      "name": "SECRETARIO DE SUPERVISION POLITICA"
+    },
+    {
+      "id": 235,
+      "name": "PRESIDENTE FRENTE DE CULTURA"
+    },
+    {
+      "id": 236,
+      "name": "DIPUTADO"
+    },
+    {
+      "id": 237,
+      "name": "REGIDOR"
+    },
+    {
+      "id": 238,
+      "name": "PRESEDENTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
+    },
+    {
+      "id": 239,
+      "name": "PRESIDENTE DEL FRENTE RELIGIOSOS CULTOS"
+    },
+    {
+      "id": 240,
+      "name": "PRESIDENTA DEL FRENTE DE LAS JUVENTUD"
+    },
+    {
+      "id": 241,
+      "name": "MIEMBRO EXSOFICIO"
+    },
+    {
+      "id": 242,
+      "name": "3RO VICE-PRESIDENTE"
+    },
+    {
+      "id": 243,
       "name": "PRESIDENTE DEL FRENTE DE LAS MUJERES"
     },
     {
-      "id": 547,
-      "name": "SAN CRISTOBAL"
+      "id": 244,
+      "name": "PRESIDENTE DEL FRENTE DE CULTO"
+    },
+    {
+      "id": 245,
+      "name": "PRESIDENTE DEL FRENTE DE CULTOS"
+    },
+    {
+      "id": 246,
+      "name": "1ER VICE- PRESIDENTE"
+    },
+    {
+      "id": 247,
+      "name": "2DO VICE- PRESIDENTE"
+    },
+    {
+      "id": 248,
+      "name": "3ER VICE- PRESIDENTE"
+    },
+    {
+      "id": 249,
+      "name": "1ER SUB- SECRETARIO GENERAL"
+    },
+    {
+      "id": 250,
+      "name": "2DO SUB- SECRETARIO GENERAL"
+    },
+    {
+      "id": 251,
+      "name": "3ER SUB- SECRETARIO GENERAL"
+    },
+    {
+      "id": 252,
+      "name": "SECRETARIO DE ELECTORAL"
+    },
+    {
+      "id": 253,
+      "name": "VICE-PRESIDENTE DE LA COMISION DE ÉTICA Y DISCIPLINA"
+    },
+    {
+      "id": 254,
+      "name": "SECRETARIO DE ACTAS Y CORRESPONDECIA"
+    },
+    {
+      "id": 255,
+      "name": "SECRETARIO DE SEGURIDAD SOCIAL"
+    },
+    {
+      "id": 256,
+      "name": "SECRETARIO DE LA COMISION DE ÉTICA Y DICIPLINA"
+    },
+    {
+      "id": 257,
+      "name": "MIENBRO DE LA COMISION DE ÉTICA Y DISCIPLINA"
+    },
+    {
+      "id": 258,
+      "name": "SECRETARIO TÉCNICO DE POLICTICAS PÚBLICAS"
+    },
+    {
+      "id": 259,
+      "name": "1ER VICEPRESIDENTE"
+    },
+    {
+      "id": 260,
+      "name": "FISCAL ABJUNTO"
+    },
+    {
+      "id": 261,
+      "name": "PRESIDENTE FRENTE DE ABOGADOS"
+    },
+    {
+      "id": 262,
+      "name": "PRESIDENTE DEL FRENTE DE COOPERTIVISMO Y ECONOMIA SOCIAL"
+    },
+    {
+      "id": 263,
+      "name": "ALCALDE MUNICIPALNO DIRECTOR DE DISTRITO MUNICIPAL DEL PARTIDO"
+    },
+    {
+      "id": 264,
+      "name": "PRESIDENTE DED FRENTE DE CONTADORES PÚBLICOS"
+    },
+    {
+      "id": 265,
+      "name": "PRESIDENTE DEL FRENTE ABOGADOS"
+    },
+    {
+      "id": 266,
+      "name": "1RA SUB SECRETARIO GENERAL"
+    },
+    {
+      "id": 267,
+      "name": "PRESIDENTE DE FRENTE DE ABOGADOS"
+    },
+    {
+      "id": 268,
+      "name": "PRESIDENTE CIRCUNSCRIPCION ELECORAL 6 (SI CORRESPONDE)"
+    },
+    {
+      "id": 269,
+      "name": "SECRETARIO GRAL REGION O CIRCUNSCRIPCION ELECORAL 6 (SI CORRESPONDE)"
+    },
+    {
+      "id": 270,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE SEGURIDAD"
+    },
+    {
+      "id": 271,
+      "name": "DIRECTOR DEL DEPARTAMENTO DE PROTOCOLO"
+    },
+    {
+      "id": 272,
+      "name": "MIEMBRO COMISION EJECUTIVA"
+    },
+    {
+      "id": 273,
+      "name": "PRESIDENTE MUNICIAPL"
+    },
+    {
+      "id": 274,
+      "name": "VICEPRESIDENTE MUNICIPAL"
+    },
+    {
+      "id": 275,
+      "name": "SUB -SECRETARIO GENERAL"
+    },
+    {
+      "id": 276,
+      "name": "DIRECTOR DE OPERACIONES"
+    },
+    {
+      "id": 277,
+      "name": "SECRETARIO DE ASUNTOS ELECTORALES"
+    },
+    {
+      "id": 278,
+      "name": "SECRETARIA DE ASUNTOS ECONÓMICOS"
+    },
+    {
+      "id": 279,
+      "name": "SEC DE ASUNTOS MUNICIPALES"
+    },
+    {
+      "id": 280,
+      "name": "SEC DE COMUNICACIONES"
+    },
+    {
+      "id": 281,
+      "name": "SEC COOP INTERNACIONAL"
+    },
+    {
+      "id": 282,
+      "name": "SECRETARIA DE EDUCACIÓN Y DOCTRINA"
+    },
+    {
+      "id": 283,
+      "name": "SECRETARIA DE FRENTES SECTORIALES"
+    },
+    {
+      "id": 284,
+      "name": "SECRETARIA DE FINANZAS"
+    },
+    {
+      "id": 285,
+      "name": "SECRETARIO DE GESTIÓN SOCIEDAD CIVIL"
+    },
+    {
+      "id": 286,
+      "name": "SECRETARIA MEDIO AMBIENTE Y REC NAT"
+    },
+    {
+      "id": 287,
+      "name": "SECRETARIA DE MODERNIZACIÓN"
+    },
+    {
+      "id": 288,
+      "name": "SECRETARIA DE TECNOLOGIAS"
+    },
+    {
+      "id": 289,
+      "name": "SECRETARIA EJECUTIVA"
+    },
+    {
+      "id": 290,
+      "name": "SECRETARIA TECNICA Y DE POLICTICAS PÚBLICAS"
+    },
+    {
+      "id": 291,
+      "name": "DEPARTAMENTO ADMINISTRATIVO"
+    },
+    {
+      "id": 292,
+      "name": "DEPARTAMENTO CONTRA LA CORRUPCIÓN Y IMPUNIDAD"
+    },
+    {
+      "id": 293,
+      "name": "DEPARTAMENTOS DE ASUNTOS CIETIFICOS"
+    },
+    {
+      "id": 294,
+      "name": "DEPARTAMENTO DE CONTRALORIA Y PRESUPUESTO"
+    },
+    {
+      "id": 295,
+      "name": "DEPARTAMENTO DE CULTURA"
+    },
+    {
+      "id": 296,
+      "name": "DPTO EQUIPO Y TRAMSPORTE"
+    },
+    {
+      "id": 297,
+      "name": "DPTO DE LA FAMILIA"
+    },
+    {
+      "id": 298,
+      "name": "DPTO PRESNSA"
+    },
+    {
+      "id": 299,
+      "name": "DPTO PROPAGANDA"
+    },
+    {
+      "id": 300,
+      "name": "RELACIONES PÚBLICAS Y PROTOCOLO"
+    },
+    {
+      "id": 301,
+      "name": "SEGURIDAD PUBLICA"
+    },
+    {
+      "id": 302,
+      "name": "SEGURIDAD SOCIAL"
+    },
+    {
+      "id": 303,
+      "name": "DPTO LEGAL"
+    },
+    {
+      "id": 304,
+      "name": "FRENTE DE ABOGADOS"
+    },
+    {
+      "id": 305,
+      "name": "FRENTE DE CONATDORES PÚBLICOS"
+    },
+    {
+      "id": 306,
+      "name": "FRENTE DEPORTES"
+    },
+    {
+      "id": 307,
+      "name": "FRENTE DE LA JUVENTUD"
+    },
+    {
+      "id": 308,
+      "name": "FRENTE DE LOS VIEJOS ROBLES"
+    },
+    {
+      "id": 309,
+      "name": "FRENTE MICRO PEQUEÑO Y MEDIANO EMPRESARIOS"
+    },
+    {
+      "id": 310,
+      "name": "FRENTE DE MUJERES"
+    },
+    {
+      "id": 311,
+      "name": "FRENTE SALUD"
+    },
+    {
+      "id": 312,
+      "name": "FRENTE TÉCNICOS"
+    },
+    {
+      "id": 313,
+      "name": "FRENTE MAGISTERIAL"
+    },
+    {
+      "id": 314,
+      "name": "PRESIDENTE DEL CONSEJO DE DICIPLINA"
+    },
+    {
+      "id": 315,
+      "name": "FISCAL DEL CONSEJO DE DICIPLINA"
+    },
+    {
+      "id": 316,
+      "name": "COMINSION MUNICIPAL DE ASESORES"
+    },
+    {
+      "id": 317,
+      "name": "COMISION MUNICIPAL DE ESTRATEGIA"
+    },
+    {
+      "id": 318,
+      "name": "SECRETARIA DE ACTA Y CORREPONDENCIA"
+    },
+    {
+      "id": 319,
+      "name": "DIPUTADO CIRC NO 1"
+    },
+    {
+      "id": 320,
+      "name": "DIPUTADO CIRC NO 2"
+    },
+    {
+      "id": 321,
+      "name": "DIPUTADO CIRC NO 3"
+    },
+    {
+      "id": 322,
+      "name": "PRESIDENTE -ORIENTAL 1"
+    },
+    {
+      "id": 323,
+      "name": "PRESIDENTEORIENTAL 1-A"
+    },
+    {
+      "id": 324,
+      "name": "PRESIDENTEORIENTAL 1-B"
+    },
+    {
+      "id": 325,
+      "name": "PRESIDENTEORIENTAL 2"
+    },
+    {
+      "id": 326,
+      "name": "PRESIDENTEORIENTAL 2-A"
+    },
+    {
+      "id": 327,
+      "name": "PRESIDENTEORIENTAL 3"
+    },
+    {
+      "id": 328,
+      "name": "PRESIDENTEORIENTAL 3-A"
+    },
+    {
+      "id": 329,
+      "name": "PRESIDENTEORIENTAL 3-B"
+    },
+    {
+      "id": 330,
+      "name": "SEC GRAL ORIENTAL 1"
+    },
+    {
+      "id": 331,
+      "name": "SEC GRAL ORIENTAL 1-A"
+    },
+    {
+      "id": 332,
+      "name": "SEC GRAL ORIENTAL 2"
+    },
+    {
+      "id": 333,
+      "name": "SEC GRAL ORIENTAL 2-A"
+    },
+    {
+      "id": 334,
+      "name": "SEC GRAL ORIENTAL 3"
+    },
+    {
+      "id": 335,
+      "name": "SEC GRAL ORIENTAL 3-A"
+    },
+    {
+      "id": 336,
+      "name": "SEC GRAL ORIENTAL"
+    },
+    {
+      "id": 337,
+      "name": "PRESIDENTE ZONA E"
+    },
+    {
+      "id": 338,
+      "name": "PRESIDENTE ZONA E-1"
+    },
+    {
+      "id": 339,
+      "name": "PRESIDENTE ZONA E-2"
+    },
+    {
+      "id": 340,
+      "name": "PRESIDENTE ZONA F"
+    },
+    {
+      "id": 341,
+      "name": "PRESIDENTE ZONA F-1"
+    },
+    {
+      "id": 342,
+      "name": "PRESIDENTE ZONA F-2"
+    },
+    {
+      "id": 343,
+      "name": "PRESIDENTE ZONA F-3"
+    },
+    {
+      "id": 344,
+      "name": "PRESIDENTE ZONA G"
+    },
+    {
+      "id": 345,
+      "name": "PRESIDENTE ZONA G-1"
+    },
+    {
+      "id": 346,
+      "name": "PRESIDENTE ZONA H"
+    },
+    {
+      "id": 347,
+      "name": "PRESIDENTE ZONA H-1"
+    },
+    {
+      "id": 348,
+      "name": "PRESIDENTE ZONA H-2"
+    },
+    {
+      "id": 349,
+      "name": "PRESIDENTE ZONA I"
+    },
+    {
+      "id": 350,
+      "name": "PRESIDENTE ZONA I-1"
+    },
+    {
+      "id": 351,
+      "name": "PRESIDENTE ZONA I-2"
+    },
+    {
+      "id": 352,
+      "name": "PRESIDENTE ZONA I-3"
+    },
+    {
+      "id": 353,
+      "name": "PRESIDENTE ZONA A"
+    },
+    {
+      "id": 354,
+      "name": "PRESIDENTE ZONA A-1"
+    },
+    {
+      "id": 355,
+      "name": "PRESIDENTE ZONA A-2"
+    },
+    {
+      "id": 356,
+      "name": "PRESIDENTE ZONA A-3"
+    },
+    {
+      "id": 357,
+      "name": "PRESIDENTE ZONA A-4"
+    },
+    {
+      "id": 358,
+      "name": "PRESIDENTE ZONA A-5"
+    },
+    {
+      "id": 359,
+      "name": "PRESIDENTE ZONA B"
+    },
+    {
+      "id": 360,
+      "name": "PRESIDENTE ZONA B-1"
+    },
+    {
+      "id": 361,
+      "name": "PRESIDENTE ZONA B-2"
+    },
+    {
+      "id": 362,
+      "name": "PRESIDENTE ZONA B-3"
+    },
+    {
+      "id": 363,
+      "name": "PRESIDENTE ZONA B-4"
+    },
+    {
+      "id": 364,
+      "name": "PRESIDENTE ZONA B-5"
+    },
+    {
+      "id": 365,
+      "name": "PRESIDENTE ZONA B-6"
+    },
+    {
+      "id": 366,
+      "name": "PRESIDENTE ZONA C"
+    },
+    {
+      "id": 367,
+      "name": "PRESIDENTE ZONA C-1"
+    },
+    {
+      "id": 368,
+      "name": "PRESIDENTE ZONA C-2"
+    },
+    {
+      "id": 369,
+      "name": "PRESIDENTE ZONA C-3"
+    },
+    {
+      "id": 370,
+      "name": "PRESIDENTE ZONA C-4"
+    },
+    {
+      "id": 371,
+      "name": "PRESIDENTE ZONA D"
+    },
+    {
+      "id": 372,
+      "name": "PRESIDENTE ZONA D-1"
+    },
+    {
+      "id": 373,
+      "name": "PRESIDENTE ZONA D-2"
+    },
+    {
+      "id": 374,
+      "name": "PRESIDENTE ZONA D-3"
+    },
+    {
+      "id": 375,
+      "name": "PRESIDENTE ZONA D-4"
+    },
+    {
+      "id": 376,
+      "name": "PRESIDENTE ZONA J"
+    },
+    {
+      "id": 377,
+      "name": "PRESIDENTE ZONA J-1"
+    },
+    {
+      "id": 378,
+      "name": "PRESIDENTE ZONA N"
+    },
+    {
+      "id": 379,
+      "name": "PRESIDENTE ZONA N-1"
+    },
+    {
+      "id": 380,
+      "name": "PRESIDENTE ZONA N-2"
+    },
+    {
+      "id": 381,
+      "name": "PRESIDENTE ZONA N-3"
+    },
+    {
+      "id": 382,
+      "name": "PRESIDENTE ZONA N-4"
+    },
+    {
+      "id": 383,
+      "name": "PRESIDENTE ZONA N-5"
+    },
+    {
+      "id": 384,
+      "name": "PRESIDENTE ZONA N-6"
+    },
+    {
+      "id": 385,
+      "name": "PRESIDENTE ZONA K"
+    },
+    {
+      "id": 386,
+      "name": "PRESIDENTE ZONA N-7"
+    },
+    {
+      "id": 387,
+      "name": "PRESIDENTE ZONA N-8"
+    },
+    {
+      "id": 388,
+      "name": "PRESIDENTE ZONA O"
+    },
+    {
+      "id": 389,
+      "name": "PRESIDENTE ZONA O-1"
+    },
+    {
+      "id": 390,
+      "name": "PRESIDENTE ZONA O-2"
+    },
+    {
+      "id": 391,
+      "name": "PRESIDENTE ZONA O-3"
+    },
+    {
+      "id": 392,
+      "name": "PRESIDENTE ZONA O-4"
+    },
+    {
+      "id": 393,
+      "name": "PRESIDENTE ZONA O-6"
+    },
+    {
+      "id": 394,
+      "name": "PRESIDENTE ZONA P"
+    },
+    {
+      "id": 395,
+      "name": "PRESIDENTE ZONA P-1"
+    },
+    {
+      "id": 396,
+      "name": "PRESIDENTE ZONA P-2"
+    },
+    {
+      "id": 397,
+      "name": "PRESIDENTE ZONA P-3"
+    },
+    {
+      "id": 398,
+      "name": "PRESIDENTE ZONA Q"
+    },
+    {
+      "id": 399,
+      "name": "PRESIDENTE ZONA Q-1"
+    },
+    {
+      "id": 400,
+      "name": "PRESIDENTE ZONA Q-2"
+    },
+    {
+      "id": 401,
+      "name": "PRESIDENTE ZONA Q-3"
+    },
+    {
+      "id": 402,
+      "name": "PRESIDENTE ZONA Q-4"
+    },
+    {
+      "id": 403,
+      "name": "PRESIDENTE ZONA Q-5"
+    },
+    {
+      "id": 404,
+      "name": "PRESIDENTE ZONA Q-6"
+    },
+    {
+      "id": 405,
+      "name": "PRESIDENTE ZONA R"
+    },
+    {
+      "id": 406,
+      "name": "PRESIDENTE ZONA R-1"
+    },
+    {
+      "id": 407,
+      "name": "PRESIDENTE ZONA R-2"
+    },
+    {
+      "id": 408,
+      "name": "PRESIDENTE ZONA S"
+    },
+    {
+      "id": 409,
+      "name": "PRESIDENTE ZONA S-1"
+    },
+    {
+      "id": 410,
+      "name": "PRESIDENTE ZONA S-2"
+    },
+    {
+      "id": 411,
+      "name": "PRESIDENTE ZONA X-1"
+    },
+    {
+      "id": 412,
+      "name": "PRESIDENTE ZONA X-3"
+    },
+    {
+      "id": 413,
+      "name": "PRESIDENTE ZONA T"
+    },
+    {
+      "id": 414,
+      "name": "PRESIDENTE ZONA T-1"
+    },
+    {
+      "id": 415,
+      "name": "PRESIDENTE ZONA T-2"
+    },
+    {
+      "id": 416,
+      "name": "PRESIDENTE ZONA T-3"
+    },
+    {
+      "id": 417,
+      "name": "PRESIDENTE ZONA U"
+    },
+    {
+      "id": 418,
+      "name": "PRESIDENTE ZONA U-2"
+    },
+    {
+      "id": 419,
+      "name": "PRESIDENTE ZONA Y"
+    },
+    {
+      "id": 420,
+      "name": "PRESIDENTE ZONA Y-2"
+    },
+    {
+      "id": 421,
+      "name": "PRESIDENTE ZONA Z"
+    },
+    {
+      "id": 422,
+      "name": "PRESIDENTE ZONA Z-1"
+    },
+    {
+      "id": 423,
+      "name": "PRESIDENTE ZONA X"
+    },
+    {
+      "id": 424,
+      "name": "PRESIDENTE ZONA X-2"
+    },
+    {
+      "id": 425,
+      "name": "PRESIDENTE ZONA X-4"
+    },
+    {
+      "id": 426,
+      "name": "PRESIDENTE ZONA X-5"
+    },
+    {
+      "id": 427,
+      "name": "PRESIDENTE ZONA X-"
+    },
+    {
+      "id": 428,
+      "name": "PRESIDENTE ZONA X-8"
+    },
+    {
+      "id": 429,
+      "name": "PRESIDENTE ZONA X-10"
+    },
+    {
+      "id": 430,
+      "name": "PRESIDENTE ZONA U-1"
+    },
+    {
+      "id": 431,
+      "name": "PRESIDENTE ZONA U-3"
+    },
+    {
+      "id": 432,
+      "name": "PRESIDENTE ZONA Y-1"
+    },
+    {
+      "id": 433,
+      "name": "MIEMBRO MUJERES"
+    },
+    {
+      "id": 434,
+      "name": "MIEMBRO JUVENTUD"
+    },
+    {
+      "id": 435,
+      "name": "SECRETARIO DE ASUNTOS ECOMICOS"
+    },
+    {
+      "id": 436,
+      "name": "PRESINTE DE CONSEJO DE REGIDORES O DE LA JUNTA MUNICIPAL DEL PARTIDO"
+    },
+    {
+      "id": 437,
+      "name": "PRESINTE DEL FRENTE DE LAS MUJERES"
+    },
+    {
+      "id": 438,
+      "name": "DIRECTOR DEPARTAMENTO ADMINISTRATIVO"
+    },
+    {
+      "id": 439,
+      "name": "DIRECTOR DEPARTAMENTO DE TRANSPORTE"
+    },
+    {
+      "id": 440,
+      "name": "MIEMBROS EXOFICIO"
+    },
+    {
+      "id": 441,
+      "name": "PRESIDENTE DEL FRENTE AGROPECUAIO"
+    },
+    {
+      "id": 442,
+      "name": "PRESIDENTE DEL FRENTE DE BARRIAL Y COMUNAL"
+    },
+    {
+      "id": 443,
+      "name": "SECRETARIO DE FRENTE SECTORIALES Y SOCIEDAD CIVIL"
+    },
+    {
+      "id": 444,
+      "name": "PRESIDENTE DEL FRENTE DE MICO Y PEQUEÑO Y MEDIANOS EMPRESARIOSPR"
+    },
+    {
+      "id": 445,
+      "name": "PRESIDENTE DEL FRENTE ROBLES MODERNOS"
+    },
+    {
+      "id": 446,
+      "name": "DIRECTOR DEL DEPARTAMENTOS ADMINISTRATIVO"
+    },
+    {
+      "id": 447,
+      "name": "IRECTOR DEL DEPARTAMENTO DE TRANSPORTE"
+    },
+    {
+      "id": 448,
+      "name": "DIRECTOR DE RELACIONES PÚBLICAS Y PROTOCOLO"
+    },
+    {
+      "id": 449,
+      "name": "COORDINADOR DE LOS FRENTES SECTORIALES"
+    },
+    {
+      "id": 450,
+      "name": "COORDINADOR DEL SECTOR EXTERNO"
     }
   ]
 }

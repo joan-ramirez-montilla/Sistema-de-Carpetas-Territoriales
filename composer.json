@@ -16,6 +16,7 @@
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.9.0",
         "livewire/livewire": "^4.0",
+        "maatwebsite/excel": "^3.1",
         "stancl/tenancy": "^3.9"
     },
     "require-dev": {
