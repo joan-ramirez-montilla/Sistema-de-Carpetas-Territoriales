@@ -48,10 +48,10 @@ class PeopleImport implements ToCollection
         foreach ($rows->skip(1) as $row) {
 
             $provinceName = $this->normalize($row[0]);
-            $municipalityName = $this->normalize($row[1]);
-            $districtName = $this->normalize($row[2]);
+            $municipalityName = $this->normalize_V2($row[1]);
+            $districtName = $this->normalize_V2($row[2]);
             $circumscription =  $this->normalizeCircumscription($row[3]);
-            $positionName = strtoupper(trim(preg_replace('/\s+/', ' ', $row[4])));
+            $positionName = $this->normalize_V2(strtoupper(trim(preg_replace('/\s+/', ' ', $row[4]))));
             $organizationName  = strtoupper(trim(preg_replace('/\s+/', ' ', $row[5])));
             $email = $this->normalizeEmail($row[14]);
 
@@ -74,6 +74,22 @@ class PeopleImport implements ToCollection
                 ]);
 
                 continue;
+            }
+
+            // validar provincia, municipio y distrito
+            if (!$province || !$municipality || !$district) {
+
+                Log::warning('Fila omitida por provincia, municipio o distrito', [
+                    'province-id' => $province?->id,
+                    'provinceName' => $provinceName,
+                    '$row[0]' => $row[0],
+                    'municipality-id' => $municipality?->id,
+                    'municipalityName' => $municipalityName,
+                    '$row[1]' => $row[1],
+                    'district-id' => $district?->id,
+                    'districtName' => $districtName,
+                    '$row[2]' => $row[2],
+                ]);
             }
 
 
@@ -104,6 +120,13 @@ class PeopleImport implements ToCollection
         return in_array($value, ['NO APLICA', 'N/A', '']) ? null : $value;
     }
 
+        private function normalize_V2($value): ?string
+    {
+        $value = strtoupper(trim((string)$value));
+
+        return in_array($value, ['NO APLICA', 'N/A', '']) ? 'N/A' : $value;
+    }
+
     private function normalizeEmail($value): ?string
     {
           // Normalizar
@@ -116,6 +139,7 @@ class PeopleImport implements ToCollection
 
             return $email;
     }
+
 
     private function normalizeCircumscription($value): ?string
 {
