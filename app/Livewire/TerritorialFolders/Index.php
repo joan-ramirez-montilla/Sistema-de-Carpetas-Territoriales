@@ -89,8 +89,8 @@ class Index extends Component
             'filters' => [
                 'region' => $this->selectedRegion ? Region::find($this->selectedRegion)->name : 'Todas',
                 'province' => $this->selectedProvince ? Province::find($this->selectedProvince)->name : 'Todas',
-                'municipality' => $this->selectedMunicipality ? Municipality::find($this->selectedMunicipality)->name : 'Todas',
-                'district' => $this->selectedDistrict ? District::find($this->selectedDistrict)->name : 'Todas',
+                'municipality' => $this->selectedMunicipality ? Municipality::find($this->selectedMunicipality)->name : 'Todos',
+                'district' => $this->selectedDistrict ? District::find($this->selectedDistrict)->name : 'Todos',
             ],
             'members' => $members,
             'date' => now()->format('Y-m-d'),
