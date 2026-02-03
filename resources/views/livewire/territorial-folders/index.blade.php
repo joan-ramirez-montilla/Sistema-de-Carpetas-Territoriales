@@ -215,15 +215,27 @@
                                 </div>
                                 <div
                                     class="mt-2 text-sm {{ $selectedFolder == $folder['id'] ? 'text-amber-800 dark:text-amber-200' : 'text-gray-600 dark:text-gray-400' }}">
-                                    Provincia: {{ $folder['province'] }}
-                                    @if ($folder['municipality'])
+
+                                    @if ($folder['province'] && $selectedProvince)
+                                        Provincia: {{ $folder['province'] }}
+                                    @else
+                                        Provincia: Todas
+                                    @endif
+
+                                    @if ($folder['municipality'] && $selectedMunicipality)
                                         | Municipio: {{ $folder['municipality'] }}
+                                    @else
+                                        | Municipio: Todas
                                     @endif
-                                    @if ($folder['district'])
+                                    @if ($folder['district'] && $selectedDistrict)
                                         | DM: {{ $folder['district'] }}
+                                    @else
+                                        | DM: Todas
                                     @endif
-                                    @if ($folder['region'])
+                                    @if ($folder['region'] && $selectedRegion)
                                         | Zona: {{ $folder['region'] }}
+                                    @else
+                                        | Zona: Todas
                                     @endif
                                 </div>
                             </div>
@@ -239,7 +251,8 @@
                                         </span>
                                     </div>
                                 </div>
-                                <flux:button wire:click="exportPdf({{ $folder['id'] }})" variant="ghost" class="hidden sm:flex mt-5">
+                                <flux:button wire:click="exportPdf({{ $folder['id'] }})" variant="ghost"
+                                    class="hidden sm:flex mt-5">
                                     <i class="fas fa-download mr-2"></i>
                                     Exportar PDF
                                 </flux:button>

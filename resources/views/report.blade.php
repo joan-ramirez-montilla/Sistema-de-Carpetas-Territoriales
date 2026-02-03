@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Carpetas Territoriales</title>
@@ -117,6 +118,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="page">
 
@@ -144,6 +146,8 @@
         <!-- INFO LINE -->
         <div class="info-line">
             <span>PROVINCIA</span> {{ $filters['province'] }} &nbsp;&nbsp;&nbsp;
+            <span>MUNICIPIO</span> {{ $filters['municipality'] }} &nbsp;&nbsp;&nbsp;
+            <span>DISTRITO (DM)</span> {{ $filters['district'] }} &nbsp;&nbsp;&nbsp;
             <span>ESTRUCTURA</span> {{ $folder }}
         </div>
 
@@ -171,4 +175,5 @@
 
     </div>
 </body>
+
 </html>
